@@ -25,25 +25,25 @@
             <div class="create-2">
                 <div class="text-des-create text-des-create2">
                     <x-label for="price" :value="__('')" />
-                    <span>Descrición:</span>
+                    <span>Descripción:</span>
                     <x-input id="details"  type="text" name="details" :value="old('details')" required />
                 </div>
 
                 <div class="text-des-create">
                     <x-label for="price" :value="__('')" />
-                    <span>Hora:</span>
+                    <span>Edad:</span>
                     <x-input id="age"  type="text" name="age" :value="old('age')" required />
                 </div>
 
                 <div class="text-des-create">
                     <x-label for="price" :value="__('')" />
-                    <span>Fecha:</span>
+                    <span>Duración:</span>
                     <x-input id="duration"  type="text" name="duration" :value="old('duration')" required />
                 </div>
 
                 <div class="text-des-create">
                     <x-label for="price" :value="__('')" />
-                    <span>Plazas:</span>
+                    <span>Formato:</span>
                     <x-input id="format"  type="text" name="format" :value="old('format')" required />
                 </div>
             </div>
