@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WorkshopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pruebas', [WorkshopController::class, 'index' ])->name("pruebas");
+Route::get('/admin/create', [WorkshopController::class, 'create' ])->name("create");
+Route::post('/admin/create', [WorkshopController::class, 'save' ])->name('admin.save');
+
+Route::get('/admin/{id}/edit', [WorkshopController::class, 'edit' ])->name("edit");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
