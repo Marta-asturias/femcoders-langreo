@@ -76,9 +76,14 @@ class WorkshopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
-        return view('admin.edit');
+        $workshop = Workshop::find($id);
+        if(!$workshop){
+            return view('workshop.notexist');
+        }
+
+        return view('admin.edit')->with('workshop',$workshop);
     }
 
     /**
@@ -90,7 +95,27 @@ class WorkshopController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            // 'file' => 'required|mimes:jpg,png|max:2048',
+            'title'=> 'required',
+            'details' => 'required',
+            'age'  => 'required',
+            'duration'  => 'required',
+            'format'  => 'required'
+        ]);
+
+/*         $fileName = time().'.'.$request->file->extension();
+        $request->file->move(public_path('storage'), $fileName); */
+        // $url_file = Storage::url($fileName);
+        $workshop = Workshop::find($id);
+        $workshop->title = $request->get('title');
+        $workshop->details = $request->get('details');
+        // $workshops->image = $url_file;
+        $workshop->age = $request->get('age');
+        $workshop->duration = $request->get('duration');
+        $workshop->format = $request->get('format');
+        $workshop->save();
+        return view('/pruebas')->with('workshop',$workshop);
     }
 
     /**
@@ -99,8 +124,10 @@ class WorkshopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $workshop = workshop::find($request->id);        
+        $workshop->delete();
+        return redirect('/pruebas');
     }
 }

@@ -16,10 +16,7 @@
         <x-label class="text-title-c" for="title" :value="__('Añadir Titulo')" />
         <x-input id="title" class="input-tilte-create" type="text" name="title" :value="old('title')" required autofocus />
         </div>
-        <div class="tile-create">
-            <x-label class="text-title-c" for="title" :value="__('Detalles')" />
-            <x-input id="title" class="input-tilte-create" type="text" name="details" :value="old('details')" required autofocus />
-            </div>
+
 
 
     {{--  <div class="principal-create">
@@ -30,7 +27,7 @@
             <div class="create-2">
                 <div class="text-des-create text-des-create2">
                     <x-label for="price" :value="__('')" />
-                    <span>Descripción:</span>
+                    <span>Detalles:</span>
                     <x-input id="details"  type="text" name="details" :value="old('details')" required />
                 </div>
 
