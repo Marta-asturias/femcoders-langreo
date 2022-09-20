@@ -36,27 +36,27 @@ class WorkshopController extends Controller
      */
     public function save(Request $request)
     {
-        /* $request->validate([
+        $request->validate([
             'file' => 'required|mimes:jpg,png|max:2048',
             'title'=> 'required',
             'details' => 'required',
             'age range'  => 'required',
             'duration'  => 'required',
             'format'  => 'required'
-        ]); */
+        ]); 
 
 /*         $fileName = time().'.'.$request->file->extension();
         $request->file->move(public_path('storage'), $fileName); */
         // $url_file = Storage::url($fileName);
         $workshops = new Workshop();
         $workshops->title = $request->get('title');
-/*         $workshops->details = $request->get('details');
+        $workshops->details = $request->get('details');
         // $workshops->image = $url_file;
-        $workshops->age_range = $request->get('age range');
+        $workshops->age = $request->get('age');
         $workshops->duration = $request->get('duration');
-        $workshops->format = $request->get('format'); */
+        $workshops->format = $request->get('format');
         $workshops->save();
-        return redirect('/workshops');
+        return redirect('/pruebas');
     }
 
     /**
