@@ -22,7 +22,7 @@
             </div>
 
 
-       {{--  <div class="principal-create">
+    {{--  <div class="principal-create">
             <div class="create-1">
                 <input type="file" name="file" class="btn-img-c">
             </div> --}}
