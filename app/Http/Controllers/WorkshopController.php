@@ -37,21 +37,13 @@ class WorkshopController extends Controller
     public function save(Request $request)
     {
         $request->validate([
-<<<<<<< HEAD
-            'file' => 'required|mimes:jpg,png|max:2048',
-=======
             // 'file' => 'required|mimes:jpg,png|max:2048',
->>>>>>> paz
             'title'=> 'required',
             'details' => 'required',
             'age'  => 'required',
             'duration'  => 'required',
             'format'  => 'required'
-<<<<<<< HEAD
-        ]); 
-=======
         ]);
->>>>>>> paz
 
 /*         $fileName = time().'.'.$request->file->extension();
         $request->file->move(public_path('storage'), $fileName); */
