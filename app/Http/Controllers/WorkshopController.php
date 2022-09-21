@@ -57,7 +57,7 @@ class WorkshopController extends Controller
         $workshops->duration = $request->get('duration');
         $workshops->format = $request->get('format');
         $workshops->save();
-        return redirect('/pruebas');
+        return redirect('admin/workshops');
     }
 
     /**
