@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserWorkshopsController;
 use App\Http\Controllers\WorkshopController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
 
 Route::get('/', function () {
     return view('welcome');
