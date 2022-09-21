@@ -15,7 +15,8 @@ class WorkshopController extends Controller
      */
     public function index()
     {
-        return view('/pruebas');
+        $workshops = Workshop::all()->sortByDesc("id");
+        return view('admin.workshops')->with('workshop',$workshops);
     }
 
     /**
@@ -128,6 +129,6 @@ class WorkshopController extends Controller
     {
         $workshop = workshop::find($request->id);        
         $workshop->delete();
-        return redirect('/pruebas');
+        return redirect('/admin/workshops');
     }
 }
