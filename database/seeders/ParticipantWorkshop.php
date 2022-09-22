@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Workshop;
+use App\Models\ParticipantWorkshop as ModelsParticipantWorkshop;
 use Illuminate\Database\Seeder;
 
-class WorkshopSeeder extends Seeder
+class ParticipantWorkshop extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class WorkshopSeeder extends Seeder
      */
     public function run()
     {
-        Workshop::factory()->times(50)->create();
+        
     }
 }

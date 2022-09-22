@@ -16,5 +16,13 @@ class Workshop extends Model
         'duration',
         'format',
     ];
+
+    public function participants(){
+        return $this->belongsToMany(Participant::class)->withTimestamps();
+    }
+
+    public function dates(){
+        return $this->belongsToMany(Date::class)->withTimestamps();
     
+}
 }
