@@ -14,7 +14,14 @@ class ParticipantFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'first_name' => $this->faker->firstname,
+            'last_name' => $this->faker->lastName,
+            'birth_date' => $this->faker->date(),
+            'email' => $this->faker->unique()->safeEmail,
+            'whatsapp' => $this->faker->phoneNumber,
+            'city' => $this->faker->city(),
+            'how_did_you_meet_us' => $this->faker->sentence(4),
+            'legals' => $this->faker->boolean(),
         ];
     }
 }

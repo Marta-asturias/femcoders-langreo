@@ -15,10 +15,10 @@ class CreateParticipantsTable extends Migration
     {
         Schema::create('participants', function (Blueprint $table) {
             $table->id();
-            $table->string ('first_name');
+            $table->string ("first_name");
             $table->string ("last_name");
             $table->date ("birth_date");
-            $table->string ('email');
+            $table->string ("email");
             $table->string ("whatsapp");
             $table->string ("city");
             $table->string ("how_did_you_meet_us");
