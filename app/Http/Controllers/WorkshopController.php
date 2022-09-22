@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class WorkshopController extends Controller
 {
+    private Workshop $workshop;
+
+    public function __construct() {
+        $this->workshop = new Workshop();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +20,7 @@ class WorkshopController extends Controller
      */
     public function index()
     {
+    /*     $this->workshop->all()->sortByDesc("id"); */
         $workshops = Workshop::all()->sortByDesc("id");
         return view('admin.workshops')->with('workshop',$workshops);
     }
