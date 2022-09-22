@@ -2,24 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Workshop;
-use App\Repositories\WorkshopRepository\WorkshopRepository;
+use App\Repositories\Workshop\WorkshopRepository;
+use App\Repositories\WorkshopRepository\WorkshopRepository as WorkshopRepositoryWorkshopRepository;
 use App\View\Components\pruebas;
-use Illuminate\Http\Client\Request as ClientRequest;
 use Illuminate\Http\Request;
 
-class WorkshopController extends Controller
+class WorkshopController extends WorkshopRepository
 {
-   private WorkshopRepository $repository; 
 
     public function __construct() {
-        $this->repository = new WorkshopRepository();
+        parent::__construct();
+       
     }
 
     
     public function index()
     {
-        $workshops = $this->repository->getAll();
+        $workshops = $this->getAll();
         return view('admin.workshops')->with('workshop',$workshops); 
     }
 
@@ -33,39 +32,11 @@ class WorkshopController extends Controller
         return view('admin.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function save()
+
+    public function save(Request $request)
     {
-      $this->repository->save();
-       
-
-        
-/*         $request->validate([
-            // 'file' => 'required|mimes:jpg,png|max:2048',
-            'title'=> 'required',
-            'details' => 'required',
-            'age'  => 'required',
-            'duration'  => 'required',
-            'format'  => 'required'
-        ]); */
-
-/*         $fileName = time().'.'.$request->file->extension();
-        $request->file->move(public_path('storage'), $fileName); */
-        // $url_file = Storage::url($fileName);
-/*         $workshops = new Workshop();
-        $workshops->title = $request->get('title');
-        $workshops->details = $request->get('details'); */
-        // $workshops->image = $url_file;
-/*         $workshops->age = $request->get('age');
-        $workshops->duration = $request->get('duration');
-        $workshops->format = $request->get('format');
-        $workshops->save();
-        return redirect('/pruebas'); */
+        $data = $this->saveWorkshop($request);
+        return $this->index();
     }
 
     /**
