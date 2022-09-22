@@ -4,9 +4,12 @@ namespace Database\Seeders;
 
 use App\Models\Date;
 use App\Models\Participant;
+use App\Models\User;
 use App\Models\Workshop;
 use Illuminate\Database\Seeder;
+use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -29,7 +32,15 @@ class DatabaseSeeder extends Seeder
         DB::statement("SET foreign_key_checks=1");
 
 
-
+        $useradmin= User::where('email','admin@admin.com')->first();
+        if ($useradmin) {
+            $useradmin->delete();
+        }
+        $useradmin= User::create([
+            'name'      => 'admin',
+            'email'     => 'admin@admin.com',
+            'password'  => Hash::make('admin')    
+        ]);
         //user admin
         $participant= Participant::where('email','admin@admin.com')->first();
         if ($participant) {
@@ -43,7 +54,7 @@ class DatabaseSeeder extends Seeder
             'whatsapp'=>'admin',
             'city'=>'admin',
             'how_did_you_meet_us'=>'admin',
-            'legals'=>'si',
+            // 'legals'=>'si',
         ]);
         
             $workshop= Workshop::create([
