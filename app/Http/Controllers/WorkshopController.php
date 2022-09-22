@@ -3,26 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Workshop;
+use App\Repositories\WorkshopRepository\WorkshopRepository;
 use App\View\Components\pruebas;
 use Illuminate\Http\Request;
 
 class WorkshopController extends Controller
 {
-    private Workshop $workshop;
+   private WorkshopRepository $repository; 
 
     public function __construct() {
-        $this->workshop = new Workshop();
+        $this->repository = new WorkshopRepository();
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    
     public function index()
     {
-    /*     $this->workshop->all()->sortByDesc("id"); */
-        $workshops = Workshop::all()->sortByDesc("id");
-        return view('admin.workshops')->with('workshop',$workshops);
+        $workshops = $this->repository->getAll();
+        return view('admin.workshops')->with('workshop',$workshops); 
     }
 
     /**
