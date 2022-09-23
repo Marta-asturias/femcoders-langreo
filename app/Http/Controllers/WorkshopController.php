@@ -35,7 +35,7 @@ class WorkshopController extends WorkshopRepository
 
     public function save(Request $request)
     {
-        $data = $this->saveWorkshop($request);
+        $this->saveWorkshop($request);
         return $this->index();
     }
 

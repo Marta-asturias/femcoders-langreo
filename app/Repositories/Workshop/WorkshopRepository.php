@@ -1,15 +1,12 @@
 <?php
 
 namespace App\Repositories\Workshop;
-
 use App\Http\Controllers\Controller;
 use App\Models\Workshop;
 use Illuminate\Http\Request;
 
-/* use Illuminate\Http\Request; */
 
 class WorkshopRepository extends Controller {
- /*    private $model; */
  private Workshop $workshop;
 
 
@@ -17,19 +14,16 @@ class WorkshopRepository extends Controller {
      $this->workshop= new Workshop(); 
     
     }
+
+
     public function getAll(){
-/*         $workshops = $this->model->all();
-        return $workshops; */
        return $this->workshop->all()->sortByDesc("id");
-        
-      /*   return view('admin.workshops')->with('workshop', $this->workshops); */
     }
+
+
     public function saveWorkshop(Request $request)
-    {
-     
-        
-        $request->validate([
-            
+    {  
+        $request->validate([     
             // 'file' => 'required|mimes:jpg,png|max:2048',
             'title'=> 'required', 
             'details' => 'required',
@@ -46,8 +40,7 @@ class WorkshopRepository extends Controller {
         $this->workshop->age = $request->get('age');
         $this->workshop->duration = $request->get('duration');
         $this->workshop->format = $request->get('format');
-        return $this->workshop->save();
-        
+        return $this->workshop->save();    
     }
 
 }
