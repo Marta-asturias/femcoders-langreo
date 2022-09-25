@@ -1,5 +1,6 @@
 #### femcoders-langreo
-![logo-femcoders](https://user-images.githubusercontent.com/104801269/192168831-13556df3-8d62-43c2-9c52-36061fd900dd.png)
+![logo-femcoders](/public/assets/logo-femcoders.png)
+
 
 
 ## Tabla de Contenidos
@@ -24,26 +25,22 @@ Para poder inscribirse a estos cursos impartidos por profesores de Factoría F5,
 
 ## Capturas de pantalla
 
-![screenshot-homeview](https://user-images.githubusercontent.com/104801269/192168840-7a237f25-76b1-41e2-b976-ddc48c5766e4.png)
+![screenshot-homeview](/public/assets/screenshot-homeview.png)
 
-![screenshot-games](https://user-images.githubusercontent.com/104801269/192168853-4da2629f-0f61-430b-9532-bb92ce163fb1.png)
+![screenshot-games](/public/assets/screenshot-games.png)
 
-![screenshot-courses](https://user-images.githubusercontent.com/104801269/192168860-166b29a7-4c9a-4f33-b908-496bb432bf67.png)
+![screenshot-courses](/public/assets/screenshot-courses.png)
 
-![screenshot-resources](https://user-images.githubusercontent.com/104801269/192168865-183952af-6318-4aa6-b273-0c9b10ac4a8c.png)
+![screenshot-resources](/public/assets/screenshot-resources.png)
 
-
-***
 ## Tecnologías
 Lista de tecnologías usadas en el desarrollo del proyecto:
-
 * php artisan storage:link
 * Laravel breeze
 * Composer install
 * Npm install
 * Npm run watch
 * Npm run dev
-
 
 
 ***
@@ -65,7 +62,6 @@ npm i
 
 ***
 
-<<<<<<< HEAD
 
 ## Soporte
 Si tiene cualquier problema póngase en contacto con: 
@@ -102,10 +98,6 @@ El proyecto está abierto a cualquier persona que quiera aportar ideas o sugeren
 
 
 ***
-=======
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
 
-
->>>>>>> Develop
