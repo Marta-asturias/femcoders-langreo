@@ -10,7 +10,7 @@ class Workshop extends Model
     use HasFactory;
     protected $fillable = [
         'title',
-        // 'image',
+        'image',
         'details',
         'age',
         'duration',

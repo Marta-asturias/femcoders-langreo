@@ -20,7 +20,7 @@
         <x-input id="title" class="input-tilte-edit" type="text" name="title" :value="old('title') ?? $workshop->title" required />
     </div>
 
-{{--     <div class="conten2">
+
         <div class="descrip-edit2">
         <div class="img-edit">
         <img src="{{ old('image') ?? $workshop->image }}" />
@@ -29,7 +29,7 @@
         <div class="btn-img">
         <input type="file" name="file" class="form-control">
         </div> 
-    </div> --}}
+
 
 
 <div class="descrip-edit">

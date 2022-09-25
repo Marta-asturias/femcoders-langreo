@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
             'whatsapp'=>'admin',
             'city'=>'admin',
             'how_did_you_meet_us'=>'admin',
-            // 'legals'=>'si',
+            'legals'=>1,
         ]);
         
             $workshop= Workshop::create([

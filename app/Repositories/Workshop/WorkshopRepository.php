@@ -4,7 +4,7 @@ namespace App\Repositories\Workshop;
 use App\Http\Controllers\Controller;
 use App\Models\Workshop;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 
 class WorkshopRepository extends Controller {
 private Workshop $workshop;
@@ -20,19 +20,19 @@ private Workshop $workshop;
     public function saveWorkshop(Request $request)
     {  
         $request->validate([     
-            // 'file' => 'required|mimes:jpg,png|max:2048',
+            'file' => 'required|mimes:jpg,png|max:2048',
             'title'=> 'required', 
             'details' => 'required',
             'age'  => 'required',
             'duration'  => 'required',
             'format'  => 'required'
         ]);
-/*         $fileName = time().'.'.$request->file->extension();
-        $request->file->move(public_path('storage'), $fileName); */
-        // $url_file = Storage::url($fileName);
+        $fileName = time().'.'.$request->file->extension();
+        $request->file->move(public_path('storage'), $fileName);
+        $url_file = Storage::url($fileName);
         $this->workshop->title = $request->get('title');
         $this->workshop->details = $request->get('details');
-        // $workshops->image = $url_file;
+        $this->workshop->image = $url_file;
         $this->workshop->age = $request->get('age');
         $this->workshop->duration = $request->get('duration');
         $this->workshop->format = $request->get('format');
@@ -46,7 +46,7 @@ private Workshop $workshop;
     public function updateWorkshop(Request $request, $id)
     {
         $request->validate([
-            // 'file' => 'required|mimes:jpg,png|max:2048',
+            'file' => 'required|mimes:jpg,png|max:2048',
             'title'=> 'required',
             'details' => 'required',
             'age'  => 'required',
@@ -54,13 +54,13 @@ private Workshop $workshop;
             'format'  => 'required'
         ]);
 
-/*         $fileName = time().'.'.$request->file->extension();
-        $request->file->move(public_path('storage'), $fileName); */
-        // $url_file = Storage::url($fileName);
+        $fileName = time().'.'.$request->file->extension();
+        $request->file->move(public_path('storage'), $fileName);
+        $url_file = Storage::url($fileName);
         $this->workshop = Workshop::find($id);
         $this->workshop->title = $request->get('title');
         $this->workshop->details = $request->get('details');
-        // $workshops->image = $url_file;
+        $this->workshop->image = $url_file;
         $this->workshop->age = $request->get('age');
         $this->workshop->duration = $request->get('duration');
         $this->workshop->format = $request->get('format');
