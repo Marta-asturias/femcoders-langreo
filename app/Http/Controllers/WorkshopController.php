@@ -40,7 +40,7 @@ class WorkshopController extends WorkshopRepository
 /*         $fileName = time().'.'.$request->file->extension();
         $request->file->move(public_path('storage'), $fileName); */
         // $url_file = Storage::url($fileName);
-        $workshops = new Workshop();
+        $workshops = new Workshops();
         $workshops->title = $request->get('title');
         $workshops->details = $request->get('details');
         // $workshops->image = $url_file;
