@@ -36,13 +36,11 @@ Para poder inscribirse a estos cursos impartidos por profesores de Factoría F5,
 ## Tecnologías
 Lista de tecnologías usadas en el desarrollo del proyecto:
 * php artisan storage:link
-* Laravel
 * Laravel breeze
 * Composer install
 * Npm install
 * Npm run watch
 * Npm run dev
-* Xamp
 
 
 ***
