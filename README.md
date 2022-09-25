@@ -1,5 +1,6 @@
 #### coderMarket
-![logo-femcoders](/public/assets/logo-femcoders.png)
+![logo-femcoders](https://user-images.githubusercontent.com/104801269/192168831-13556df3-8d62-43c2-9c52-36061fd900dd.png)
+
 
 
 ## Tabla de Contenidos
@@ -24,16 +25,14 @@ Para poder inscribirse a estos cursos impartidos por profesores de Factoría F5,
 
 ## Capturas de pantalla
 
-![screenshot0****](/public/assets/screenshot-homeview.png)
-***
-![screenshot0****](/public/assets/screenshot-games.png)
-***
-![screenshot0****](/public/assets/screenshot-courses.png)
+![screenshot-homeview](https://user-images.githubusercontent.com/104801269/192168840-7a237f25-76b1-41e2-b976-ddc48c5766e4.png)
 
-***
-![screenshot0****](/public/assets/screenshot-resources.png)
+![screenshot-games](https://user-images.githubusercontent.com/104801269/192168853-4da2629f-0f61-430b-9532-bb92ce163fb1.png)
 
-***
+![screenshot-courses](https://user-images.githubusercontent.com/104801269/192168860-166b29a7-4c9a-4f33-b908-496bb432bf67.png)
+
+![screenshot-resources](https://user-images.githubusercontent.com/104801269/192168865-183952af-6318-4aa6-b273-0c9b10ac4a8c.png)
+
 ## Tecnologías
 Lista de tecnologías usadas en el desarrollo del proyecto:
 * PHP
