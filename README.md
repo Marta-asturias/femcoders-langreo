@@ -93,7 +93,7 @@ El proyecto está abierto a cualquier persona que quiera aportar ideas o sugeren
 [Marta Gonzalez Fernández](https://github.com/Marta-asturias)  
 [Maria Paz Manrique](https://github.com/PazManrique)   
 [Juliet Linarez](https://github.com/Julieta3164)  
-[Esther Graciela](https://github.com/Estherherrera)  
+[Esther Herrera](https://github.com/Estherherrera)  
 [Sara Peromingo Colunga](https://github.com/Sarap120298)  
 
 
