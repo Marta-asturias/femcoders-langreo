@@ -1553,3 +1553,52 @@ input::placeholder, textarea::placeholder {
   font-weight: bold;
   font-size: 15px;
 }
+
+footer {
+  margin-top: 1%;
+  background-color: rgb(203, 191, 232);
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .logo {
+  width: 33%;
+  height: 140px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .logo .img-logo {
+  width: 130px;
+  height: 100px;
+}
+footer .logo .img-logo img {
+  width: 130px;
+  height: 100px;
+}
+footer .copyright {
+  width: 33%;
+  text-align: center;
+}
+footer .copyright .text-foot {
+  font-family: Open Sans;
+  font-size: 15px;
+}
+footer .copyright .text-foot .bi-c-circle {
+  font-size: 15px;
+}
+footer .social-networks {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+}
+footer .social-networks .networks {
+  width: 32px;
+  height: 25px;
+}
+footer .social-networks .networks img {
+  width: 32px;
+  height: 25px;
+}

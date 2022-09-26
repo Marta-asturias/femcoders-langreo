@@ -7,6 +7,8 @@
         <title>{{ config('app.name', 'FemCoders') }}</title>
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
+        <!--Icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <!-- Scripts -->
