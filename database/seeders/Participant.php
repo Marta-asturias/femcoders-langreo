@@ -4,15 +4,16 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class ParticipantSeeder extends Seeder
+class Participant extends Seeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-    public function run()
-    {
-        //
+    public function run(){
+
     }
 }
+
+        

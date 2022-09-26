@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Workshop;
-use Illuminate\Http\Request;
 
 class UserWorkshopsController extends Controller
 {

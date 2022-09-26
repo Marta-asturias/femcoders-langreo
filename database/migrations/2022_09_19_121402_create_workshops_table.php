@@ -17,7 +17,7 @@ class CreateWorkshopsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('details');
-            /* $table->string('image'); */
+            $table->string('image');
             $table->string('age');
             $table->string('duration');
             $table->string('format');
