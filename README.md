@@ -41,6 +41,8 @@ Lista de tecnologías usadas en el desarrollo del proyecto:
 * Npm install
 * Npm run watch
 * Npm run dev
+* Tailwind
+* Xamp
 
 
 ***
