@@ -1,5 +1,5 @@
 #### femcoders-langreo
-![logo-femcoders](/public/assets/logo-femcoders.png)
+![logo-femcoders](/public/logo-femcoders.png)
 
 
 
@@ -25,13 +25,13 @@ Para poder inscribirse a estos cursos impartidos por profesores de Factoría F5,
 
 ## Capturas de pantalla
 
-![screenshot-homeview](/public/assets/screenshot-homeview.png)
+![screenshot-homeview](/public/screenshot-homeview.png)
 
-![screenshot-games](/public/assets/screenshot-games.png)
+![screenshot-games](/public/screenshot-games.png)
 
-![screenshot-courses](/public/assets/screenshot-courses.png)
+![screenshot-courses](/public/screenshot-courses.png)
 
-![screenshot-resources](/public/assets/screenshot-resources.png)
+![screenshot-resources](/public/screenshot-resources.png)
 
 ## Tecnologías
 Lista de tecnologías usadas en el desarrollo del proyecto:
