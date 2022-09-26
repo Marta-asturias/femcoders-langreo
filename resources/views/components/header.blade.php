@@ -1,4 +1,5 @@
 <header class="header">
-    <img src="{{ asset('storage/.png') }}" />
-    <h1>HOLA</h1>
+    <div class="img-header">
+    <img src="{{ asset('storage/logofempng.png') }}" />
+    </div>
 </header>
