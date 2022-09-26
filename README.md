@@ -54,8 +54,10 @@ Como instalar el repositorio:
 git clone https://github.com/Marta-asturias/femcoders-langreo.git
 ```
 En ordenador instalar:  
-3. Instalar [Laravel](https://laravel.com/docs/8.x/installation)
-4. Instalar [Composer](https://www.hostinger.es/tutoriales/como-instalar-composer)  
+3. Instalar [Laravel 8x](https://laravel.com/docs/8.x/installation)
+<br>
+4. Instalar [Composer](https://www.hostinger.es/tutoriales/como-instalar-composer) 
+<br> 
 5. En la terminarl del Visual Studio Code, escribir el comando:   
 ``` 
 npm i 
