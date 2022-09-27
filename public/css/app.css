@@ -1555,6 +1555,7 @@ input::placeholder, textarea::placeholder {
 }
 
 footer {
+  position: absolute;
   margin-top: 1%;
   background-color: rgb(203, 191, 232);
   width: 100%;
@@ -1601,4 +1602,38 @@ footer .social-networks .networks {
 footer .social-networks .networks img {
   width: 32px;
   height: 25px;
+}
+
+.conten-clain {
+  position: absolute;
+  width: 100%;
+}
+.conten-clain .img-principal {
+  width: 100%;
+  height: 150px;
+}
+.conten-clain .img-principal img {
+  width: 100%;
+}
+.conten-clain .text-clain {
+  position: relative;
+  width: 40%;
+  height: 200px;
+  margin-left: 60%;
+  border: solid black 1px;
+}
+.conten-clain .img-logo {
+  border: solid black 1px;
+}
+.conten-clain .img-logo .logo_clain {
+  border: solid black 1px;
+}
+.conten-clain .img-logo .logo_clain img {
+  border: solid black 1px;
+}
+.conten-clain .btn-clain {
+  border: solid black 1px;
+}
+.conten-clain .btn-clain .btn-clain {
+  border: solid black 1px;
 }
