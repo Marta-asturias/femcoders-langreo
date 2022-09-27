@@ -1,3 +1,6 @@
+<x-head/> 
+
+
 
 
 <div class="conten-create">
