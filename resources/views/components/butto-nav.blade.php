@@ -5,3 +5,4 @@
 <div><a href="{{ url('/register') }}" class="btn-nav">Registro</a></div>
 <div><a href="{{ url('/login') }}" class="btn-nav">Iniciar</a></div>
 </div>
+    

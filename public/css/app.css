@@ -1555,6 +1555,7 @@ input::placeholder, textarea::placeholder {
 }
 
 footer {
+  position: absolute;
   margin-top: 1%;
   background-color: rgb(203, 191, 232);
   width: 100%;
@@ -1601,4 +1602,68 @@ footer .social-networks .networks {
 footer .social-networks .networks img {
   width: 32px;
   height: 25px;
+}
+
+.conten-clain {
+  position: relative;
+}
+.conten-clain .img-principal {
+  overflow: hidden;
+  width: 100%;
+  height: 800px;
+}
+.conten-clain .img-principal img {
+  width: 100%;
+  height: 800px;
+}
+.conten-clain .text-clain {
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  width: 40%;
+  height: 100px;
+}
+.conten-clain .text-clain .txt-clain {
+  line-height: 2em;
+  text-align: justify;
+  color: #f6f3ef;
+  font-family: Open Sans;
+  font-weight: regular;
+  font-size: 25px;
+}
+.conten-clain .img-logo {
+  position: absolute;
+  left: 100px;
+  top: 65%;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.conten-clain .img-logo .logo_clain {
+  align-items: center;
+  width: 100%;
+}
+.conten-clain .img-logo .logo_clain img {
+  width: 100%;
+  height: 80px;
+}
+.conten-clain .btn-clain {
+  color: #4311b9;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  left: 15%;
+  top: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(203, 191, 232);
+  border: solid #4311b9 1px;
+  width: 180px;
+  height: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
