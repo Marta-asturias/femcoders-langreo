@@ -1,3 +1,5 @@
+<x-head/> 
+
 <div class="conten-create">
     @if($errors->any())
         <div 
