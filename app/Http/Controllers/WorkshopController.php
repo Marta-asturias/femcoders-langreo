@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\Workshop\WorkshopRepository;
-use App\View\Components\pruebas;
 use Illuminate\Http\Request;
 
 class WorkshopController
