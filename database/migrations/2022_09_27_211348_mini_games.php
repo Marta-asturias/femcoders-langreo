@@ -13,7 +13,7 @@ class MiniGames extends Migration
      */
     public function up()
     {
-        Schema::create('minigames', function (Blueprint $table) {
+        Schema::create('mini_games', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('link');
@@ -29,6 +29,6 @@ class MiniGames extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('minigames');
+        Schema::dropIfExists('mini_games');
     }
 }

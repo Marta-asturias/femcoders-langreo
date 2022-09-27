@@ -59,7 +59,7 @@ class DatabaseSeeder extends Seeder
         
             $workshop= Workshop::create([
                 'title' => 'hola',
-                // 'image',
+                'image'=> 'link',
                 'details'=>'hola',
                 'age'=> 'hola',
                 'duration'=> 'hola',
