@@ -35,8 +35,15 @@ Route::get('/admin/workshops/create', [WorkshopController::class, 'create' ])->n
 Route::post('/admin/workshops/create', [WorkshopController::class, 'save' ])->name('admin.save');
 Route::get('/admin/workshops/{id}/edit', [WorkshopController::class, 'edit' ])->name("edit");
 Route::put('/admin/workshops/{id}/edit', [WorkshopController::class, 'update' ])->name("update");
-
 Route::delete('/admin/workshops/workshops', [WorkshopController::class, 'destroy'])->name('destroy');
+
+
+Route::get('/admin/resources/create', [MiniGamesController::class, 'create' ])->name("create");
+Route::post('/admin/resources/create', [MiniGamesController::class, 'save' ])->name('admin.save');
+Route::get('/admin/resources/{id}/edit', [MiniGamesController::class, 'edit' ])->name("edit");
+Route::put('/admin/resources/{id}/edit', [MiniGamesController::class, 'update' ])->name("update");
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
