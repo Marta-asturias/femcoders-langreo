@@ -10,6 +10,19 @@ class Workshop extends Model
     use HasFactory;
     protected $fillable = [
         'title',
+        'image',
+        'details',
+        'age',
+        'duration',
+        'format',
     ];
+
+    public function participants(){
+        return $this->belongsToMany(Participant::class)->withTimestamps();
+    }
+
+    public function dates(){
+        return $this->belongsToMany(Date::class)->withTimestamps();
     
+}
 }
