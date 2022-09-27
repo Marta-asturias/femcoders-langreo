@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\UserWorkshopsController;
+use App\Http\Controllers\WorkshopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hellodomain', function () {
-    return view('hellodomain');
-});
+Route::get('/admin/workshops', [WorkshopController::class, 'index' ])->name("workshops");
+Route::get('/admin/create', [WorkshopController::class, 'create' ])->name("create");
+Route::post('/admin/create', [WorkshopController::class, 'save' ])->name('admin.save');
+Route::get('/admin/{id}/edit', [WorkshopController::class, 'edit' ])->name("edit");
+Route::put('/admin/{id}/edit', [WorkshopController::class, 'update' ])->name("update");
+
+Route::delete('/admin/workshops', [WorkshopController::class, 'destroy'])->name('destroy');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
