@@ -48,6 +48,7 @@ Route::get('/admin/resources/create', [ResourcesController::class, 'create' ])->
 Route::post('/admin/resources/create', [ResourcesController::class, 'save' ])->name('resource.save');
 Route::get('/admin/resources/{id}/edit', [ResourcesController::class, 'edit' ])->name("resource.edit");
 Route::put('/admin/resources/{id}/edit', [ResourcesController::class, 'update' ])->name("resource.update");
+Route::delete('/admin/resources/resources', [ResourcesController::class, 'destroy' ])->name("resource.destroy");
 
 
 
