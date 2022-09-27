@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
-Route::get('/minigames', [UserMiniGamesController::class, 'index' ])->name("minigames");
-Route::get('/resources', [UserResourcesController::class, 'index' ])->name("resources");
+Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
+Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
 
 Route::get('/', function () {
     return view('welcome');
