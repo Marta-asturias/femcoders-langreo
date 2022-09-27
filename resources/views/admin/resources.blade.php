@@ -1,0 +1,3 @@
+<x-head/> 
+
+<x-seccionclain/>

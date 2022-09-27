@@ -3,20 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\Workshop\WorkshopRepository;
-use App\Repositories\WorkshopRepository\WorkshopRepository as WorkshopRepositoryWorkshopRepository;
-use App\View\Components\pruebas;
 use Illuminate\Http\Request;
 
-class WorkshopController extends WorkshopRepository
+class WorkshopController
 {
+    private WorkshopRepository $repository;
+
     public function __construct() {
-        parent::__construct();
+
+        $this->repository = new WorkshopRepository;
+        // parent::__construct();
 
     }
 
     public function index()
     {
-        $workshops = $this->getAll();
+        $workshops = $this->repository->getAll();
         return view('admin.workshops')->with('workshop',$workshops); 
     }
 
@@ -28,13 +30,13 @@ class WorkshopController extends WorkshopRepository
 
     public function save(Request $request)
     {
-        $this->saveWorkshop($request);
+        $this->repository->saveWorkshop($request);
         return $this->index();
     }
 
     public function edit(Request $request, $id)
     {
-        $workshop=$this->editWorkshop($request,$id);
+        $workshop=$this->repository->editWorkshop($request,$id);
         if(!$workshop){
             return view('workshop.notexist');
         }
@@ -43,14 +45,14 @@ class WorkshopController extends WorkshopRepository
 
     public function update(Request $request, $id)
     {
-        $workshop = $this->getAll();
-        $this->updateWorkshop($request,$id);
+        $workshop = $this->repository->getAll();
+        $this->repository->updateWorkshop($request,$id);
         return view('/workshops')->with('workshop',$workshop);
     }
 
     public function destroy(Request $request)
     {
-        $this->destroyWorkshop($request);
+        $this->repository->destroyWorkshop($request);
         return redirect('/admin/workshops');
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Repositories\Workshop;
-use App\Http\Controllers\Controller;
 use App\Models\Workshop;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class WorkshopRepository extends Controller {
+class WorkshopRepository  {
+
 private Workshop $workshop;
 
     public function __construct() {
