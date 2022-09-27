@@ -38,10 +38,16 @@ Route::put('/admin/workshops/{id}/edit', [WorkshopController::class, 'update' ])
 Route::delete('/admin/workshops/workshops', [WorkshopController::class, 'destroy'])->name('destroy');
 
 
-Route::get('/admin/resources/create', [MiniGamesController::class, 'create' ])->name("create");
-Route::post('/admin/resources/create', [MiniGamesController::class, 'save' ])->name('admin.save');
-Route::get('/admin/resources/{id}/edit', [MiniGamesController::class, 'edit' ])->name("edit");
-Route::put('/admin/resources/{id}/edit', [MiniGamesController::class, 'update' ])->name("update");
+/* Route::get('/admin/miniGames/create', [MiniGamesController::class, 'create' ])->name("create");
+Route::post('/admin/miniGames/create', [MiniGamesController::class, 'save' ])->name('admin.save');
+Route::get('/admin/miniGames/{id}/edit', [MiniGamesController::class, 'edit' ])->name("edit");
+Route::put('/admin/miniGames/{id}/edit', [MiniGamesController::class, 'update' ])->name("update"); */
+
+
+Route::get('/admin/resources/create', [ResourcesController::class, 'create' ])->name("resource.create");
+Route::post('/admin/resources/create', [ResourcesController::class, 'save' ])->name('resource.save');
+Route::get('/admin/resources/{id}/edit', [ResourcesController::class, 'edit' ])->name("resource.edit");
+Route::put('/admin/resources/{id}/edit', [ResourcesController::class, 'update' ])->name("resource.update");
 
 
 
