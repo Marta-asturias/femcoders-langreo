@@ -1,5 +1,5 @@
 <div>
-<img src="{{ asset('img/foto5.jpeg') }}" />
+<img src="{{ asset('img/chicas/foto5.jpeg') }}" />
 </div>
 
 
