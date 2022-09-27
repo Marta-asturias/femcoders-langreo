@@ -1,3 +1,5 @@
-<section>
-    <img src="{{ asset('storage/bandera.png') }}" />
-</section>
+<div>
+<img src="{{ asset('img/foto5.jpeg') }}" />
+</div>
+
+
