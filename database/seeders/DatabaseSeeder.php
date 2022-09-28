@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
             'password'  => Hash::make('admin')    
         ]);
         //user admin
-        $participant= Participant::where('email','admin@admin.com')->first();
+    /*     $participant= Participant::where('email','admin@admin.com')->first();
         if ($participant) {
             $participant->delete();
         }
@@ -72,10 +72,6 @@ class DatabaseSeeder extends Seeder
             'date' =>'2021-03-12',
            
        
-          
-    ]);
-        
-           
 
         $participant->workshops()->sync([ $workshop->id ]);
         $date->workshops()->sync([ $workshop->id ]); */

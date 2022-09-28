@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\MiniGame;
+
 
 class UserMiniGamesController extends Controller
 {
-    public function index () {
-        return view('minigames');
-       }
+    public function getMiniGames()
+    {
+        $minigames = MiniGame::all()->sortByDesc("id");
+        return view('minigames')->with('minigame',$minigames);
+    }
 }
