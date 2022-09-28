@@ -21,6 +21,14 @@
         <x-label class="text-title-c" for="title" :value="__('Añadir Titulo')" />
         <x-input id="title" class="input-tilte-create" type="text" name="title" :value="old('title')" required autofocus />
         </div>
+        <div class="details-create">
+            <x-label class="text-title-c" for="details" :value="__('Añadir Detalles')" />
+            <x-input id="details" class="input-tilte-create" type="text" name="details" :value="old('details')" required autofocus />
+            </div>
+            <div class="details-create">
+                <x-label class="text-title-c" for="age" :value="__('Añadir Edad')" />
+                <x-input id="age" class="input-tilte-create" type="text" name="age" :value="old('age')" required autofocus />
+                </div>
 
 
 

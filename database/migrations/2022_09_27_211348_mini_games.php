@@ -16,6 +16,8 @@ class MiniGames extends Migration
         Schema::create('mini_games', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('details');
+            $table->string('age');
             $table->string('link');
             $table->string('image');
             $table->timestamps();

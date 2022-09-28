@@ -10,6 +10,8 @@ class MiniGame extends Model
     use HasFactory;
     protected $fillable = [
         'title',
+        'details',
+        'age',
         'image',
         'link',
     ];
