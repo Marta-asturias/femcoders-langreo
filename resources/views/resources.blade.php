@@ -4,8 +4,8 @@
 
 
 
+<x-resourceCard :resource="$resource"/>
 
-<x-card :workshop="$workshop"/> 
 
 
 </app-layouts>

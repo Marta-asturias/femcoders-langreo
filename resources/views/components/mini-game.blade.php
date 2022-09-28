@@ -4,7 +4,7 @@
 </div>
 <div>
         <img src="..." class="card-mj" alt="...">
-        <h5 class="mjtitle">Juego</h5>
+        <h5 class="mjtitle">Mini Juego</h5>
         <a href="#" class="btn-mj">Jugar</a>
 </div>
 <div class="btn-mj2">

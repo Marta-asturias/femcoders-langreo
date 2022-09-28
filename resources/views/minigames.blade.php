@@ -4,8 +4,8 @@
 
 
 
+<x-miniGameCard :minigame="$minigame"/>
 
-<x-card :workshop="$workshop"/> 
 
 
 </app-layouts>

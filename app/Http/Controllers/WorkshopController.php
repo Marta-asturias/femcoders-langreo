@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\Workshop\WorkshopRepository;
-use App\View\Components\pruebas;
 use Illuminate\Http\Request;
 
 class WorkshopController
@@ -20,12 +19,12 @@ class WorkshopController
     public function index()
     {
         $workshops = $this->repository->getAll();
-        return view('admin.workshops')->with('workshop',$workshops); 
+        return view('admin.workshops.workshops')->with('workshop',$workshops); 
     }
 
     public function create()
     {
-        return view('admin.create');
+        return view('admin.workshops.create');
     }
 
 
@@ -41,7 +40,7 @@ class WorkshopController
         if(!$workshop){
             return view('workshop.notexist');
         }
-        return view('admin.edit')->with('workshop',$workshop);
+        return view('admin.workshops.edit')->with('workshop',$workshop);
     }
 
     public function update(Request $request, $id)
@@ -54,6 +53,6 @@ class WorkshopController
     public function destroy(Request $request)
     {
         $this->repository->destroyWorkshop($request);
-        return redirect('/admin/workshops');
+        return redirect('/admin/workshops/workshops');
     }
 }
