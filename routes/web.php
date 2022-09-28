@@ -55,13 +55,8 @@ Route::delete('/admin/resources/resources', [ResourcesController::class, 'destro
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth','verified'])->name('dashboard');
+})->middleware(['auth',])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
-Route::get('/', function () {
-    return view('test');
-}); //Esta ruta la ponemos en la raiz para que nada mas ejecutar nuestra aplicación aparezca nuestro formulario
 
-Route::post('/contactar', 'EmailController@contact')->name('contact');
-//Ruta que esta señalando nuestro formulario
