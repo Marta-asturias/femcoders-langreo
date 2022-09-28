@@ -3,10 +3,8 @@
 <app-layouts>
 
 
-
 <x-resourceCard :resource="$resource"/>
 
 
 
-</app-layouts>
 <x-footer/>
