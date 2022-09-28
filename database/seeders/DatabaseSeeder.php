@@ -20,11 +20,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(
+       /*  $this->call(
             [
                 WorkshopSeeder::class
             ]
-            );
+            );  */
       
         DB::statement("SET foreign_key_checks=0");
             DB::table('participant_workshop')->truncate();
@@ -42,43 +42,14 @@ class DatabaseSeeder extends Seeder
             'password'  => Hash::make('admin')    
         ]);
         //user admin
-        $participant= Participant::where('email','admin@admin.com')->first();
+    /*     $participant= Participant::where('email','admin@admin.com')->first();
         if ($participant) {
             $participant->delete();
-        }
-        $participant= Participant::create([
-            'first_name' =>'admin',
-            'last_name'=>'admin',
-            'birth_date'=>'1985-11-02',
-            'email'=>'admin',
-            'whatsapp'=>'admin',
-            'city'=>'admin',
-            'how_did_you_meet_us'=>'admin',
-            'legals'=>1,
-        ]);
-        
-            $workshop= Workshop::create([
-                'title' => 'hola',
-                // 'image',
-                'details'=>'hola',
-                'age'=> 'hola',
-                'duration'=> 'hola',
-                'format'=> 'hola',
-           
-              
-        ]);
-
-        $date= Date::create([
-            'date' =>'2021-03-12',
-           
+        } */
        
-          
-    ]);
-        
-           
 
-        $participant->workshops()->sync([ $workshop->id ]);
-        $date->workshops()->sync([ $workshop->id ]);
+      /*   $participant->workshops()->sync([ $workshop->id ]);
+        $date->workshops()->sync([ $workshop->id ]); */
         
         //table role_user
        

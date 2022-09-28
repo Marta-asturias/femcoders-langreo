@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello juliet, sara, paz, esther this is a domain</h1>
+    <h1>hello juliet, sara, paz, esther</h1>
 </body>
 </html>
