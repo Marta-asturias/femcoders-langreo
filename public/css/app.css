@@ -1606,6 +1606,8 @@ footer .social-networks .networks img {
 
 .conten-clain {
   position: relative;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 .conten-clain .img-principal {
   overflow: hidden;
@@ -1667,4 +1669,80 @@ footer .social-networks .networks img {
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.mini-game {
+  width: 100%;
+  height: 500px;
+  background: #4311b9;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.mini-game .title-mg {
+  padding-top: 1%;
+  margin-bottom: 1%;
+  color: #f6f3ef;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 30px;
+}
+.mini-game .cardMj {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
+  margin: 1%;
+  padding: 1%;
+  width: 15%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.mini-game .cardMj .card-mj {
+  width: 100%;
+  height: 280px;
+}
+.mini-game .cardMj .mjtitle {
+  color: #f6f3ef;
+  font-family: Open Sans;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  font-size: 20px;
+  margin: 1%;
+}
+.mini-game .cardMj .btnMjCard {
+  margin: 1%;
+  color: #4311b9;
+  background: rgb(203, 191, 232);
+  border: solid #4311b9 1px;
+  width: 75%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+.mini-game .cardMj .btnMjCard:hover {
+  color: #f6f3ef;
+}
+.mini-game .btn-mj2 {
+  display: flex;
+  justify-content: center;
+}
+.mini-game .btn-mj2 .btn-b {
+  color: #4311b9;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  background: rgb(203, 191, 232);
+  border: solid #4311b9 2px;
+  width: 180px;
+  height: 35px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.mini-game .btn-mj2 .btn-b:hover {
+  color: #f6f3ef;
 }

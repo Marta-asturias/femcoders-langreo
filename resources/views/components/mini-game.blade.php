@@ -1,13 +1,18 @@
 <section class="mini-game">
 <div class="title-mg">
-    <h3 class="txt-mg">Mini Juegos</h3>
+    <h2 class="txtMg">Mini Juegos</h2>
 </div>
-<div>
-        <img src="..." class="card-mj" alt="...">
-        <h5 class="mjtitle">Mini Juego</h5>
+
+<div class="cardMj">
+        <img class="card-mj" src="{{ asset('img/foto5.jpg') }}" />
+        <h5 class="mjtitle">Titulo del Juego</h5>
+        <div class="btnMjCard">
         <a href="#" class="btn-mj">Jugar</a>
+        </div>
 </div>
+
 <div class="btn-mj2">
-    <a href="{{ url('/') }}" class="btn-b">Ver Más</a>
+    <a href="{{ url('/minigames') }}" class="btn-b">Ver Más</a>
 </div>
+
 </section>
