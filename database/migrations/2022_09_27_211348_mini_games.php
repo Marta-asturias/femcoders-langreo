@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ParticipantsWorkshops extends Migration
+class MiniGames extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class ParticipantsWorkshops extends Migration
      */
     public function up()
     {
-        Schema::create('participant_workshops', function (Blueprint $table) {
+        Schema::create('mini_games', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('participant_id')->references('id')->on('participants')->onDelete('cascade');
-            $table->foreignId('workshop_id')->references('id')->on('workshops')->onDelete('cascade');
+            $table->string('title');
+            $table->string('link');
+            $table->string('image');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +29,6 @@ class ParticipantsWorkshops extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('participant_workshops');
+        Schema::dropIfExists('mini_games');
     }
 }

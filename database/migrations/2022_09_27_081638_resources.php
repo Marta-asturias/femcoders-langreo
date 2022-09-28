@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DatesWorkshops extends Migration
+class Resources extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class DatesWorkshops extends Migration
      */
     public function up()
     {
-        Schema::create('date_workshops', function (Blueprint $table) {
+        Schema::create('resources', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('date_id')->references('id')->on('dates')->onDelete('cascade');
-            $table->foreignId('workshop_id')->references('id')->on('workshops')->onDelete('cascade');
+            $table->string('title');
+            $table->string('link');
+            $table->string('image');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +29,6 @@ class DatesWorkshops extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('date_workshops');
+        Schema::dropIfExists('resources');
     }
 }

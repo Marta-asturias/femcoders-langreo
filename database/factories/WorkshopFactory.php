@@ -13,8 +13,15 @@ class WorkshopFactory extends Factory
      */
     public function definition()
     {
-        return [
-            //
-        ];
+        
+           /*  return [
+                'title' => $this->faker->name(),
+                'image',
+                'details'=>$this->faker->sentences(4,true),
+                'age'=> $this->faker->name(),
+                'duration'=> $this->faker->name(),
+                'format'=> $this->faker->name(),
+            ]; 
+         */
     }
 }

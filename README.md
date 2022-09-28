@@ -1,64 +1,103 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+#### femcoders-langreo
+![logo-femcoders](https://user-images.githubusercontent.com/104801269/192168831-13556df3-8d62-43c2-9c52-36061fd900dd.png)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tabla de Contenidos
+1. [Información General](#información-general)
+2. [Capturas de Pantalla](#capturas-de-pantalla)
+4. [Instalación](#instalación)
+5. [Soporte](#soporte)
+6. [Hoja de ruta](#hoja-de-ruta)
+7. [Colaboración](#colaboración)
+8. [Autores](#autores)
+9. [FAQs](#faqs)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+***
+## Información General
+Femcoders es una plataforma que pretende fomentar y ampliar la red de mujeres y niñas desarrolladoras ya que hay una gran carencia de más mujeres en este sector. Mediante esta plataforma se pretende interesar a las niñas por el mundo de la programación y formarlas comenzando por estos pequeños talleres.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Para poder inscribirse a estos cursos impartidos por profesores de Factoría F5, los usuarios no necesitaran registrarse. Si lo hará el administrador para gestionar la página y gestionar otros administradores.
 
-## Learning Laravel
+*Proyecto en proceso de desarrollo.*   
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+***
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Capturas de pantalla
 
-## Laravel Sponsors
+![screenshot-homeview](https://user-images.githubusercontent.com/104801269/192168840-7a237f25-76b1-41e2-b976-ddc48c5766e4.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![screenshot-games](https://user-images.githubusercontent.com/104801269/192168853-4da2629f-0f61-430b-9532-bb92ce163fb1.png)
 
-### Premium Partners
+![screenshot-courses](https://user-images.githubusercontent.com/104801269/192168860-166b29a7-4c9a-4f33-b908-496bb432bf67.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![screenshot-resources](https://user-images.githubusercontent.com/104801269/192168865-183952af-6318-4aa6-b273-0c9b10ac4a8c.png)
 
-## Contributing
+## Tecnologías
+Lista de tecnologías usadas en el desarrollo del proyecto:
+* php artisan storage:link
+* Laravel breeze
+* Composer install
+* Npm install
+* Npm run watch
+* Tailwind
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+***
+## Instalación
+Como instalar el repositorio:
 
-## Security Vulnerabilities
+1. Ingresar en Visual Studio Code
+2.  Clonar el proyecto con el comando: 
+ ``` 
+git clone https://github.com/Marta-asturias/femcoders-langreo.git
+```
+En ordenador instalar:  
+3. Instalar [Laravel 8x](https://laravel.com/docs/8.x/installation)
+<br>
+4. Instalar [Composer](https://www.hostinger.es/tutoriales/como-instalar-composer) 
+<br> 
+5. En la terminarl del Visual Studio Code, escribir el comando:   
+``` 
+npm i 
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+***
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Soporte
+Si tiene cualquier problema póngase en contacto con: 
+>mazmorraf5@gmail.com
+
+***
+
+## Hoja de ruta
+
+En nuestra primera entrega presentamos una home de la empresa en la que se exponen una serie de talleres disponibles actualmente, y una seccion de minijuegos y recursos.
+
+La web consiste en una seccion de talleres, con informacion detallada de cada curso y un formulario de inscripcion. Una seccion de minijuegos relacionados con el aprendizaje de código, y una sección de recursos para la busqueda de información en fuentes externas y/o complementarias.
+
+Además tiene una vista para el usuario, en la que no es necesario registro, y otra para el administrador, en la que si tendremos que identificarnos. El administrador podrá dar acceso o nombrar otros administradores para la página.
+
+Los datos son cargados desde una base de datos. En próximas actualizaciones, nuestro objetivo es entregar las demás vistas de la web con sus funcionalidades.
+
+La web es resposive, para poder visualizarla desde cualquier dispositivo. 
+
+***
+
+## Colaboración
+El proyecto está abierto a cualquier persona que quiera aportar ideas o sugerencias. Podéis contactar con nosotros a través de:
+
+> mazmorraf5@gmail.com
+
+***
+## Autores 
+[Marta Gonzalez Fernández](https://github.com/Marta-asturias)  
+[Maria Paz Manrique](https://github.com/PazManrique)   
+[Juliet Linarez](https://github.com/Julieta3164)  
+[Esther Herrera](https://github.com/Estherherrera)  
+[Sara Peromingo Colunga](https://github.com/Sarap120298)  
+
+
+***

@@ -2,133 +2,57 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Workshop;
-use App\View\Components\pruebas;
+use App\Repositories\Workshop\WorkshopRepository;
 use Illuminate\Http\Request;
 
-class WorkshopController extends Controller
+class WorkshopController
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private WorkshopRepository $repository;
+
+    public function __construct() {
+
+        $this->repository = new WorkshopRepository;
+        // parent::__construct();
+
+    }
+
     public function index()
     {
-        $workshops = Workshop::all()->sortByDesc("id");
-        return view('admin.workshops')->with('workshop',$workshops);
+        $workshops = $this->repository->getAll();
+        return view('admin.workshops.workshops')->with('workshop',$workshops); 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        return view('admin.create');
+        return view('admin.workshops.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function save(Request $request)
     {
-        $request->validate([
-            // 'file' => 'required|mimes:jpg,png|max:2048',
-            'title'=> 'required',
-            'details' => 'required',
-            'age'  => 'required',
-            'duration'  => 'required',
-            'format'  => 'required'
-        ]);
-
-/*         $fileName = time().'.'.$request->file->extension();
-        $request->file->move(public_path('storage'), $fileName); */
-        // $url_file = Storage::url($fileName);
-        $workshops = new Workshop();
-        $workshops->title = $request->get('title');
-        $workshops->details = $request->get('details');
-        // $workshops->image = $url_file;
-        $workshops->age = $request->get('age');
-        $workshops->duration = $request->get('duration');
-        $workshops->format = $request->get('format');
-        $workshops->save();
-        return redirect('/pruebas');
+        $this->repository->saveWorkshop($request);
+        return $this->index();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Request $request, $id)
     {
-        $workshop = Workshop::find($id);
+        $workshop=$this->repository->editWorkshop($request,$id);
         if(!$workshop){
             return view('workshop.notexist');
         }
-
-        return view('admin.edit')->with('workshop',$workshop);
+        return view('admin.workshops.edit')->with('workshop',$workshop);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        $request->validate([
-            // 'file' => 'required|mimes:jpg,png|max:2048',
-            'title'=> 'required',
-            'details' => 'required',
-            'age'  => 'required',
-            'duration'  => 'required',
-            'format'  => 'required'
-        ]);
-
-/*         $fileName = time().'.'.$request->file->extension();
-        $request->file->move(public_path('storage'), $fileName); */
-        // $url_file = Storage::url($fileName);
-        $workshop = Workshop::find($id);
-        $workshop->title = $request->get('title');
-        $workshop->details = $request->get('details');
-        // $workshops->image = $url_file;
-        $workshop->age = $request->get('age');
-        $workshop->duration = $request->get('duration');
-        $workshop->format = $request->get('format');
-        $workshop->save();
-        return view('/pruebas')->with('workshop',$workshop);
+        $workshop = $this->repository->getAll();
+        $this->repository->updateWorkshop($request,$id);
+        return view('/workshops')->with('workshop',$workshop);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Request $request)
     {
-        $workshop = workshop::find($request->id);        
-        $workshop->delete();
-        return redirect('/admin/workshops');
+        $this->repository->destroyWorkshop($request);
+        return redirect('/admin/workshops/workshops');
     }
 }

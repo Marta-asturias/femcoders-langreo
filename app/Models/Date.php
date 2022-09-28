@@ -11,4 +11,8 @@ class Date extends Model
     protected $fillable = [
         'date',
     ];
+
+    public function workshops(){
+        return $this->belongsToMany(Workshop::class)->withTimestamps();;
+}
 }

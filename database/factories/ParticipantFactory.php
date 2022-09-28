@@ -13,15 +13,18 @@ class ParticipantFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'first_name' => $this->faker->firstname,
-            'last_name' => $this->faker->lastName,
-            'birth_date' => $this->faker->date(),
-            'email' => $this->faker->unique()->safeEmail,
-            'whatsapp' => $this->faker->phoneNumber,
-            'city' => $this->faker->city(),
-            'how_did_you_meet_us' => $this->faker->sentence(4),
-            'legals' => $this->faker->boolean(),
-        ];
+        
+            return [
+                'first_name' => $this->faker->name(),
+                "last_name"=> $this->faker->name(),
+                "birth_date"=> $this->faker->date(),
+                'email'=> $this->faker->name(),
+                "whatsapp"=> $this->faker->name(),
+                "city"=> $this->faker->name(),
+                "how_did_you_meet_us"=> $this->faker->name(),
+                'legals'=>$this->faker->boolean()
+                
+            ]; 
+        
     }
 }

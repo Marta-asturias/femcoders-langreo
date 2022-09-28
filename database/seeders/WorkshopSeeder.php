@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Workshop;
 use Illuminate\Database\Seeder;
 
 class WorkshopSeeder extends Seeder
@@ -13,6 +14,6 @@ class WorkshopSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Workshop::factory()->times(50)->create();
     }
 }

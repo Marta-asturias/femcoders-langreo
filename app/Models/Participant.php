@@ -9,13 +9,17 @@ class Participant extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'first_name',
-        'last_name',
-        'birth_date',
+        'first_name', 
+        "last_name",
+        "birth_date",
         'email',
-        'whatsapp',
-        'city',
-        'how_did_you_meet_us',
-        'legals'
+        "whatsapp",
+        "city",
+        "how_did_you_meet_us",
+        "legals",
     ];
+
+    public function workshops(){
+        return $this->belongsToMany(Workshop::class)->withTimestamps();;
+    }
 }
