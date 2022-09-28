@@ -59,3 +59,9 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+Route::get('/', function () {
+    return view('test');
+}); //Esta ruta la ponemos en la raiz para que nada mas ejecutar nuestra aplicación aparezca nuestro formulario
+
+Route::post('/contactar', 'EmailController@contact')->name('contact');
+//Ruta que esta señalando nuestro formulario
