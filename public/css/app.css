@@ -1626,7 +1626,7 @@ footer .social-networks .networks img {
 .conten-clain .text-clain .txt-clain {
   line-height: 2em;
   text-align: justify;
-  color: #f6f3ef;
+  color: #f1eff6;
   font-family: Open Sans;
   font-weight: regular;
   font-size: 25px;
@@ -1666,4 +1666,8 @@ footer .social-networks .networks img {
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.card {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4499999881);
 }
