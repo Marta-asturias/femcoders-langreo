@@ -1624,6 +1624,7 @@ footer .social-networks .networks img {
   top: 80px;
   width: 40%;
   height: 100px;
+  opacity: 90%;
 }
 .conten-clain .text-clain .txt-clain {
   color: #f6f3ef;
@@ -1745,4 +1746,50 @@ footer .social-networks .networks img {
 }
 .mini-game .btn-mj2 .btn-b:hover {
   color: #f6f3ef;
+}
+
+.conten-resources {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background: #fed2c0;
+  border-top: 1px solid #ff4300;
+  border-bottom: 1px solid #ff4300;
+}
+.conten-resources .title-resources {
+  padding-top: 1%;
+  margin-bottom: 1%;
+  color: #020100;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 30px;
+}
+.conten-resources .card-img-top-end {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #ff4300;
+}
+.conten-resources .btn-R {
+  width: 10%;
+  padding: 1%;
+}
+.conten-resources .btn-R .R-btn {
+  padding: 2%;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  border: 2px solid #ff4300;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
