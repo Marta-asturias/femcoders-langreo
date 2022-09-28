@@ -1606,8 +1606,6 @@ footer .social-networks .networks img {
 
 .conten-clain {
   position: relative;
-  margin-top: 1%;
-  margin-bottom: 1%;
 }
 .conten-clain .img-principal {
   overflow: hidden;
@@ -1626,10 +1624,9 @@ footer .social-networks .networks img {
   height: 100px;
 }
 .conten-clain .text-clain .txt-clain {
-  color: #f6f3ef;
-  -webkit-text-stroke: 1.5px black;
-  line-height: 1.5em;
+  line-height: 2em;
   text-align: justify;
+  color: #f6f3ef;
   font-family: Open Sans;
   font-weight: regular;
   font-size: 25px;
