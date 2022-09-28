@@ -20,11 +20,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(
+       /*  $this->call(
             [
                 WorkshopSeeder::class
             ]
-            );
+            ); */
       
         DB::statement("SET foreign_key_checks=0");
             DB::table('participant_workshop')->truncate();
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
         if ($participant) {
             $participant->delete();
         }
-        $participant= Participant::create([
+/*         $participant= Participant::create([
             'first_name' =>'admin',
             'last_name'=>'admin',
             'birth_date'=>'1985-11-02',
@@ -66,9 +66,9 @@ class DatabaseSeeder extends Seeder
                 'format'=> 'hola',
            
               
-        ]);
+        ]); */
 
-        $date= Date::create([
+/*         $date= Date::create([
             'date' =>'2021-03-12',
            
        
@@ -78,7 +78,7 @@ class DatabaseSeeder extends Seeder
            
 
         $participant->workshops()->sync([ $workshop->id ]);
-        $date->workshops()->sync([ $workshop->id ]);
+        $date->workshops()->sync([ $workshop->id ]); */
         
         //table role_user
        
