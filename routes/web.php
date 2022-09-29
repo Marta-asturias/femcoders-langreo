@@ -20,12 +20,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
+
+
 Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
-Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
 
 Route::get('/', function () {
-    return view('welcome');
 });
+
+
+Route::get('/admin/workshops', [WorkshopController::class, 'index' ])->name("workshops");
+Route::get('/admin/create', [WorkshopController::class, 'create' ])->name("create");
+Route::post('/admin/create', [WorkshopController::class, 'save' ])->name('admin.save');
+Route::get('/admin/{id}/edit', [WorkshopController::class, 'edit' ])->name("edit");
+Route::put('/admin/{id}/edit', [WorkshopController::class, 'update' ])->name("update");
+
+Route::delete('/admin/workshops', [WorkshopController::class, 'destroy'])->name('destroy');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::get('/admin/workshops/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('/admin/minigames/minigames', [MiniGamesController::class, 'index' ])->name("admin.minigames");
@@ -56,6 +69,7 @@ Route::delete('/admin/resources/resources', [ResourcesController::class, 'destro
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
 
 require __DIR__.'/auth.php';
 
