@@ -2,5 +2,6 @@
 <x-header/> 
 <x-seccionclain/>
 <x-mini-game/>
-<x-resources/>
+<x-seccion-courses/>
+<x-seccionresources/>
 <x-footer/>
