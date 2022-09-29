@@ -1977,3 +1977,26 @@ footer .social-networks .networks img {
 .contenedor-MG .button-cardsMG .btnMG:hover {
   color: #ff4300;
 }
+
+.txt-principal-MG {
+  color: #060300;
+  font-family: Open Sans;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  font-size: 50px;
+  margin: 4%;
+}
+.txt-principal-MG .title-principal-MG {
+  text-align: center;
+}
+
+.img-principal-MG {
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-principal-MG img {
+  width: 100%;
+}
