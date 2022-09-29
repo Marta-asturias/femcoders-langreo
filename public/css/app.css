@@ -1906,3 +1906,72 @@ footer .social-networks .networks img {
 .btn2-cuorses .C2-btn:hover {
   color: #ff4300;
 }
+
+.contenedor-MG {
+  margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contenedor-MG .card-homeMG {
+  margin: 2%;
+  width: 19%;
+  height: 500px;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4499999881);
+}
+.contenedor-MG .card-homeMG .img-cardMG {
+  width: 95%;
+  height: 250px;
+}
+.contenedor-MG .card-homeMG .img-cardMG img {
+  width: 95%;
+  height: 200px;
+}
+.contenedor-MG .card-bodyMG {
+  margin-top: 2%;
+  height: 250px;
+  width: 95%;
+}
+.contenedor-MG .card-bodyMG .card-titleMG {
+  padding: 2%;
+}
+.contenedor-MG .card-bodyMG .card-titleMG .cardMg-title {
+  font-family: Open Sans;
+  font-size: 25px;
+}
+.contenedor-MG .card-bodyMG .card-titleMG .cardMg-text {
+  font-family: Open Sans;
+  text-align: justify;
+  word-wrap: break-word;
+  font-size: 18px;
+}
+.contenedor-MG .card-bodyMG .card-titleMG .cardMg-text1 {
+  font-family: Open Sans;
+  font-size: 18px;
+}
+.contenedor-MG .button-cardsMG {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor-MG .button-cardsMG .btnMG {
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 18px;
+  margin: 1%;
+  width: 80%;
+  background: #fed2c0;
+  border: 2px solid #ff4300;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.contenedor-MG .button-cardsMG .btnMG:hover {
+  color: #ff4300;
+}
