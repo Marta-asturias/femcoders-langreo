@@ -1771,10 +1771,13 @@ footer .social-networks .networks img {
 }
 .conten-resources .card-img-top-end {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
+  border-radius: 50%;
   width: 200px;
   height: 200px;
-  border-radius: 50%;
   border: 2px solid #ff4300;
+  padding: 4%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .conten-resources .btn-R {
   width: 10%;

@@ -4,11 +4,18 @@
     </div>
 
     <div class="card-end">
-        <img src="{{ asset('img/foto0.jpeg') }}" class="card-img-top-end" alt="">
+        <img src="{{ asset('img/google.png') }}"  class="card-img-top-end" alt="">
     </div>
 
     <div class="card-end">
-        <img src="{{ asset('img/foto0.jpeg') }}" class="card-img-top-end" alt="">
+        <img src="{{ asset('img/factoria-web.png') }}" class="card-img-top-end" alt="">
+    </div>
+    <div class="card-end">
+        <img src="{{ asset('img/logofempng.png') }}" class="card-img-top-end" alt="">
+    </div>
+
+    <div class="card-end">
+        <img src="{{ asset('img/google.png') }}" class="card-img-top-end" alt="">
     </div>
 
     <div class="btn-R"> 
