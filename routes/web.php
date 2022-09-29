@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\MiniGamesController;
 use App\Http\Controllers\ResourcesController;
@@ -24,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
 Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
 Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
+Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("adminwelcome");
 
 Route::get('/', function () {
     return view('welcome');
