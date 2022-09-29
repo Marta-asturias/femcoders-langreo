@@ -6,11 +6,12 @@
 
 <div class="text-clain">
 <p class="txt-clain">
+    <strong>
 ¿Conoces a Ada Lovelace o Grae Hopper? Son sólo dos ejemplo de las numerosas mujeres que revolucionaron el mundo de la tecnología. Es hora de volver a cambiar la historia y romper los estereotipos, porque... ¡Todas podemos aprender a programar¡
 Tú también puedes apender a crear tu propia app, juegos o páginas web.
 ¡Es mucho más facil y divertido de lo que te imaginas!
 Atrévete a descubrir cómo funciona el código, y comprueba por ti misma que la tecnología ¡mola! 
-</p>
+</strong></p>
 </div>
 
 <div class="img-logo">
@@ -27,9 +28,9 @@ Atrévete a descubrir cómo funciona el código, y comprueba por ti misma que la
     
 </div>
 
-<div class="btn-clain">
-    <a href="{{ url('/register') }}" class="btn-A">Apuntate Gratis</a>
-</div>
+<button class="btn-clain">
+    <a href="{{ url('/') }}" class="btn-A">Apuntate Gratis</a>
+</button>
 
 </section>
 

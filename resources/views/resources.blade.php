@@ -1,6 +1,5 @@
 <x-head/> 
 <x-header/>
-<app-layouts>
 
 
 
@@ -8,5 +7,4 @@
 
 
 
-</app-layouts>
 <x-footer/>

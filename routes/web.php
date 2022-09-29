@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\AdminWelcomeController;
+use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\MiniGamesController;
 use App\Http\Controllers\ResourcesController;
+use App\Http\Controllers\ShowUserController;
 use App\Http\Controllers\UserMiniGamesController;
 use App\Http\Controllers\UserResourcesController;
 use App\Http\Controllers\UserWorkshopsController;
@@ -23,6 +26,8 @@ Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->nam
 
 
 Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
+Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
+Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("adminwelcome");
 
 Route::get('/', function () {
 });
@@ -41,6 +46,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/admin/workshops/workshops', [WorkshopController::class, 'index' ])->name("workshops");
+Route::get('/admin/users/users', [ShowUserController::class, 'index' ])->name("users");
+Route::delete('/admin/users/users', [DeleteUserController::class, 'destroy'])->name('destroyUser');
+
 Route::get('/admin/minigames/minigames', [MiniGamesController::class, 'index' ])->name("admin.minigames");
 Route::get('/admin/resources/resources', [ResourcesController::class, 'index' ])->name("admin.resources");
 Route::get('/admin/workshops/workshops', [WorkshopController::class, 'index' ])->name("workshops");

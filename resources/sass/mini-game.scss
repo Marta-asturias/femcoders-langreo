@@ -1,0 +1,80 @@
+.mini-game{
+    width: 100%;
+    height: 500px;
+    background: #4311b9;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    .title-mg{
+        padding-top:1%;
+        margin-bottom:1%;
+        color: #f6f3ef;
+        text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+        text-align: center;
+        font-family:Open Sans;
+        font-size: 30px;
+    }
+
+    .cardMj{
+        box-shadow:4px 4px 4px rgba(0, 0, 0, 0.44999998807907104);
+        margin: 1%;
+        padding: 1%;
+        width: 15%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .card-mj{
+            width: 100%;
+            height: 280px;
+        }
+        .mjtitle{
+            color: #f6f3ef;
+            font-family:Open Sans;
+            text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+            font-size: 20px;
+            margin: 1%;
+
+        }
+        .btnMjCard{
+            margin: 1%;
+            color: #4311b9;
+            background:rgba(203.00000309944153, 191.00000381469727, 232.00000137090683, 1);
+            border: solid #4311b9 1px;	
+            width: 75%;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            text-align: center;
+        }
+        .btnMjCard:hover{
+            color: #f6f3ef;
+        }
+        
+    }
+
+    .btn-mj2{
+        display: flex;
+        justify-content: center;
+        .btn-b{
+        color: #4311b9;
+        font-family:Open Sans;
+        font-weight:bold;
+        font-size: 18px;
+        text-align: center;
+        background:rgba(203.00000309944153, 191.00000381469727, 232.00000137090683, 1);
+        border: solid #4311b9 2px;	
+        width:180px;
+        height:35px;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom-left-radius:20px;
+        border-bottom-right-radius:20px;
+        }
+        .btn-b:hover{
+            color: #f6f3ef;
+        }
+    }
+}

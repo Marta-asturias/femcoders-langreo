@@ -14,14 +14,16 @@ position: relative;
     .text-clain{
         position:absolute; left: 50px; top: 80px;
         width: 40%;
-        height: 100px;
+        height: 100px;  
+        opacity: 90%;
         .txt-clain{
-            line-height:2em;
-            text-align: justify;
             color: #f6f3ef;
+            -webkit-text-stroke: 1.5px black;
+            line-height:1.5em;
+            text-align: justify;
             font-family:Open Sans;
-            font-weight:regular;
             font-size: 25px;
+
         }
     }
 
