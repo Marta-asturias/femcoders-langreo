@@ -16,7 +16,11 @@ class Participant extends Model
         "whatsapp",
         "city",
         "how_did_you_meet_us",
+<<<<<<< HEAD
+        // "legals",
+=======
         "legals",
+>>>>>>> 8275c5bd88a6d9b684ce9668e86ada2081b00f98
     ];
 
     public function workshops(){

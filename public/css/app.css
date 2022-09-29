@@ -1522,6 +1522,8 @@ input::placeholder, textarea::placeholder {
     padding-right: 2rem;
   }
 }
+<<<<<<< HEAD
+=======
 .header {
   display: flex;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4499999881);
@@ -1667,3 +1669,4 @@ footer .social-networks .networks img {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+>>>>>>> 8275c5bd88a6d9b684ce9668e86ada2081b00f98
