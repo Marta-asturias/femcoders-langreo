@@ -11,8 +11,8 @@
         </div>
 </div>
 
-<button class="btn-mj2">
+<div class="btn-mj2">
     <a href="{{ url('/minigames') }}" class="btn-b">Ver Más</a>
-</button>
+</div>
 
 </section>
