@@ -27,14 +27,10 @@ private Participant $Participant;
             'duration'  => 'required',
             'format'  => 'required'
         ]);
-        $fileName = time().'.'.$request->file->extension();
-        $request->file->move(public_path('storage'), $fileName);
-        $url_file = Storage::url($fileName);
         $this->workshop->title = $request->get('title');
         $this->workshop->details = $request->get('details');
         $this->workshop->image = $url_file;
         $this->workshop->age = $request->get('age');
         $this->workshop->duration = $request->get('duration');
-        $this->workshop->format = $request->get('format');
         return $this->workshop->save();    
     }
