@@ -1625,9 +1625,10 @@ footer .social-networks .networks img {
   opacity: 90%;
 }
 .conten-clain .text-clain .txt-clain {
-  line-height: 2em;
-  text-align: justify;
   color: #f6f3ef;
+  -webkit-text-stroke: 1.5px black;
+  line-height: 1.5em;
+  text-align: justify;
   font-family: Open Sans;
   font-size: 25px;
 }
