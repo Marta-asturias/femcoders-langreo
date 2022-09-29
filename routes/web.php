@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\MiniGamesController;
 use App\Http\Controllers\ResourcesController;
+use App\Http\Controllers\ShowUserController;
 use App\Http\Controllers\UserMiniGamesController;
 use App\Http\Controllers\UserResourcesController;
 use App\Http\Controllers\UserWorkshopsController;
@@ -20,14 +22,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
-Route::get('/minigames', [UserMiniGamesController::class, 'index' ])->name("minigames");
-Route::get('/resources', [UserResourcesController::class, 'index' ])->name("resources");
+Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
+Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/admin/workshops/workshops', [WorkshopController::class, 'index' ])->name("workshops");
+Route::get('/admin/users/users', [ShowUserController::class, 'index' ])->name("users");
+Route::delete('/admin/users/users', [DeleteUserController::class, 'destroy'])->name('destroyUser');
+
 Route::get('/admin/minigames/minigames', [MiniGamesController::class, 'index' ])->name("admin.minigames");
 Route::get('/admin/resources/resources', [ResourcesController::class, 'index' ])->name("admin.resources");
 Route::get('/admin/workshops/workshops', [WorkshopController::class, 'index' ])->name("workshops");
@@ -38,16 +43,24 @@ Route::put('/admin/workshops/{id}/edit', [WorkshopController::class, 'update' ])
 Route::delete('/admin/workshops/workshops', [WorkshopController::class, 'destroy'])->name('destroy');
 
 
-Route::get('/admin/resources/create', [MiniGamesController::class, 'create' ])->name("create");
-Route::post('/admin/resources/create', [MiniGamesController::class, 'save' ])->name('admin.save');
-Route::get('/admin/resources/{id}/edit', [MiniGamesController::class, 'edit' ])->name("edit");
-Route::put('/admin/resources/{id}/edit', [MiniGamesController::class, 'update' ])->name("update");
+Route::get('/admin/minigames/create', [MiniGamesController::class, 'create' ])->name("minigame.create");
+Route::post('/admin/minigames/create', [MiniGamesController::class, 'save' ])->name('minigame.save');
+Route::get('/admin/minigames/{id}/edit', [MiniGamesController::class, 'edit' ])->name("minigame.edit");
+Route::put('/admin/minihames/{id}/edit', [MiniGamesController::class, 'update' ])->name("minigame.update");
+Route::delete('/admin/minigames/minigames', [MiniGamesController::class, 'destroy' ])->name("minigame.destroy");
+
+
+Route::get('/admin/resources/create', [ResourcesController::class, 'create' ])->name("resource.create");
+Route::post('/admin/resources/create', [ResourcesController::class, 'save' ])->name('resource.save');
+Route::get('/admin/resources/{id}/edit', [ResourcesController::class, 'edit' ])->name("resource.edit");
+Route::put('/admin/resources/{id}/edit', [ResourcesController::class, 'update' ])->name("resource.update");
+Route::delete('/admin/resources/resources', [ResourcesController::class, 'destroy' ])->name("resource.destroy");
 
 
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth','verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 

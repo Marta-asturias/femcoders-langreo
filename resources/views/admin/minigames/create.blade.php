@@ -14,7 +14,7 @@
         </ul>
         </div>
         @endif 
-    <form action="{{ route('resource.save') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('minigame.save') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     <div class="tile-create">
