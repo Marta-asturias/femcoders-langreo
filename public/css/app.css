@@ -1691,6 +1691,7 @@ footer .social-networks .networks img {
 }
 .mini-game .cardMj {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
+  background: #cbbfe8;
   margin: 1%;
   padding: 1%;
   width: 15%;
@@ -1702,14 +1703,14 @@ footer .social-networks .networks img {
 }
 .mini-game .cardMj .card-mj {
   width: 100%;
-  height: 280px;
+  height: 200px;
 }
 .mini-game .cardMj .mjtitle {
   color: #f6f3ef;
   font-family: Open Sans;
   text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
   font-size: 20px;
-  margin: 1%;
+  margin: 10%;
 }
 .mini-game .cardMj .btnMjCard {
   margin: 1%;
@@ -1773,8 +1774,8 @@ footer .social-networks .networks img {
 .conten-resources .card-img-top-end {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border: 2px solid #ff4300;
   padding: 4%;
   -o-object-fit: fill;

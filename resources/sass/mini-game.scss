@@ -16,6 +16,7 @@
 
     .cardMj{
         box-shadow:4px 4px 4px rgba(0, 0, 0, 0.44999998807907104);
+        background: #cbbfe8;
         margin: 1%;
         padding: 1%;
         width: 15%;
@@ -27,14 +28,14 @@
 
         .card-mj{
             width: 100%;
-            height: 280px;
+            height: 200px;
         }
         .mjtitle{
             color: #f6f3ef;
             font-family:Open Sans;
             text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
             font-size: 20px;
-            margin: 1%;
+            margin: 10%;
 
         }
         .btnMjCard{
