@@ -11,7 +11,7 @@
           <p class="datos">Whatsapp: {{$participant->whatsapp}}</p>
           <p class="datos">Ciudad: {{$participant->city}}</p>
           <p class="datos">¿Cómo nos conociste?: {{$participant->how_did_you_meet_us}}</p>
-          <p class="datos">¿Cómo nos conociste?: {{$participant->legals}}</p>
+          <p class="datos">Bases legales: {{$participant->legals}}</p>
           
       </div>
       </div>
