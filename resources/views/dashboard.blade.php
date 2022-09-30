@@ -25,7 +25,7 @@
         <div class="card-body">
           <h5 class="card-title h6">Talleres</h5>
           <p class="card-text">Crea, edita y borra tus talleres.</p>
-          <a href="#" class="btn btn-primary m-4">Ingresar</a>
+          <a href="{{ url('/admin/workshops/workshops') }}"  class="btn btn-primary m-4">Ingresar</a>
         </div>
       </div>
 
@@ -34,7 +34,7 @@
         <div class="card-body">
           <h5 class="card-title h6">Mini Juegos</h5>
           <p class="card-text">Crea, edita y borra tus mini juegos.</p>
-          <a href="#" class="btn btn-primary m-4">Ingresar</a>
+          <a href="{{ url('/admin/minigames/minigames') }}"  class="btn btn-primary m-4">Ingresar</a>
         </div>
       </div>
 
@@ -43,7 +43,7 @@
         <div class="card-body">
           <h5 class="card-title h6">Recursos externos</h5>
           <p class="card-text">Crea, edita y borra tus recursos.</p>
-          <a href="#" class="btn btn-primary m-4">Ingresar</a>
+          <a href="{{ url('/admin/resources/resources') }}"  class="btn btn-primary m-4">Ingresar</a>
         </div>
       </div>
 </div>
