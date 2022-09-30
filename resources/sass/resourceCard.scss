@@ -1,27 +1,68 @@
 .contenedor-cartasR{
-    width: 100%;
-    border: solid 1px black;
-    .cardR{border: solid 1px black;
-
+    margin: 1%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;    
+    .cardR{
+        width: 15%;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow:4px 4px 4px 4px rgba(0, 0, 0, 0.44999998807907104);
+        
         .img-cardR{
-            border: solid 1px black;
+            width: 100%;
+            height: 240px;
+            padding: 1%;
+            img{
+                width: 100%;
+                height: 240px;
+                padding: 1%
+            }
         }
 
         .card-bodyR{
-            border: solid 1px black;
+            width: 100%;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             .card-title2R{
-                border: solid 1px black;
+                padding-left: 5%;
+                width: 100%;
+                height: 40%;
                 .card-titleR{
-                    border: solid 1px black;
+                    width: 100%;
+                    font-family:Open Sans;
+                    text-align: justify;
+                    word-wrap: break-word;
                 }
             }
-
+        
             .button-cardsR{
-                border: solid 1px black;
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: center;
                 .btnR{
-                    border: solid 1px black;
+                    width: 70%;
+                    height: 23px;
+                    border: solid 1px #ff4300;
+                    background: #fed2c0;
+                    text-align: center;
+                    border-top-left-radius:20px;
+                    border-top-right-radius:20px;
+                    border-bottom-left-radius:20px;
+                    border-bottom-right-radius:20px;
+                }
+                .btnR:hover{
+                    color:#ff4300;
                 }
             }
+            
         }
     }
 }
