@@ -7,3 +7,53 @@
 @import 'mini-game';
 @import 'seccionresources';
 @import 'seccioncourses';
+@import 'miniGameCard';
+@import 'resourceCard';
+
+
+//Mini Game View main image and text
+.txt-principal-MG{
+    color: #060300;
+    font-family:Open Sans;
+    text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+    font-size: 50px;
+    margin: 4%;
+    .title-principal-MG{
+        text-align: center;
+    }
+}
+
+.img-principal-MG{ 
+    overflow:hidden;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 100%;
+    }
+}
+//Resources View main image and text
+.title-principalR{
+    color: #060300;
+    font-family:Open Sans;
+    text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+    font-size: 50px;
+    margin: 2%;
+    .txt-principalR{
+        text-align: center;
+    }
+}
+
+.img-principalR{ 
+    overflow:hidden;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 100%;
+    }
+}

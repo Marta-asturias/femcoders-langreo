@@ -1691,6 +1691,7 @@ footer .social-networks .networks img {
 }
 .mini-game .cardMj {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
+  background: #cbbfe8;
   margin: 1%;
   padding: 1%;
   width: 15%;
@@ -1702,14 +1703,14 @@ footer .social-networks .networks img {
 }
 .mini-game .cardMj .card-mj {
   width: 100%;
-  height: 280px;
+  height: 200px;
 }
 .mini-game .cardMj .mjtitle {
   color: #f6f3ef;
   font-family: Open Sans;
   text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
   font-size: 20px;
-  margin: 1%;
+  margin: 10%;
 }
 .mini-game .cardMj .btnMjCard {
   margin: 1%;
@@ -1773,8 +1774,8 @@ footer .social-networks .networks img {
 .conten-resources .card-img-top-end {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border: 2px solid #ff4300;
   padding: 4%;
   -o-object-fit: fill;
@@ -1904,4 +1905,186 @@ footer .social-networks .networks img {
 }
 .btn2-cuorses .C2-btn:hover {
   color: #ff4300;
+}
+
+.contenedor-MG {
+  margin: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contenedor-MG .card-homeMG {
+  margin: 2%;
+  width: 19%;
+  height: 500px;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4499999881);
+}
+.contenedor-MG .card-homeMG .img-cardMG {
+  width: 95%;
+  height: 250px;
+}
+.contenedor-MG .card-homeMG .img-cardMG img {
+  width: 95%;
+  height: 200px;
+}
+.contenedor-MG .card-bodyMG {
+  margin-top: 2%;
+  height: 250px;
+  width: 95%;
+}
+.contenedor-MG .card-bodyMG .card-titleMG {
+  padding: 2%;
+}
+.contenedor-MG .card-bodyMG .card-titleMG .cardMg-title {
+  font-family: Open Sans;
+  font-size: 25px;
+}
+.contenedor-MG .card-bodyMG .card-titleMG .cardMg-text {
+  font-family: Open Sans;
+  text-align: justify;
+  word-wrap: break-word;
+  font-size: 18px;
+  height: 120px;
+  margin-top: 5%;
+}
+.contenedor-MG .card-bodyMG .card-titleMG .cardMg-text1 {
+  font-family: Open Sans;
+  font-size: 18px;
+}
+.contenedor-MG .button-cardsMG {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor-MG .button-cardsMG .btnMG {
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 18px;
+  margin: 1%;
+  width: 80%;
+  background: #fed2c0;
+  border: 2px solid #ff4300;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.contenedor-MG .button-cardsMG .btnMG:hover {
+  color: #ff4300;
+}
+
+.contenedor-cartasR {
+  margin: 1%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.contenedor-cartasR .cardR {
+  width: 15%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
+}
+.contenedor-cartasR .cardR .img-cardR {
+  width: 100%;
+  height: 240px;
+  padding: 1%;
+}
+.contenedor-cartasR .cardR .img-cardR img {
+  width: 100%;
+  height: 240px;
+  padding: 1%;
+}
+.contenedor-cartasR .cardR .card-bodyR {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.contenedor-cartasR .cardR .card-bodyR .card-title2R {
+  padding-left: 5%;
+  width: 100%;
+  height: 40%;
+}
+.contenedor-cartasR .cardR .card-bodyR .card-title2R .card-titleR {
+  width: 100%;
+  font-family: Open Sans;
+  text-align: justify;
+  word-wrap: break-word;
+}
+.contenedor-cartasR .cardR .card-bodyR .button-cardsR {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+.contenedor-cartasR .cardR .card-bodyR .button-cardsR .btnR {
+  width: 70%;
+  height: 23px;
+  border: solid 1px #ff4300;
+  background: #fed2c0;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.contenedor-cartasR .cardR .card-bodyR .button-cardsR .btnR:hover {
+  color: #ff4300;
+}
+
+.txt-principal-MG {
+  color: #060300;
+  font-family: Open Sans;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  font-size: 50px;
+  margin: 4%;
+}
+.txt-principal-MG .title-principal-MG {
+  text-align: center;
+}
+
+.img-principal-MG {
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-principal-MG img {
+  width: 100%;
+}
+
+.title-principalR {
+  color: #060300;
+  font-family: Open Sans;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  font-size: 50px;
+  margin: 2%;
+}
+.title-principalR .txt-principalR {
+  text-align: center;
+}
+
+.img-principalR {
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-principalR img {
+  width: 100%;
 }
