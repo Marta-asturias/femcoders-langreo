@@ -1,36 +1,32 @@
 <?php
 
-namespace App\Repositories\Workshop;
+namespace App\Http\Controllers;
 
-use App\Models\Participant;
+use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
-class ParticipantRepository  {
-private Participant $Participant;
+
+
+class ParticipantController  {
+private ParticipantRepository $participant;
 
     public function __construct() {
-    $this->participant= new Participant(); 
+    $this->participant= new ParticipantRepository(); 
     }
 
-    public function getAll(){
+    public function index(){
     return $this->participant->all()->sortByDesc("id");
+    return view("participant")->with('participant', $participant);
     }
 
-    public function saveParticipant(Request $request)
-    {  
-        $request->validate([     
-            'file' => 'required|mimes:jpg,png|max:2048',
-            'title'=> 'required', 
-            'details' => 'required',
-            'age'  => 'required',
-            'duration'  => 'required',
-            'format'  => 'required'
-        ]);
-        $this->workshop->title = $request->get('title');
-        $this->workshop->details = $request->get('details');
-        $this->workshop->image = $url_file;
-        $this->workshop->age = $request->get('age');
-        $this->workshop->duration = $request->get('duration');
-        return $this->workshop->save();    
+    public function createParticipant(){
+        return view("welcome");
+
     }
+
+    public function save(Request $request)
+    {
+        $this->repository->saveParticipant($request);
+        return $this->index();
+    }
+}

@@ -1,6 +1,6 @@
-<div class="description-container">
+{{-- <div class="description-container">
     @foreach ($participant as $participants)
-    <form method="POST" action="{{route('description.update', $participant)}}" enctype="multipart/form-data">
+    <form method="POST" action="{{route('inscription', $participant)}}" enctype="multipart/form-data">
       @csrf
       @method('PUT')
       
@@ -24,4 +24,4 @@
          <button href="" class="description-button">Solicitar Plaza</button>
       </div>
       @endforeach
-  </div>
+  </div> --}}
