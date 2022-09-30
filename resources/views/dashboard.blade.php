@@ -1,56 +1,51 @@
 <x-head/>
-{{-- <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout> --}}
+<body>
+  
+@include('layouts.navigation')
+<main>
+<div class="d-flex p-2 flex-column align-items-center">
+<h1 class=" h1 mt-3" style="max-width: 100%">Panel Administrador</h1>
 
-<div class="adminCard flex">
-    <div class="card admin" style="width: 18rem;">
+ <p class="text-center mt-3"  style="max-width:50%">Aquí podrás administrar todas las funcionalidades de tu página.<br>Haz clic en la sección que deseas modificar, donde podrás visualizar la información, crear, actualizar o borrar, según necesites.
+  Recuerda que cualquier incidencia puedes comunicarla a mazmorraf5@gmail.com</p>
+</div>
+<div class="adminCard d-flex align-items-center p-5">
+    <div class="card admin align-middle mx-auto text-center text-wrap p-2 " style="width: 14rem;">
         <img src="{{ asset('img/admin.webp') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Administradores</h5>
+          <h3 class="card-title h6">Administradores</h3>
           <p class="card-text">Crea, edita y borra tus administradores.</p>
-          <a href="#" class="btn btn-primary">Ingresar</a>
+          <a href="#" class="btn btn-primary m-4">Ingresar</a>
         </div>
       </div>
 
-      <div class="card workshops" style="width: 18rem;">
-        <img src="{{ asset('img/workshops.jpg') }}" class="card-img-top" alt="...">
+      <div class="card admin align-middle mx-auto text-center text-wrap " style="width: 14rem;">
+        <img src="{{ asset('img/workshops-.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Talleres</h5>
+          <h5 class="card-title h6">Talleres</h5>
           <p class="card-text">Crea, edita y borra tus talleres.</p>
-          <a href="#" class="btn btn-primary">Ingresar</a>
+          <a href="#" class="btn btn-primary m-4">Ingresar</a>
         </div>
       </div>
 
-      <div class="card minigames" style="width: 18rem;">
+      <div class="card admin align-middle mx-auto text-center text-wrap " style="width: 14rem;">
         <img src="{{ asset('img/foto3.jpeg') }}" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Mini Juegos</h5>
+          <h5 class="card-title h6">Mini Juegos</h5>
           <p class="card-text">Crea, edita y borra tus mini juegos.</p>
-          <a href="#" class="btn btn-primary">Ingresar</a>
+          <a href="#" class="btn btn-primary m-4">Ingresar</a>
         </div>
       </div>
 
-      <div class="card resources" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+      <div class="card admin align-middle mx-auto text-center text-wrap " style="width: 14rem;">
+        <img src="{{ asset('img/recursos.jpg') }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Recursos externos</h5>
+          <h5 class="card-title h6">Recursos externos</h5>
           <p class="card-text">Crea, edita y borra tus recursos.</p>
-          <a href="#" class="btn btn-primary">Ingresar</a>
+          <a href="#" class="btn btn-primary m-4">Ingresar</a>
         </div>
       </div>
 </div>
+<main>
+</body>
