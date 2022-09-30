@@ -8,15 +8,17 @@ use Illuminate\Http\Request;
 
 
 class ParticipantController  {
-private ParticipantRepository $participant;
+
+private ParticipantRepository $repository;
 
     public function __construct() {
-    $this->participant= new ParticipantRepository(); 
+    $this->repository= new ParticipantRepository(); 
     }
 
     public function index(){
-    return $this->participant->all()->sortByDesc("id");
-    return view("participant")->with('participant', $participant);
+    $participant = $this->repository->getall();
+    return view('participant')->with('participant', $participant);
+
     }
 
     public function createParticipant(){

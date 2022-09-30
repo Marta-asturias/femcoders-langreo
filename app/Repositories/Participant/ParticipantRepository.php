@@ -4,7 +4,7 @@ namespace App\Repositories\Participant;
 
 use App\Models\Participant;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+
 
 class ParticipantRepository{
 
@@ -13,7 +13,7 @@ class ParticipantRepository{
     public function __construct() {
         $this->participant= new Participant(); 
         }
-     public function index(){
+     public function getAll(){
         return $this->participant->all()->sortByDesc("id");
         }
      public function saveParticipant(Request $request)

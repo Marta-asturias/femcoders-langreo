@@ -3,14 +3,14 @@
 use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\MiniGamesController;
-use App\Http\Controllers\ParticipantController as ControllersParticipantController;
+use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\ShowUserController;
 use App\Http\Controllers\UserMiniGamesController;
 use App\Http\Controllers\UserResourcesController;
 use App\Http\Controllers\UserWorkshopsController;
 use App\Http\Controllers\WorkshopController;
-use App\Repositories\Participant\ParticipantController;
+use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/participant', [ParticipantController::class, 'create' ])->name("create");
+Route::get('/participant', [ParticipantController::class, 'createParticipant' ])->name("create");
 Route::post('/participant', [ParticipantController::class, 'save' ])->name("inscription");
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
 
