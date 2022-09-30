@@ -1669,8 +1669,91 @@ footer .social-networks .networks img {
   border-bottom-right-radius: 20px;
 }
 
-.card {
-  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4499999881);
+.contenedor-cartasW {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.contenedor-cartasW .cardw {
+  margin: 2%;
+  width: 70%;
+  height: 300px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4499999881);
+  border: solid 1px black;
+}
+.contenedor-cartasW .cardw .img-cardW {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  width: 20%;
+  height: 190px;
+}
+.contenedor-cartasW .cardw .img-cardW .card-imgW {
+  width: 90%;
+  height: 180px;
+}
+.contenedor-cartasW .cardw .img-cardW img {
+  width: 90%;
+  height: 180px;
+}
+.contenedor-cartasW .cardw .separador2 {
+  background: black;
+  text-align: center;
+  width: 100%;
+  height: 2px;
+}
+.contenedor-cartasW .cardw .card-bodyW {
+  width: 70%;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contenedor-cartasW .cardw .card-bodyW .card-title2W {
+  width: 70%;
+  text-align: center;
+  font-family: Open Sans;
+  margin-bottom: 2%;
+  font-size: 25px;
+}
+.contenedor-cartasW .cardw .card-bodyW .card-title2W .card-textW {
+  margin: 1%;
+  text-align: justify;
+  font-family: Open Sans;
+  font-size: 18px;
+}
+.contenedor-cartasW .cardw .card-bodyW .button-cardsW {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor-cartasW .cardw .card-bodyW .button-cardsW .btnyw {
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 18px;
+  margin: 2%;
+  width: 100%;
+  background: #fed2c0;
+  border: 2px solid #ff4300;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.contenedor-cartasW .cardw .card-bodyW .button-cardsW .btnyw:hover {
+  color: #ff4300;
 }
 
 .mini-game {
