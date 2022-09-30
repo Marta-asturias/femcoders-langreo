@@ -2065,3 +2065,26 @@ footer .social-networks .networks img {
 .img-principal-MG img {
   width: 100%;
 }
+
+.title-principalR {
+  color: #060300;
+  font-family: Open Sans;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  font-size: 50px;
+  margin: 2%;
+}
+.title-principalR .txt-principalR {
+  text-align: center;
+}
+
+.img-principalR {
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-principalR img {
+  width: 100%;
+}
