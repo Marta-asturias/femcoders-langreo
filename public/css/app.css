@@ -2126,6 +2126,104 @@ footer .social-networks .networks img {
   color: #ff4300;
 }
 
+.adminHeader {
+  position: absolute;
+  margin-top: 1%;
+  background-color: rgb(203, 191, 232);
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.adminHeader .logo {
+  width: 33%;
+  height: 140px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.adminHeader .logo .img-logo {
+  width: 130px;
+  height: 100px;
+}
+.adminHeader .logo .img-logo img {
+  width: 130px;
+  height: 100px;
+}
+
+.contenD {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contenD .cardD {
+  width: 20%;
+  height: 430px;
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4499999881);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contenD .cardD .car-imgD {
+  width: 90%;
+  height: 300px;
+}
+.contenD .cardD .car-imgD .card-imgD {
+  width: 100%;
+  height: 300px;
+}
+.contenD .cardD .card-bodyD {
+  width: 90%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contenD .cardD .card-bodyD .card-titleD {
+  font-family: Open Sans;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+}
+.contenD .cardD .card-bodyD .card-textD {
+  font-family: Open Sans;
+  font-size: 15px;
+  text-align: justify;
+  width: 100%;
+  height: 30px;
+}
+.contenD .cardD .card-bodyD .btnD {
+  font-family: Open Sans;
+  text-align: center;
+  padding: 1px 50px;
+  position: relative;
+  right: -70px;
+  width: 50%;
+  height: 30px;
+  color: white;
+  border: 1px solid #cbbfe8;
+  background: #4311b9;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.contenD .cardD .card-bodyD .btnD:hover {
+  color: #cbbfe8;
+}
+
+.sesion {
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 .title-principal {
   color: #060300;
   font-family: Open Sans;

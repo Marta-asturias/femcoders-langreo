@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\MiniGamesController;
@@ -80,10 +81,7 @@ Route::delete('/admin/resources/resources', [ResourcesController::class, 'destro
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth','verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
