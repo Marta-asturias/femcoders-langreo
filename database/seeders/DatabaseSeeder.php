@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             [
                 WorkshopSeeder::class
             ]
-            ); */
+            );  */
       
         DB::statement("SET foreign_key_checks=0");
             DB::table('participant_workshop')->truncate();

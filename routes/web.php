@@ -1,13 +1,16 @@
 <?php
 
+use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\MiniGamesController;
+use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\ShowUserController;
 use App\Http\Controllers\UserMiniGamesController;
 use App\Http\Controllers\UserResourcesController;
 use App\Http\Controllers\UserWorkshopsController;
 use App\Http\Controllers\WorkshopController;
+use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,13 +24,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/participant', [ParticipantController::class, 'createParticipant' ])->name("create");
+Route::post('/participant', [ParticipantController::class, 'save' ])->name("inscription");
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
+
+
 Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
 Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
+Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("adminwelcome");
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('/admin/workshops', [WorkshopController::class, 'index' ])->name("workshops");
+Route::get('/admin/create', [WorkshopController::class, 'create' ])->name("create");
+Route::post('/admin/create', [WorkshopController::class, 'save' ])->name('admin.save');
+Route::get('/admin/{id}/edit', [WorkshopController::class, 'edit' ])->name("edit");
+Route::put('/admin/{id}/edit', [WorkshopController::class, 'update' ])->name("update");
+
+Route::delete('/admin/workshops', [WorkshopController::class, 'destroy'])->name('destroy');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::get('/admin/workshops/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('/admin/users/users', [ShowUserController::class, 'index' ])->name("users");
@@ -60,7 +82,9 @@ Route::delete('/admin/resources/resources', [ResourcesController::class, 'destro
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth','verified'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
 
 require __DIR__.'/auth.php';
+
 
