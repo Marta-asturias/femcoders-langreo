@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Participant;
 use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Http\Request;
 
@@ -22,7 +23,7 @@ private ParticipantRepository $repository;
     }
 
     public function createParticipant(){
-        return view("welcome");
+        return view("participant");
 
     }
 

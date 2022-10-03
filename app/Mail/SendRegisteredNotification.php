@@ -11,17 +11,17 @@ class SendRegisteredNotification extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subject = "Inscripción completada con éxito"
+    public $subject = "Inscripción completada con éxito";
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    /* public function __construct()
     {
         //
-    }
+    } */
 
     /**
      * Build the message.

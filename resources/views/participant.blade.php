@@ -1,5 +1,4 @@
-{{-- <x-head/> 
+<x-head/> 
 <x-header/>
-<x-coursesform/>
+<x-courses-form/>
 <x-footer/>
- --}}

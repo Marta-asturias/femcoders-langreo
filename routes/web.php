@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\MiniGamesController;
 use App\Http\Controllers\ParticipantController;
+use App\Http\Controllers\ParticipantViewController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\ShowUserController;
 use App\Http\Controllers\UserMiniGamesController;
