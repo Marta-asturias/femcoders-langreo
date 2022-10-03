@@ -25,7 +25,7 @@ class WorkshopController
 
     public function create()
     {
-        return view('welcome');
+        return view('admin/workshops/create');
     }
 
 

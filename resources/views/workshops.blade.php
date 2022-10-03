@@ -7,11 +7,4 @@
     <img src="{{ asset('img/foto1.jpeg') }}" alt="">
 </div>
 <x-card :workshop="$workshop"/> 
-<<<<<<< HEAD
 <x-footer/>
-=======
-
-
-
-<x-footer/>
->>>>>>> origin/sara
