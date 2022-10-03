@@ -29,11 +29,11 @@
         <x-label class="text-title-c" for="how_did_you_meet_us" :value="__('how_did_you_meet_us')" />
         <x-input id="how_did_you_meet_us" class="input-tilte-create" type="text" name="how_did_you_meet_us" :value="old('how_did_you_meet_us')" required autofocus />
         <x-label class="text-title-c" for="legals" :value="__('legals')" />
-        <x-input id="legals" class="input-tilte-create" type="checkbox" name="legals" :value="old('legals')" required autofocus />
-        </div>
+        <input type="checkbox" class="form-check-input" id="legals" name="legals" value="1">
+        <label class="form-check-label" for="legals">Aceptar condiciones de uso</label>
 
         <div class="btn-create">
-          <button class="btn-c">
+          <button class="btn-c" name="sendForm">
               {{ __('Guardar') }}
           </button>
       </div>
