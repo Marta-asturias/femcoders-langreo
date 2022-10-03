@@ -37,6 +37,8 @@ class ParticipantRepository{
             $this->participant->how_did_you_meet_us = $request->get('how_did_you_meet_us');
             $this->participant->legals = $request->get('legals');
             //pivot workshop
+/*             $participant->workshops()->sync([ $workshop->id ]);
+            $date->workshops()->sync([ $workshop->id ]); */
             return $this->participant->save();    
         }
 
