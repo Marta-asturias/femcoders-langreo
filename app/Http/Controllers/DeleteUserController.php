@@ -22,7 +22,7 @@ private DeleteUserRepository $repository;
     public function destroy(Request $request)
     {
         $this->repository->destroyUser($request);
-        return redirect('/admin/users/users');
+        return redirect('/admin/users/users')->with('status_success', 'Eliminado Correctamente');
     }
 
 }

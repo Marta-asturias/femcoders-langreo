@@ -47,7 +47,8 @@ class WorkshopController
     {
         $workshop = $this->repository->getAll();
         $this->repository->updateWorkshop($request,$id);
-        return view('/workshops')->with('workshop',$workshop);
+       return view('/workshops')->with('workshop',$workshop);
+       
     }
 
     public function destroy(Request $request)

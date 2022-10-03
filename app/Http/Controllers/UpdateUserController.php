@@ -29,7 +29,8 @@ class UpdateUSerController extends Controller
     {
         $user = $this->repository->getAll();
         $this->repository->updateUser($request,$id);
-        return view('/users')->with('user',$user);
+        //return view('/users')->with('user',$user);
+        return redirect()->route('users');
     }
 
 }

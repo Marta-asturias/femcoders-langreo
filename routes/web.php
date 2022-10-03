@@ -4,6 +4,7 @@ use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\MiniGamesController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\ShowUserController;
+use App\Http\Controllers\UpdateUSerController;
 use App\Http\Controllers\UserMiniGamesController;
 use App\Http\Controllers\UserResourcesController;
 use App\Http\Controllers\UserWorkshopsController;
@@ -32,6 +33,8 @@ Route::get('/', function () {
 Route::get('/admin/workshops/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('/admin/users/users', [ShowUserController::class, 'index' ])->name("users");
 Route::delete('/admin/users/users', [DeleteUserController::class, 'destroy'])->name('destroyUser');
+Route::get('/admin/users/{id}/edit', [UpdateUSerController::class, 'edit' ])->name("editUser");
+Route::put('/admin/users/{id}/edit', [UpdateUSerController ::class, 'update' ])->name("updateUser");
 
 Route::get('/admin/minigames/minigames', [MiniGamesController::class, 'index' ])->name("admin.minigames");
 Route::get('/admin/resources/resources', [ResourcesController::class, 'index' ])->name("admin.resources");
