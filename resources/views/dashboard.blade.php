@@ -10,42 +10,56 @@
  <p class="text-center mt-3"  style="max-width:50%">Aquí podrás administrar todas las funcionalidades de tu página.<br>Haz clic en la sección que deseas modificar, donde podrás visualizar la información, crear, actualizar o borrar, según necesites.
   Recuerda que cualquier incidencia puedes comunicarla a mazmorraf5@gmail.com</p>
 </div>
-<div class="adminCard d-flex align-items-center p-5">
-    <div class="card admin align-middle mx-auto text-center text-wrap p-2 " style="width: 14rem;">
-        <img src="{{ asset('img/admin.webp') }}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h3 class="card-title h6">Administradores</h3>
-          <p class="card-text">Crea, edita y borra tus administradores.</p>
-          <a href="#" class="btn btn-primary m-4">Ingresar</a>
+
+
+<div class="contenD">
+
+    <div class="cardD">
+        <div class="car-imgD">
+          <img src="{{ asset('img/admin.png') }}" class="card-imgD" alt="...">
+        </div>
+        <div class="card-bodyD">
+          <h3 class="card-titleD"><strong>Administradores</strong></h3>
+          <p class="card-textD">Crea, edita y borra tus administradores.</p>
+          <a href="#" class="btnD">Ingresar</a>
+        </div>
+    </div>
+
+    <div class="cardD">
+      <div class="car-imgD">
+          <img src="{{ asset('img/cursos.webp') }}" class="card-imgD" alt="...">
+        </div>
+      <div class="card-bodyD">
+        <h5 class="card-titleD"><strong>Talleres</strong></h5>
+        <p class="card-textD">Crea, edita y borra tus talleres.</p>
+        <a href="{{ url('/admin/workshops/workshops') }}"  class="btnD">Ingresar</a>
+      </div>
+    </div>
+
+      <div class="cardD">
+        <div class="car-imgD">
+          <img src="{{ asset('img/juegos.png') }}" class="card-imgD" alt="...">
+        </div>
+        <div class="card-bodyD">
+          <h5 class="card-titleD"> <strong>Mini Juegos</strong></h5>
+          <p class="card-textD">Crea, edita y borra tus mini juegos.</p>
+          <a href="{{ url('/admin/minigames/minigames') }}"  class="btnD">Ingresar</a>
         </div>
       </div>
 
-      <div class="card admin align-middle mx-auto text-center text-wrap " style="width: 14rem;">
-        <img src="{{ asset('img/workshops-.jpg') }}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title h6">Talleres</h5>
-          <p class="card-text">Crea, edita y borra tus talleres.</p>
-          <a href="{{ url('/admin/workshops/workshops') }}"  class="btn btn-primary m-4">Ingresar</a>
+      <div class="cardD">
+        <div class="car-imgD">
+          <img src="{{ asset('img/recursos.jpg') }}" class="card-imgD" alt="...">
         </div>
-      </div>
-
-      <div class="card admin align-middle mx-auto text-center text-wrap " style="width: 14rem;">
-        <img src="{{ asset('img/foto3.jpeg') }}" alt="...">
-        <div class="card-body">
-          <h5 class="card-title h6">Mini Juegos</h5>
-          <p class="card-text">Crea, edita y borra tus mini juegos.</p>
-          <a href="{{ url('/admin/minigames/minigames') }}"  class="btn btn-primary m-4">Ingresar</a>
-        </div>
-      </div>
-
-      <div class="card admin align-middle mx-auto text-center text-wrap " style="width: 14rem;">
-        <img src="{{ asset('img/recursos.jpg') }}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title h6">Recursos externos</h5>
-          <p class="card-text">Crea, edita y borra tus recursos.</p>
-          <a href="{{ url('/admin/resources/resources') }}"  class="btn btn-primary m-4">Ingresar</a>
+        <div class="card-bodyD">
+          <h5 class="card-titleD"><strong>Recursos externos</strong></h5>
+          <p class="card-textD">Crea, edita y borra tus recursos.</p>
+          <a href="{{ url('/admin/resources/resources') }}"  class="btnD">Ingresar</a>
         </div>
       </div>
 </div>
+
+
 <main>
+<x-footer/>
 </body>
