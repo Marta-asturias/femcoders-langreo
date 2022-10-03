@@ -2218,6 +2218,48 @@ footer .social-networks .networks img {
   color: #cbbfe8;
 }
 
+.titlePrincipal2 {
+  margin: 2%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.titlePrincipal2 .txtprincipal2 {
+  color: #060300;
+  font-family: Open Sans;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  font-size: 50px;
+}
+
+.AdminH2 {
+  margin: 1%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border: solid 1px black;
+}
+.AdminH2 .btnH2 {
+  border: solid 1px black;
+}
+
+.table-W {
+  border: solid 1px black;
+}
+.table-W .table-W1 {
+  border: solid 1px black;
+}
+.table-W .table-W2 {
+  border: solid 1px black;
+}
+
+.AdminB2 {
+  border: solid 1px black;
+}
+.AdminB2 .btnB2 {
+  border: solid 1px black;
+}
+
 .sesion {
   font-family: Open Sans;
   font-weight: bold;

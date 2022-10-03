@@ -29,7 +29,7 @@ Atrévete a descubrir cómo funciona el código, y comprueba por ti misma que la
 </div>
 
 <button class="btn-clain">
-    <a href="{{ url('/') }}" class="btn-A">Apuntate Gratis</a>
+    <a href="{{ url('/workshops') }}" class="btn-A">Apuntate Gratis</a>
 </button>
 
 </section>
