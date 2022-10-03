@@ -1,5 +1,7 @@
-@include('layouts.adminNavigation')
+@include('layouts.adminNavigationWelcome')
+
 <x-guest-layout>
+    
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -13,10 +15,11 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('login') }}">
+        <form  method="POST" action="{{ route('login') }}">
             @csrf
 
             <!-- Email Address -->
+           \
             <div>
                 <x-label for="email" :value="__('Email')" />
 
@@ -54,5 +57,7 @@
             </div>
         </form>
     </x-auth-card>
+
 </x-guest-layout>
+
 <x-footer/>

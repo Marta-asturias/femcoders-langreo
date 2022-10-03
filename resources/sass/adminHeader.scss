@@ -1,12 +1,19 @@
 .adminHeader{
-    position: absolute;
+    position: relative;
     margin-top: 1%;
-	background-color:rgba(203.00000309944153, 191.00000381469727, 232.00000137090683, 1);
+    margin-bottom: 2%;
+	background-color:rgb(255, 255, 255);
+    border-bottom: 1px;
+    border-style: solid;
 	width:100%;
 	height: 150px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    .logOut{
+        font-size: xx-large;
+    }
     .logo{ 
         width: 33%;
         height: 140px;
