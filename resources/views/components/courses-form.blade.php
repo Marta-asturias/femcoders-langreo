@@ -14,21 +14,21 @@
       @csrf
 
       <div class="first_name">
-        <x-label class="text-title-c" for="first_name" :value="__('first_name')" />
+        <x-label class="text-title-c" for="first_name" :value="__('Nombre')" />
         <x-input id="first_name" class="input-tilte-create" type="text" name="first_name" :value="old('first_name')" required autofocus />
-        <x-label class="text-title-c" for="last_name" :value="__('last_name')" />
+        <x-label class="text-title-c" for="last_name" :value="__('Apellidos')" />
         <x-input id="last_name" class="input-tilte-create" type="text" name="last_name" :value="old('last_name')" required autofocus />
-        <x-label class="text-title-c" for="birth_date" :value="__('birth_date')" />
+        <x-label class="text-title-c" for="birth_date" :value="__('Fecha Nacimiento')" />
         <x-input id="birth_date" class="input-tilte-create" type="text" name="birth_date" :value="old('birth_date')" required autofocus />
-        <x-label class="text-title-c" for="email" :value="__('email')" />
+        <x-label class="text-title-c" for="email" :value="__('Email')" />
         <x-input id="email" class="input-tilte-create" type="text" name="email" :value="old('email')" required autofocus />
-        <x-label class="text-title-c" for="whatsapp" :value="__('whatsapp')" />
+        <x-label class="text-title-c" for="whatsapp" :value="__('Whatsapp')" />
         <x-input id="whatsapp" class="input-tilte-create" type="text" name="whatsapp" :value="old('whatsapp')" required autofocus />
-        <x-label class="text-title-c" for="city" :value="__('city')" />
+        <x-label class="text-title-c" for="city" :value="__('Ciudad')" />
         <x-input id="city" class="input-tilte-create" type="text" name="city" :value="old('city')" required autofocus />
-        <x-label class="text-title-c" for="how_did_you_meet_us" :value="__('how_did_you_meet_us')" />
+        <x-label class="text-title-c" for="how_did_you_meet_us" :value="__('¿Como nos has conocido?')" />
         <x-input id="how_did_you_meet_us" class="input-tilte-create" type="text" name="how_did_you_meet_us" :value="old('how_did_you_meet_us')" required autofocus />
-        <x-label class="text-title-c" for="legals" :value="__('legals')" />
+        <x-label class="text-title-c" for="legals" :value="__('Política de privacidad')" />
         <input type="checkbox" class="form-check-input" id="legals" name="legals" value="1">
         <label class="form-check-label" for="legals">Aceptar condiciones de uso</label>
 
