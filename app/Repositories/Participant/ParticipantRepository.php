@@ -36,6 +36,7 @@ class ParticipantRepository{
             $this->participant->city = $request->get('city');
             $this->participant->how_did_you_meet_us = $request->get('how_did_you_meet_us');
             $this->participant->legals = $request->get('legals');
+            //pivot workshop
             return $this->participant->save();    
         }
 
