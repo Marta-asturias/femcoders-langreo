@@ -2218,6 +2218,39 @@ footer .social-networks .networks img {
   color: #cbbfe8;
 }
 
+.workshopscreate {
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  font-family: Open Sans;
+  font-size: 22px;
+}
+
+.conten-create {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.conten-create form {
+  width: 50%;
+}
+
+.tile-create {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 1%;
+}
+.tile-create label {
+  font-size: 22px;
+}
+.tile-create .input-tilte-create {
+  border: 1px solid #4311B9;
+  margin: 5px;
+  padding: 5px;
+}
+
 .sesion {
   font-family: Open Sans;
   font-weight: bold;
