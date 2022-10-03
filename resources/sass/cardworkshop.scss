@@ -1,0 +1,92 @@
+.contenedor-cartasW{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .cardw{
+        margin: 2%;
+        width: 70%;
+        height: 300px;
+        border-top-left-radius:40px;
+        border-top-right-radius:40px;
+        border-bottom-left-radius:40px;
+        border-bottom-right-radius:40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow:6px 6px 6px 6px rgba(0, 0, 0, 0.44999998807907104);
+        border: solid 1px black;
+        .img-cardW{
+            margin-top: 5%;
+            margin-bottom:5%;
+            border-top-left-radius:40px;
+            border-top-right-radius:40px;
+            border-bottom-left-radius:40px;
+            border-bottom-right-radius:40px;
+            width: 20%;
+            height: 190px;
+
+            .card-imgW{
+                width:90%;
+                height: 180px;
+            }
+            img{
+                width:90%;
+                height: 180px;
+            }
+        }
+        .separador2{
+            background:black;
+            text-align: center;
+            width: 100%;
+            height: 2px;
+
+        }
+        .card-bodyW{
+            width:70% ;
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            .card-title2W{
+                width: 70%;
+                text-align: center;
+                font-family:Open Sans;
+                margin-bottom: 2%;
+                font-size: 25px;
+                .card-textW{
+                    margin: 1%;
+                    text-align: justify;
+                    font-family:Open Sans;
+                    font-size: 18px;                    
+                }
+            }
+            .button-cardsW{
+                width: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .btnyw{
+                    text-align: center;
+                    font-family:Open Sans;
+                    font-size: 18px;
+                    margin: 2%;
+                    width: 100%;
+                    background: #fed2c0;
+                    border: 2px solid #ff4300;
+                    border-top-left-radius:20px;
+                    border-top-right-radius:20px;
+                    border-bottom-left-radius:20px;
+                    border-bottom-right-radius:20px;
+                }
+                .btnyw:hover{
+                    color:#ff4300;
+                }
+            }
+
+
+            
+        }
+    }
+}
+

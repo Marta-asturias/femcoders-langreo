@@ -21,10 +21,11 @@ class WorkshopController
         $workshops = $this->repository->getAll();
         return view('admin.workshops.workshops')->with('workshop',$workshops); 
     }
+    
 
     public function create()
     {
-        return view('admin.workshops.create');
+        return view('admin/workshops/create');
     }
 
 
