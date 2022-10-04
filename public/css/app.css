@@ -2327,11 +2327,14 @@ footer .social-networks .networks img {
 .conten-P {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .conten-P .linea {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 1%;
   border: solid 1px #ff4300;
   background: #fed2c0;
   border-top-left-radius: 20px;
@@ -2342,6 +2345,7 @@ footer .social-networks .networks img {
   height: 50px;
 }
 .conten-P .btn-Edit {
+  color: #060300;
   font-family: Open Sans;
   font-weight: bold;
   font-size: 18px;
@@ -2349,10 +2353,12 @@ footer .social-networks .networks img {
 .conten-P .btn-Edit:hover {
   color: #ff4300;
 }
-.conten-P .btn-Delete {
+.conten-P .btn-Delete-A {
   font-family: Open Sans;
   font-weight: bold;
   font-size: 18px;
+}
+.conten-P .btn-Delete-A:hover {
   color: #ff4300;
 }
 

@@ -35,10 +35,13 @@
 .conten-P{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     .linea{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-top: 1%;
         border: solid 1px #ff4300;
         background: #fed2c0;
         border-top-left-radius:20px;
@@ -50,6 +53,7 @@
     }
 
     .btn-Edit{
+        color: #060300;
         font-family:Open Sans;
         font-weight: bold;
         font-size: 18px;
@@ -59,13 +63,13 @@
         color: #ff4300;
     }
 
-    .btn-Delete{
+    .btn-Delete-A{
         font-family:Open Sans;
         font-weight: bold;
         font-size: 18px;
     }
-    .btn-Delete{
+    .btn-Delete-A:hover{      
         color: #ff4300;
-    }
+    } 
 
 }
