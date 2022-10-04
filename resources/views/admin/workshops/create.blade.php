@@ -20,9 +20,9 @@
     <form class="conten-admin" action="{{ route('admin.save') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
-        <div class="title-admin2">
-            <x-label class="the-title" for="title" :value="__('Añadir Titulo')" />
-            <x-input class="the-input" id="title" type="text" name="title" :value="old('title')" required autofocus />
+        <div class="title-admin1">
+            <x-label class="the-title1" for="title" :value="__('Añadir Titulo')" />
+            <x-input class="the-input1" id="title" type="text" name="title" :value="old('title')" required autofocus />
         </div>
 
         <div class="title-admin2">

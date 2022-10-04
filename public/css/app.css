@@ -2233,6 +2233,27 @@ footer .social-networks .networks img {
   display: flex;
   justify-content: center;
 }
+.admin-Conten .title-admin1 {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: 1%;
+  padding: 5px;
+}
+.admin-Conten .title-admin1 label {
+  font-size: 25px;
+}
+.admin-Conten .title-admin1 .the-title1 {
+  margin: 1%;
+}
+.admin-Conten .title-admin1 .the-input1 {
+  display: flex;
+  text-align: center;
+  border: 1px solid #4311b9;
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
+}
 .admin-Conten .conten-admin {
   width: 80%;
 }
@@ -2263,6 +2284,8 @@ footer .social-networks .networks img {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border: solid 1px #4311b9;
+  padding: 5px;
+  text-align: center;
 }
 .admin-Conten .conten-admin .title-admin2 .the-title2 {
   width: 20%;
@@ -2286,6 +2309,8 @@ footer .social-networks .networks img {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border: solid 1px #4311b9;
+  padding: 5px;
+  text-align: center;
 }
 
 .sesion {
