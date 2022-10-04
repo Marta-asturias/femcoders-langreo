@@ -1616,7 +1616,6 @@ footer .social-networks .networks img {
 
 .cards__wrapper {
   position: relative;
-  width: calc(10 * var(--card-width));
   perspective: 1000px;
   width: 100%;
   height: 100%;
@@ -1652,27 +1651,25 @@ footer .social-networks .networks img {
   position: absolute;
   width: 100%;
   height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card.current--card {
   --current-card-rotation-offset: 0;
   --card-translateX-offset: 0;
   --card-rotation-offset: var(--current-card-rotation-offset);
   --card-scale-offset: 1.2;
-  --opacity: 0.8;
 }
 .card.previous--card {
   --card-translateX-offset: calc(-1 * var(--card-width) * 1.1);
   --card-rotation-offset: 25deg;
 }
 .card.next--card {
-  --card-translateX-offset: calc(var(--card-width) * 1.1);
+  --card-translateX-offset: calc(1 * var(--card-width) * 1.2);
   --card-rotation-offset: -25deg;
 }
 .card.previous--card, .card.next--card {
   --card-scale-offset: 0.9;
-  --opacity: 0.4;
 }
 
 .infoList {
@@ -1683,24 +1680,59 @@ footer .social-networks .networks img {
 .infoList .info__wrapper {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 500px;
 }
 
 .info {
-  margin-bottom: calc(var(--card-height) / 2);
+  margin-bottom: calc(var(--card-height) / 3);
   margin-left: calc(var(--card-width) / 1.5);
   transform: translateZ(2rem);
   transition: transform var(--card-transition-duration) var(--card-transition-easing);
 }
 .info .text {
-  border: solid black 1px;
   width: 40%;
-  height: 400px;
+  height: 500px;
   font-size: 25px;
   text-align: justify;
   position: relative;
   font-family: Open Sans;
   color: rgb(3, 0, 0);
+}
+.info .btn-clain {
+  color: #4311b9;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  left: 13%;
+  top: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(203, 191, 232);
+  border: solid #4311b9 1px;
+  width: 180px;
+  height: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.info .img-logo {
+  position: absolute;
+  left: 80px;
+  top: 65%;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.info .img-logo .logo_clain {
+  align-items: center;
+  width: 100%;
+}
+.info .img-logo .logo_clain img {
+  width: 100%;
+  height: 80px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -1709,70 +1741,6 @@ footer .social-networks .networks img {
     --card-height: 400px;
   }
 }
-/* .conten-clain{
-position: relative;
-    .img-principal{ 
-        overflow:hidden;
-        width: 100%;
-        height: 800px;
-        img{
-            // transform: scaleX(-1);
-            width: 100%;
-            height: 800px;
-        }
-    }
-
-    .text-clain{
-        position:absolute; left: 50px; top: 80px;
-        width: 40%;
-        height: 100px;  
-        opacity: 90%;
-        .txt-clain{
-            color: #f6f3ef;
-            -webkit-text-stroke: 1.5px black;
-            line-height:1.5em;
-            text-align: justify;
-            font-family:Open Sans;
-            font-size: 25px;
-
-        }
-    }
-
-    .img-logo{
-        position:absolute; left: 100px; top: 70%;
-        width: 30%;
-        display: flex;
-        justify-content: space-around;
-        .logo_clain{
-            align-items: center;
-            width: 100%;
-            img{
-                width: 100%;
-                height: 80px;
-            }
-        }
-    }
-
-    .btn-clain{
-        color: #4311b9;
-        font-family:Open Sans;
-        font-weight:bold;
-        font-size: 18px;
-        position:absolute; left: 15%; top: 85%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background:rgba(203.00000309944153, 191.00000381469727, 232.00000137090683, 1);
-        border: solid #4311b9 1px;	
-        width:180px;
-        height:50px;
-        border-top-left-radius:20px;
-        border-top-right-radius:20px;
-        border-bottom-left-radius:20px;
-        border-bottom-right-radius:20px;
-
-    }
-} */
 .contenedor-cartasW {
   display: flex;
   flex-direction: column;

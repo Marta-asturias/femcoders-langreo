@@ -49,7 +49,7 @@ function swapCards(direction) {
             nextBgImageEl.classList.add("current--image");
         } else if (direction === "left") {
             previousCardEl.style.zIndex = "30";
-            nextCardEl.style.zIndex = "20";
+            nextCardEl.style.zIndex = "0";
 
             previousBgImageEl.style.zIndex = "-1";
 
@@ -132,13 +132,10 @@ function init() {
     let tl = gsap.timeline();
 
     tl.to(cardsContainerEl.children, {
-        delay: 0.15,
-        duration: 0.5,
-        stagger: {
-            ease: "power4.inOut",
-            from: "right",
-            amount: 0.1,
-        },
+        delay: 0.20,
+        duration: 0.4,
+        stagger: 0.30,
+
         "--card-translateY-offset": "0%",
     })
         .to(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".text"), {
