@@ -3,6 +3,7 @@
     margin-top: 1%;
     margin-bottom: 2%;
 	background-color:rgb(255, 255, 255);
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.44999998807907104);
     border-bottom: 1px;
     border-style: solid;
 	width:100%;
@@ -10,7 +11,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+   
     .logOut{
         font-size: xx-large;
     }
@@ -30,4 +31,8 @@
 
         }
     }
+}
+
+.navUser{
+    font-size: 50px;
 }

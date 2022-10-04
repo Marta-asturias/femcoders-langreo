@@ -1,4 +1,5 @@
-<x-head/> 
+<x-head/>
+@include('layouts.Navigation')
 
 
 @foreach($workshop as $workshops)
