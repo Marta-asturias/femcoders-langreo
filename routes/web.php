@@ -35,18 +35,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-
-/* Route::get('/admin/workshops', [WorkshopController::class, 'index' ])->name("workshops");
-Route::get('/admin/create', [WorkshopController::class, 'create' ])->name("create");
-Route::post('/admin/create', [WorkshopController::class, 'save' ])->name('admin.save');
-Route::get('/admin/{id}/edit', [WorkshopController::class, 'edit' ])->name("edit");
-Route::put('/admin/{id}/edit', [WorkshopController::class, 'update' ])->name("update");
-Route::delete('/admin/workshops', [WorkshopController::class, 'destroy'])->name('destroy');
-
- */
-
 Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("adminwelcome");
  Route::group(['middleware' => ['auth']], function (){
 
