@@ -1,8 +1,8 @@
 <x-head/>
-
+@include('layouts.adminNavigation')
 <body>
   
-  @include('layouts.adminNavigation')
+ 
 <main>
 <div class="d-flex p-2 flex-column align-items-center">
 <h1 class=" h1 mt-3" style="max-width: 100%">Panel Administrador</h1>

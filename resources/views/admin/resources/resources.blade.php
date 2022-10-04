@@ -1,5 +1,5 @@
 <x-head/> 
-<x-header/> 
+@include('layouts.adminNavigation') 
 
 
 <div class="titlePrincipal2">

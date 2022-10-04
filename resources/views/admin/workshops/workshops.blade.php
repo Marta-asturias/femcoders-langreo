@@ -1,8 +1,8 @@
 <x-head/>
-
+@include('layouts.adminNavigation') 
 
 <a href="{{ route('export') }}"> Export </a>
-<x-header/>
+
 {{-- Aqui va la cabecera  --}}
 <div class="titlePrincipal2">
     <h1 class="txtprincipal2">Talleres</h1>

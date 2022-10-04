@@ -1,5 +1,5 @@
 <x-head/> 
-<x-header/>
+@include('layouts.adminNavigation')
 
 <div class="titlePrincipal2">
     <h1 class="txtprincipal2">Mini Juegos</h1>
