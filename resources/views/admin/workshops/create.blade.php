@@ -1,8 +1,9 @@
 <x-head />
+<x-header/>
+<div class="title-admin">
+    <h1 class="title-Ad">Añadir Talleres</h1>
+</div>
 
-<h1 class="workshopscreate">Añadir Talleres</h1>
-
-<div class="conten-create">
     @if ($errors->any())
         <div role="alert">
             <ul>
@@ -13,52 +14,46 @@
         </div>
     @endif
 
-    <form action="{{ route('admin.save') }}" method="POST" enctype="multipart/form-data">
+
+<div class="admin-Conten">
+
+    <form class="conten-admin" action="{{ route('admin.save') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
-        <div class="tile-create">
-            <x-label for="title" :value="__('Añadir Titulo')" />
-            <x-input id="title" type="text" name="title" :value="old('title')" required
-                autofocus />
+        <div class="title-admin2">
+            <x-label class="the-title" for="title" :value="__('Añadir Titulo')" />
+            <x-input class="the-input" id="title" type="text" name="title" :value="old('title')" required autofocus />
         </div>
 
-
-
-
-{{--         <div class="create-1">
-            <input type="file" name="file">
-        </div>
- --}}
-       
-            <div class="create-2">
-                <x-label class="label" for="price" :value="__('detalles')" />
-                <x-input class="create" type="text" name="details" :value="old('details')" required />
-            </div>
-
-            <div class="create-3">
-                <x-label for="price" :value="__('')" />
-                <span>Edad:</span>
-                <x-input id="age" type="text" name="age" :value="old('age')" required />
-            </div>
-
-            <div class="create-4">
-                <x-label for="price" :value="__('')" />
-                <span>Duración:</span>
-                <x-input id="duration" type="text" name="duration" :value="old('duration')" required />
-            </div>
-
-            <div class="create-5">
-                <x-label for="price" :value="__('')" />
-                <span>Formato:</span>
-                <x-input id="format" type="text" name="format" :value="old('format')" required />
-            </div>
+        <div class="title-admin2">
+                <x-label class="the-title" for="price" :value="__('Edad')" />
+                <x-input class="the-input" id="age" type="text" name="age" :value="old('age')" required />
         </div>
 
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Duración')" />
+            <x-input class="the-input" id="duration" type="text" name="duration" :value="old('duration')" required />
+        </div>
 
-    <div class="btn-create">
-        <button class="btn-c">
-            {{ __('Guardar') }}
-        </button>
-    </div>
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Formato')" />
+            <x-input class="the-input" id="format" type="text" name="format" :value="old('format')" required />
+        </div>
+
+        {{-- <div class="">
+            <input class="" type="file" name="file">
+        </div> --}}
+
+        <div class="title-admin2">
+            <x-label class="the-title2" for="price" :value="__('detalles')" />
+            <x-input class="the-input2" type="text" name="details" :value="old('details')" required />
+        </div>
+
+        <div class="btn-create">
+            <button class="btn-c">
+                {{ __('Guardar') }}
+            </button>
+        </div>
+        
     </form>
 </div>
