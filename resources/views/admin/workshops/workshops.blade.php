@@ -1,6 +1,9 @@
 <x-head/>
 
 
+<a href="{{ route('export') }}"> Export </a>
+
+
 
 @foreach($workshop as $workshops)
 <table>

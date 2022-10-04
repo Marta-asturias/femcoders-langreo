@@ -43,6 +43,7 @@ Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("a
 
 Route::get('/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('/workshops', [WorkshopController::class, 'index' ])->name("workshops");
+Route::get('export/', [WorkshopController::class, 'export'])->name("export");
 Route::get('/create', [WorkshopController::class, 'create' ])->name("create");
 Route::post('/create', [WorkshopController::class, 'save' ])->name('admin.save');
 Route::get('/{id}/edit', [WorkshopController::class, 'edit' ])->name("edit");
