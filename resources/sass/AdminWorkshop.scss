@@ -32,19 +32,40 @@
     }
 }
 
-.table-W{
+.conten-P{
     display: flex;
-    width: 100%;
-    border: solid 1px black;
-    .lineasW{
-        border: solid 1px black;
-        width: 100%;
+    justify-content: center;
+    .linea{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: solid 1px #ff4300;
+        background: #fed2c0;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom-left-radius:20px;
+        border-bottom-right-radius:20px;
+        width: 80%;
+        height: 50px;
     }
-}
 
-.AdminB2{
-    border: solid 1px black;
-    .btnB2{
-        border: solid 1px black;
+    .btn-Edit{
+        font-family:Open Sans;
+        font-weight: bold;
+        font-size: 18px;
     }
+
+    .btn-Edit:hover{
+        color: #ff4300;
+    }
+
+    .btn-Delete{
+        font-family:Open Sans;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .btn-Delete{
+        color: #ff4300;
+    }
+
 }

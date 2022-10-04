@@ -9,20 +9,27 @@
     <a href="{{ url('/admin/workshops/create') }}" class="btnH2">Agregar Nuevo</a>
 </button>
 
-@foreach($workshop as $workshops)
-    <div class="table-W">
-        <div class="lineasW">
-            <h2>{{$workshops->title}}</h2>
+<div class="conten-P">
+
+            @foreach($workshop as $workshops)
+    <div class="linea">
+            <h2> <strong>{{$workshops->title}}</strong></h2>
+            
+            <button class="btn-Edit">
+                <a href="{{ url('/admin/workshops//edit') }}" class="btn-Edit"><i class="bi bi-pencil"></i> Modificar</a>
+            </button>
+
             <form   class="AdminB2" action="{{ route('destroy',['id'=>$workshops->id]) }}" method="POST">
-                <button type="submit" class="btnB2">Borrar</button>
+                <button type="submit" class="btn-Delete"><i class="bi bi-trash"></i>Borrar</button>
                 @csrf
                 @method('DELETE')
             </form>
             @endforeach
-        </div>
+
+            
     </div>
 
-
+</div>
 
 
 <x-footer/>
