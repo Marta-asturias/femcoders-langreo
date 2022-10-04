@@ -1,4 +1,4 @@
-<section class="conten-clain">
+{{-- <section class="conten-clain">
 
 <div class="img-principal">
 <img src="{{ asset('img/foto3.jpeg') }}" alt="">
@@ -35,3 +35,4 @@ Atrévete a descubrir cómo funciona el código, y comprueba por ti misma que la
 </section>
 
 
+--}}
