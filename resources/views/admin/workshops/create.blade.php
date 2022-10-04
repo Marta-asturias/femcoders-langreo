@@ -1,18 +1,18 @@
 <x-head />
-<x-header/>
+<x-header />
 <div class="title-admin">
     <h1 class="title-Ad">Añadir Talleres</h1>
 </div>
 
-    @if ($errors->any())
-        <div role="alert">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+@if ($errors->any())
+    <div role="alert">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 
 <div class="admin-Conten">
@@ -22,12 +22,13 @@
 
         <div class="title-admin1">
             <x-label class="the-title1" for="title" :value="__('Añadir Titulo')" />
-            <x-input class="the-input1" id="title" type="text" name="title" :value="old('title')" required autofocus />
+            <x-input class="the-input1" id="title" type="text" name="title" :value="old('title')" required
+                autofocus />
         </div>
 
         <div class="title-admin2">
-                <x-label class="the-title" for="price" :value="__('Edad')" />
-                <x-input class="the-input" id="age" type="text" name="age" :value="old('age')" required />
+            <x-label class="the-title" for="price" :value="__('Edad')" />
+            <x-input class="the-input" id="age" type="text" name="age" :value="old('age')" required />
         </div>
 
         <div class="title-admin2">
@@ -40,20 +41,27 @@
             <x-input class="the-input" id="format" type="text" name="format" :value="old('format')" required />
         </div>
 
-        {{-- <div class="">
-            <input class="" type="file" name="file">
-        </div> --}}
 
         <div class="title-admin2">
             <x-label class="the-title2" for="price" :value="__('detalles')" />
             <x-input class="the-input2" type="text" name="details" :value="old('details')" required />
         </div>
 
-        <div class="btn-create">
-            <button class="btn-c">
-                {{ __('Guardar') }}
-            </button>
+        <div class="create-1">
+            <input class="" type="file" name="file">
         </div>
-        
+        <div class="btn-general">
+            <div class="btn-create">
+                <button class="btn-c">
+                    {{ __('Guardar') }}
+                </button>
+            </div>
+
+            <div class="btn-cancelar">
+                <a href="{{ url('/admin/workshops/workshops') }}" class=" btn-cancelar-admin">Cancelar</a>
+            </div>
+        </div>
+
     </form>
 </div>
+<x-footer />
