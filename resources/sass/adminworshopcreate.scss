@@ -1,74 +1,146 @@
-.workshopscreate {
-    display: flex;
-    justify-content: center;
-    color: #000000;
-    font-family: Open Sans;
-    font-size: 22px;
+.title-admin{
+    color: #060300;
+    font-family:Open Sans;
+    text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+    font-size: 40px;
+    margin: 2%;
+    .title-Ad{
+        text-align: center;
+    }
 }
-
-.conten-create {
-    margin-top: 5%;
+.admin-Conten{
     display: flex;
     justify-content: center;
-
-    form {
-        width: 50%;
-
-        .tile-create {
+    .conten-admin{
+        width: 80%;
+        .title-admin2{
+            width: 100%;
             display: flex;
-            justify-content: center;
-            text-align: center;
-            flex-direction: column;
-            margin: 1%;
-        
-            label {
-                font-size: 22px;
+            justify-content: space-around;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            .the-title{
+                width: 20%;
+                height: 30px;
+                font-family:Open Sans;
+                font-size: 15px;
+                text-align: center;
+                border-top-left-radius:20px;
+                border-top-right-radius:20px;
+                border-bottom-left-radius:20px;
+                border-bottom-right-radius:20px;
+                border: solid 1px #4311b9;
+                background: #cbbfe8;
             }
-        
-             #title {
-                border: 1px solid #4311B9;
-                margin: 5px;
-                padding: 5px;
+            .the-input{
+                width: 60%;
+                border-top-left-radius:20px;
+                border-top-right-radius:20px;
+                border-bottom-left-radius:20px;
+                border-bottom-right-radius:20px;
+                border: solid 1px #4311b9;
             }
-        }
-        .create-1 {
-            display: flex;
-            justify-content: center;
-        
-            input[type="file"] {
-                width: 70%;
-                background-color: red;
-        
-        
-            } 
-        }
-
-        .create-2{
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            margin: 1%;
-        
-            .label{
-                border: solid 1px black;
-                font-size: 8px;
-                width: 100%;
+            .the-title2{
+                width: 20%;
+                height: 30px;
+                margin-top: 3%;
+                font-family:Open Sans;
+                font-size: 15px;
+                text-align: center;
+                border-top-left-radius:20px;
+                border-top-right-radius:20px;
+                border-bottom-left-radius:20px;
+                border-bottom-right-radius:20px;
+                border: solid 1px #4311b9;
+                background: #cbbfe8;
             }
-        
-           .create {
-                border: 1px solid #4311B9;
-                height: 200px;
-                
-
+            .the-input2{
+                width: 60%;
+                height: 100px;
+                border-top-left-radius:20px;
+                border-top-right-radius:20px;
+                border-bottom-left-radius:20px;
+                border-bottom-right-radius:20px;
+                border: solid 1px #4311b9;
             }
-    
         }
 
     }
-
-
-
 }
+
+
+
+
+// .workshopscreate {
+//     display: flex;
+//     justify-content: center;
+//     color: #000000;
+//     font-family: Open Sans;
+//     font-size: 22px;
+// }
+
+// .conten-create {
+//     margin-top: 5%;
+//     display: flex;
+//     justify-content: center;
+
+//     form {
+//         width: 50%;
+
+//         .tile-create {
+//             display: flex;
+//             justify-content: center;
+//             text-align: center;
+//             flex-direction: column;
+//             margin: 1%;
+        
+//             label {
+//                 font-size: 22px;
+//             }
+        
+//              #title {
+//                 border: 1px solid #4311B9;
+//                 margin: 5px;
+//                 padding: 5px;
+//             }
+//         }
+//         .create-1 {
+//             display: flex;
+//             justify-content: center;
+        
+//             input[type="file"] {
+//                 width: 70%;
+//                 background-color: red;
+        
+        
+//             } 
+//         }
+
+//         .create-2{
+//             display: flex;
+//             justify-content: center;
+//             text-align: center;
+//             margin: 1%;
+        
+//             .label{
+//                 border: solid 1px black;
+//                 font-size: 8px;
+//                 width: 100%;
+//             }
+        
+//            .create {
+//                 border: 1px solid #4311B9;
+//                 height: 200px;
+//                 word-wrap: break-word;
+//             }
+    
+//         }
+
+//     }
+
+
+
+// }
 
 
 
