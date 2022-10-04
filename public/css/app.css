@@ -1551,7 +1551,7 @@ input::placeholder, textarea::placeholder {
   color: #4311B9;
   font-family: Open Sans;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 footer {
@@ -1604,57 +1604,107 @@ footer .social-networks .networks img {
   height: 25px;
 }
 
-.conten-clain {
-  position: relative;
-}
-.conten-clain .img-principal {
-  overflow: hidden;
+.Sectio-Clain {
   width: 100%;
-  height: 800px;
-}
-.conten-clain .img-principal img {
-  width: 100%;
-  height: 800px;
-}
-.conten-clain .text-clain {
-  position: absolute;
-  left: 50px;
-  top: 80px;
-  width: 40%;
-  height: 100px;
-  opacity: 90%;
-}
-.conten-clain .text-clain .txt-clain {
-  color: #f6f3ef;
-  -webkit-text-stroke: 1.5px black;
-  line-height: 1.5em;
-  text-align: justify;
-  font-family: Open Sans;
-  font-size: 25px;
-}
-.conten-clain .img-logo {
-  position: absolute;
-  left: 100px;
-  top: 70%;
-  width: 30%;
+  height: 600px;
   display: flex;
-  justify-content: space-around;
-}
-.conten-clain .img-logo .logo_clain {
+  justify-content: center;
   align-items: center;
-  width: 100%;
+  background: #cbbfe8;
+  overflow: hidden;
 }
-.conten-clain .img-logo .logo_clain img {
+
+.cards__wrapper {
+  position: relative;
+  perspective: 1000px;
   width: 100%;
-  height: 80px;
+  height: 100%;
 }
-.conten-clain .btn-clain {
+
+.card {
+  --card-translateY-offset: 100vh;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(85%, -40%) translateX(var(--card-translateX-offset)) translateY(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset)) scale(var(--card-scale-offset));
+  display: inline-block;
+  width: var(--card-width);
+  height: var(--card-height);
+  transition: transform var(--card-transition-duration) var(--card-transition-easing);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: opacity var(--card-transition-duration) var(--card-transition-easing);
+}
+.card__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.card__image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card.current--card {
+  --current-card-rotation-offset: 0;
+  --card-translateX-offset: 0;
+  --card-rotation-offset: var(--current-card-rotation-offset);
+  --card-scale-offset: 1.2;
+}
+.card.previous--card {
+  --card-translateX-offset: calc(-1 * var(--card-width) * 1.1);
+  --card-rotation-offset: 25deg;
+}
+.card.next--card {
+  --card-translateX-offset: calc(1 * var(--card-width) * 1.2);
+  --card-rotation-offset: -25deg;
+}
+.card.previous--card, .card.next--card {
+  --card-scale-offset: 0.9;
+}
+
+.infoList {
+  position: absolute;
+  width: calc(8 * var(--card-width));
+  height: var(--card-height);
+}
+.infoList .info__wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.info {
+  margin-bottom: calc(var(--card-height) / 3);
+  margin-left: calc(var(--card-width) / 1.5);
+  transform: translateZ(2rem);
+  transition: transform var(--card-transition-duration) var(--card-transition-easing);
+}
+.info .text {
+  width: 40%;
+  height: 500px;
+  font-size: 25px;
+  text-align: justify;
+  position: relative;
+  font-family: Open Sans;
+  color: rgb(3, 0, 0);
+}
+.info .btn-clain {
   color: #4311b9;
   font-family: Open Sans;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   position: absolute;
-  left: 15%;
+  left: 13%;
   top: 85%;
   display: flex;
   align-items: center;
@@ -1668,7 +1718,29 @@ footer .social-networks .networks img {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.info .img-logo {
+  position: absolute;
+  left: 80px;
+  top: 65%;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.info .img-logo .logo_clain {
+  align-items: center;
+  width: 100%;
+}
+.info .img-logo .logo_clain img {
+  width: 100%;
+  height: 80px;
+}
 
+@media only screen and (min-width: 800px) {
+  :root {
+    --card-width: 250px;
+    --card-height: 400px;
+  }
+}
 .contenedor-cartasW {
   display: flex;
   flex-direction: column;
@@ -1687,7 +1759,7 @@ footer .social-networks .networks img {
   justify-content: space-around;
   align-items: center;
   box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4499999881);
-  border: solid 1px black;
+  border: solid 1.5px #4311b9;
 }
 .contenedor-cartasW .cardw .img-cardW {
   margin-top: 5%;
@@ -2234,7 +2306,77 @@ footer .social-networks .networks img {
   position: relative;
   padding-top: 3%;
   padding-bottom: 3%;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4499999881);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4499999881)};
+.titlePrincipal2 {
+  margin: 2%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.titlePrincipal2 .txtprincipal2 {
+  color: #060300;
+  font-family: Open Sans;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  font-size: 50px;
+}
+
+.AdminH2 {
+  margin: 1%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.AdminH2 .btnH2 {
+  color: #faf9f7;
+  font-family: Open Sans;
+  font-size: 20px;
+  width: 15%;
+  height: 40px;
+  border: solid 1px #ff4300;
+  background: #ff4300;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.conten-P {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.conten-P .linea {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1%;
+  border: solid 1px #ff4300;
+  background: #fed2c0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 80%;
+  height: 50px;
+}
+.conten-P .btn-Edit {
+  color: #060300;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 18px;
+}
+.conten-P .btn-Edit:hover {
+  color: #ff4300;
+}
+.conten-P .btn-Delete-A {
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 18px;
+}
+.conten-P .btn-Delete-A:hover {
+  color: #ff4300;
 }
 
 .sesion {

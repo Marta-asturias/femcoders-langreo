@@ -9,12 +9,12 @@
 
     <div class="card-bodyR">
 
-      <div class="card-title2R">
+      <div class="  R">
         <h5  class="card-titleR"><strong>{{$resource->title}}</strong></h5>
       </div>
 
       <div class="button-cardsR">
-        <a href="h" class="btnR">Ver Más</a>
+        <a href="h" class="btnR">Acceder</a>
       </div>
 
     </div>
