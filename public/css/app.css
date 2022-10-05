@@ -1611,6 +1611,7 @@ footer .social-networks .networks img {
 .conten-clain .img-principal {
   overflow: hidden;
   width: 100%;
+  filter: brightness(0.6);
 }
 .conten-clain .img-principal .girl {
   opacity: 70%;
@@ -1623,34 +1624,32 @@ footer .social-networks .networks img {
   width: 40%;
   position: absolute;
   left: 2%;
-  top: 2%;
-  text-shadow: 0px 2px 2px #4311b9;
+  top: 4%;
   color: white;
   text-align: justify;
   font-family: Open Sans;
-  font-size: 20px;
+  font-size: 22px;
 }
 .conten-clain .text-clain .text-clain2 {
   width: 50%;
   position: absolute;
   right: 8%;
-  bottom: 5%;
-  color: rgb(72, 0, 255);
+  bottom: 12%;
+  color: white;
   text-align: justify;
   font-family: Open Sans;
-  font-size: 25px;
-  text-shadow: 0px 5px 5px orangered;
+  font-size: 30px;
+  text-shadow: 0px 2px 2px #4311b9;
 }
 .conten-clain .text-clain .txt-clain3 {
-  width: 40%;
+  width: 50%;
   position: absolute;
-  left: 2%;
+  right: 2%;
   top: 18%;
   color: white;
   text-align: justify;
   font-family: Open Sans;
-  font-size: 20px;
-  text-shadow: 0px 5px 5px orangered;
+  font-size: 22px;
 }
 .conten-clain .img-logo {
   position: absolute;
