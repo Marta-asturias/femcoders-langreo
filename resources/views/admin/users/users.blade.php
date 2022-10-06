@@ -1,3 +1,4 @@
+@extends('components.head')
 <x-head/> 
 
 
@@ -30,7 +31,7 @@
                     </td>
                     <td>
                         <form class="form-delete" action="{{ route('destroyUser',['id'=>$users->id]) }}" method="POST">
-                            <button type="submit" class="btn-delete"><i class="bi bi-trash"></i></button>
+                            <button type="submit" class="btn-delete delete-confirm" data-name="{{$users->name}}" title="Eliminar"><i class="bi bi-trash"></i></button>
                             @csrf
                             @method('DELETE')
                         </form>
@@ -42,40 +43,20 @@
     </div>
 @endempty
 
-
-
 @section('js')
-@if(session('status_success' == 'Eliminado Correctamente'))
-<script>
-    Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
-            'success'
-          ) 
+@include('sweetalert::alert')
 
-</script>
+    <script>
+        let btnDelete = document.getElementsByClassName("delete-confirm");
+        btnDelete.addEventListener('click', () => {
+           alert("hello");
+           
+        });
     
-@endif
+    </script>
 
-<script type="text/javascript">
-    $('.form-delete').submit(function(e){
-        e.preventDedault();
     
-    Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          {{--   --}}
-          this.submit();
-        }
-      })
-    })
 
-</script>
 @endsection
+
+

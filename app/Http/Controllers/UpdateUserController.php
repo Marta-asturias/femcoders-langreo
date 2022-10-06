@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Repositories\User\UpdateUserRepository;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class UpdateUSerController extends Controller
 {
@@ -30,6 +32,8 @@ class UpdateUSerController extends Controller
         $user = $this->repository->getAll();
         $this->repository->updateUser($request,$id);
         //return view('/users')->with('user',$user);
+        Alert::toast('Admin Actualizado', 'success');
+
         return redirect()->route('users');
     }
 
