@@ -2211,13 +2211,16 @@ footer .social-networks .networks img {
   height: 300px;
 }
 .contenD .cardD .card-bodyD {
+  border: solid black 1px;
   width: 90%;
   height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 .contenD .cardD .card-bodyD .card-titleD {
+  border: solid black 1px;
   font-family: Open Sans;
   font-size: 20px;
   text-align: center;
@@ -2225,20 +2228,19 @@ footer .social-networks .networks img {
   height: 30px;
 }
 .contenD .cardD .card-bodyD .card-textD {
+  border: solid black 1px;
   font-family: Open Sans;
   font-size: 15px;
   text-align: justify;
   width: 100%;
   height: 30px;
 }
-.contenD .cardD .card-bodyD .btnD {
+.contenD .cardD .card-bodyD .btn-Dash {
+  border: black solid 1px;
   font-family: Open Sans;
   text-align: center;
-  padding: 1px 50px;
-  position: relative;
-  right: -70px;
-  width: 50%;
   height: 30px;
+  width: 50%;
   color: white;
   border: 1px solid #cbbfe8;
   background: #4311b9;
