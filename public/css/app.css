@@ -2211,7 +2211,6 @@ footer .social-networks .networks img {
   height: 300px;
 }
 .contenD .cardD .card-bodyD {
-  border: solid black 1px;
   width: 90%;
   height: 100px;
   display: flex;
@@ -2220,7 +2219,6 @@ footer .social-networks .networks img {
   align-items: center;
 }
 .contenD .cardD .card-bodyD .card-titleD {
-  border: solid black 1px;
   font-family: Open Sans;
   font-size: 20px;
   text-align: center;
@@ -2228,7 +2226,6 @@ footer .social-networks .networks img {
   height: 30px;
 }
 .contenD .cardD .card-bodyD .card-textD {
-  border: solid black 1px;
   font-family: Open Sans;
   font-size: 15px;
   text-align: justify;
@@ -2236,7 +2233,6 @@ footer .social-networks .networks img {
   height: 30px;
 }
 .contenD .cardD .card-bodyD .btn-Dash {
-  border: black solid 1px;
   font-family: Open Sans;
   text-align: center;
   height: 30px;
