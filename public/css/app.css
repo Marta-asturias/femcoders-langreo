@@ -1613,6 +1613,9 @@ footer .social-networks .networks img {
   width: 100%;
   filter: brightness(0.6);
 }
+.conten-clain .img-principal video {
+  width: 100%;
+}
 .conten-clain .img-principal .girl {
   opacity: 70%;
   width: 100%;
