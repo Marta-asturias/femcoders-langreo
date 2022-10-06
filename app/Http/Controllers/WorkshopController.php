@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\WorkshopsExport;
 use App\Repositories\Workshop\WorkshopRepository;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class WorkshopController
 {
@@ -21,11 +23,16 @@ class WorkshopController
         $workshops = $this->repository->getAll();
         return view('admin.workshops.workshops')->with('workshop',$workshops); 
     }
+
+    public function export() 
+{
+   return Excel::download(new WorkshopsExport, 'workshops.xlsx');
+}
     
 
     public function create()
     {
-        return view('welcome');
+        return view('admin/workshops/create');
     }
 
 

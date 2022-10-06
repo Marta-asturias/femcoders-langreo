@@ -1,4 +1,5 @@
 <x-head/> 
+@include('layouts.adminNavigation')
 
 <div class="conten-create">
     @if($errors->any())
