@@ -1,30 +1,41 @@
-<div class="contenedor-cartas">
-    @foreach ($workshop ?? '' as $workshop)
-    <div class="card card-home" style="width: 18rem;">
-  
-      <div class="img-card">
-      <img src="{{$workshop
-        ->image}}" class="card-img-top" alt="...">
-      </div>
-  
-      <div class="card-body">
-        <div class="card-title2">
-          <h5  class="card-title ">Titulo: {{$workshop
-          ->title}}</h5>
-          <p class="card-text"> Detalles: {{$workshop
-          ->details}}</p>
-          <p class="card-text">Edad: {{$workshop
-          ->age}}</p> 
-            <p class="card-text">Duración: {{$workshop
-                ->duration}}</p> 
-            <p class="card-text">Formato: {{$workshop
-                    ->format}}</p> 
-        </div>
+<div class="contenedor-cartasW">
+  @foreach ($workshop ?? '' as $workshop)
+    <div class="cardw">
 
-        <div class="button-cards">
-          <a href="" class="btn btn-primary btn-primary2">Solicitar Plaza</a>
-        </div>
+      <div class="img-cardW">
+        <img src="{{$workshop->image}}" class="card-imgW" alt="...">
+      </div>
+
+      <div class="card-bodyW">
+
+          <div class="card-title2W">
+            <h5  class="card-titleW"><strong>{{$workshop->title}}</strong></h5>
+            <div class="separador2"></div>
+            <p class="card-textW"> <strong>Detalles:</strong>{{$workshop->details}}</p>
+            <p class="card-textW"><strong>Edad:</strong>{{$workshop->age}}</p> 
+            <p class="card-textW"><strong>Duración:</strong>{{$workshop->duration}}</p> 
+            <p class="card-textW"><strong>Formato:</strong>{{$workshop->format}}</p> 
+          </div>
+
+          <div class="button-cardsW">
+            <a href="" class="btnyw">Solicitar Plaza</a>
+          </div>
+
       </div>
     </div>
-      @endforeach
-  </div>
+@endforeach
+</div>
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+

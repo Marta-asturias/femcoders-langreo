@@ -1,24 +1,25 @@
-<div class="contenedor-cartas">
-    @foreach ($minigame ?? '' as $minigame)
-    <div class="card card-home" style="width: 18rem;">
-  
-      <div class="img-card">
-      <img src="{{$minigame
-        ->image}}" class="card-img-top" alt="...">
-      </div>
-  
-      <div class="card-body">
-        <div class="card-title2">
-          <h5  class="card-title ">Titulo: {{$minigame
-          ->title}}</h5>
-          <p class="card-text"> Link: {{$minigame
-          ->link}}</p>
-        </div>
+<div class="contenedor-MG">
+  @foreach ($minigame ?? '' as $minigame)
+  <div class="card-homeMG">
+    
+    <div class="img-cardMG">
+      <img src="{{$minigame->image}}" class="card-img-top" alt="..."/>
+    </div>
 
-        <div class="button-cards">
-          <a href="" class="btn btn-primary btn-primary2">Solicitar Plaza</a>
-        </div>
+    <div class="card-bodyMG">
+      <div class="card-titleMG">
+        <h5  class="cardMg-title "><strong>{{$minigame
+        ->title}} </strong></h5>
+        <p class="cardMg-text"> <strong>Detalles:</strong> {{$minigame
+        ->details}}</p>
+        <p class="cardMg-text1"><strong>Edad:</strong> {{$minigame
+        ->age}}</p> 
       </div>
     </div>
-      @endforeach
+    <div class="button-cardsMG">
+      <a href="https://studio.code.org/s/frozen/lessons/1/levels/1" class="btnMG">Jugar <i class="bi bi-play-fill"></i></a>
+    </div>
   </div>
+    @endforeach
+</div> 
+

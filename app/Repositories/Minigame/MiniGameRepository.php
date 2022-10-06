@@ -28,6 +28,8 @@ private MiniGame $MiniGame;
         $request->file->move(public_path('storage'), $fileName);
         $url_file = Storage::url($fileName);
         $this->MiniGame->title = $request->get('title');
+        $this->MiniGame->details = $request->get('details');
+        $this->MiniGame->age = $request->get('age');
         $this->MiniGame->link = $request->get('link');
         $this->MiniGame->image = $url_file;
         return $this->MiniGame->save();    
@@ -42,6 +44,8 @@ private MiniGame $MiniGame;
         $request->validate([
             'file' => 'required|mimes:jpg,png|max:2048',
             'title'=> 'required',
+            'details'=> 'required',
+            'age'=> 'required',
             'link' => 'required',
         ]);
 
@@ -50,6 +54,8 @@ private MiniGame $MiniGame;
         $url_file = Storage::url($fileName);
         $this->MiniGame = MiniGame::find($id);
         $this->MiniGame->title = $request->get('title');
+        $this->MiniGame->details = $request->get('details');
+        $this->MiniGame->age = $request->get('age');
         $this->MiniGame->link = $request->get('link');
         $this->MiniGame->image = $url_file;
         return $this->MiniGame->save(); 

@@ -1,0 +1,105 @@
+.section-courses{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+.conten-courses{
+    border: solid black 1px;
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.44999998807907104);
+    border-radius: 60px;
+    width: 95%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .img-courses{
+        width: 20%;
+        height: 250px;
+        border-radius: 60px;
+        border: solid black 1px;
+        box-shadow:5px 5px 5px rgba(0, 0, 0, 0.44999998807907104);
+        img{
+            width: 100%;
+            height: 250px;
+            padding: 1.5%;
+            border-radius: 60px;
+        }
+    }
+    .conten2-courses{
+        width: 55%;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        .title-courses{
+            width: 100%;
+            height: 45px; 
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-family:Open Sans;
+            font-size: 20px;
+        }
+        .separador {
+            background:black;
+            width: 90%;
+            height: 2px;
+            font-family:Open Sans;
+            font-size: 20px;
+        }
+        .text-course{
+            padding: 2%;
+            width: 100%;
+            height: 190px;
+        }
+    }
+
+    .btn-cuorses{
+        width: 10%;
+        padding: 1%;
+        .C-btn{
+            padding: 2%;
+            font-family:Open Sans;
+            font-weight:bold;
+            font-size: 18px;
+            text-align: center;
+            width: 100%;
+            background: #fed2c0;
+            border: 2px solid #ff4300;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+        }
+    }
+    .C-btn:hover{
+        color: #ff4300;
+    }
+}
+}
+
+.btn2-cuorses{
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    .C2-btn{
+            width: 180px;
+            padding: 2%;
+            font-family:Open Sans;
+            font-weight:bold;
+            font-size: 18px;
+            text-align: center;
+            background: #fed2c0;
+            border: 2px solid #ff4300;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+    }
+    .C2-btn:hover{
+        color: #ff4300;
+    }
+}
