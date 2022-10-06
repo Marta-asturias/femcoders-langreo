@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\MiniGamesController;
 use App\Http\Controllers\ParticipantController;
+use App\Http\Controllers\ParticipantViewController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\ShowUserController;
 use App\Http\Controllers\UserMiniGamesController;
@@ -77,5 +78,4 @@ Route::delete('/admin/users/users', [DeleteUserController::class, 'destroy'])->n
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth','verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-
 
