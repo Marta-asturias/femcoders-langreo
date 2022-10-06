@@ -6,6 +6,7 @@ use App\Exports\WorkshopsExport;
 use App\Repositories\Workshop\WorkshopRepository;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class WorkshopController
 {
@@ -61,6 +62,7 @@ class WorkshopController
     public function destroy(Request $request)
     {
         $this->repository->destroyWorkshop($request);
+       
         return redirect('/admin/workshops/workshops');
     }
 }
