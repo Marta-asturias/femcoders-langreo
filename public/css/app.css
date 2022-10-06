@@ -2248,7 +2248,6 @@ footer .social-networks .networks img {
   color: #cbbfe8;
 }
 
-<<<<<<< HEAD
 .adminForm {
   background-color: rgb(203, 191, 232);
   position: relative;
@@ -2304,7 +2303,31 @@ footer .social-networks .networks img {
   margin-top: 1%;
   border: solid 1px #ff4300;
   background: #fed2c0;
-=======
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 80%;
+  height: 50px;
+}
+.conten-P .btn-Edit {
+  color: #060300;
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 18px;
+}
+.conten-P .btn-Edit:hover {
+  color: #ff4300;
+}
+.conten-P .btn-Delete-A {
+  font-family: Open Sans;
+  font-weight: bold;
+  font-size: 18px;
+}
+.conten-P .btn-Delete-A:hover {
+  color: #ff4300;
+}
+
 .title-admin {
   color: #060300;
   font-family: Open Sans;
@@ -2357,32 +2380,10 @@ footer .social-networks .networks img {
   font-family: Open Sans;
   font-size: 15px;
   text-align: center;
->>>>>>> origin/marta
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-<<<<<<< HEAD
-  width: 80%;
-  height: 50px;
-}
-.conten-P .btn-Edit {
-  color: #060300;
-  font-family: Open Sans;
-  font-weight: bold;
-  font-size: 18px;
-}
-.conten-P .btn-Edit:hover {
-  color: #ff4300;
-}
-.conten-P .btn-Delete-A {
-  font-family: Open Sans;
-  font-weight: bold;
-  font-size: 18px;
-}
-.conten-P .btn-Delete-A:hover {
-  color: #ff4300;
-=======
   border: solid 1px #4311b9;
   background: #cbbfe8;
 }
@@ -2466,7 +2467,6 @@ footer .social-networks .networks img {
   border-bottom-right-radius: 20px;
   border: solid 1px #4311b9;
   background: #cbbfe8;
->>>>>>> origin/marta
 }
 
 .sesion {
@@ -2486,14 +2486,14 @@ footer .social-networks .networks img {
   text-align: center;
 }
 
-/* .img-principal{ 
-    overflow:hidden;
-    width: 100%;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img{
-        width: 100%;
-    }
-} */
+.img-principal {
+  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-principal img {
+  width: 100%;
+}
