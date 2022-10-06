@@ -15,7 +15,7 @@
     </button>
 
     <button class="AdminH2">
-        <a href="{{ route('export') }}" class="btnH2" > Exportar Talleres</a>
+        <a href="{{ route('export') }}" class="btnH2" > Exportar Mini juegos</a>
     </button>
 </div>
 
