@@ -5,9 +5,19 @@
     <h1 class="txtprincipal2">Mini Juegos</h1>
 </div>
 
-<button class="AdminH2">
-    <a href="{{ url('/admin/minigames/create') }}" class="btnH2">Agregar Nuevo</a>
-</button>
+<div class="keypad" >
+    <button class="AdminH2">
+        <a href="{{ url('/dashboard#') }}" class="btnH2">Volver</a>
+    </button>
+
+    <button class="AdminH2">
+        <a href="{{ url('/admin/minigames/create') }}" class="btnH2">Agregar Nuevo</a>
+    </button>
+
+    <button class="AdminH2">
+        <a href="{{ route('export') }}" class="btnH2" > Exportar Talleres</a>
+    </button>
+</div>
 
 @foreach($minigame as $minigames)
     <div class="conten-P">

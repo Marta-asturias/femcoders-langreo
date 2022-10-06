@@ -2272,18 +2272,22 @@ footer .social-networks .networks img {
   font-size: 50px;
 }
 
-.AdminH2 {
+.keypad {
+  display: flex;
+}
+.keypad .AdminH2 {
   margin: 1%;
   width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
 }
-.AdminH2 .btnH2 {
+.keypad .AdminH2 .btnH2 {
   color: #faf9f7;
   font-family: Open Sans;
-  font-size: 20px;
-  width: 15%;
+  padding-top: 1%;
+  width: 40%;
+  font-size: 15px;
   height: 40px;
   border: solid 1px #ff4300;
   background: #ff4300;
@@ -2291,6 +2295,9 @@ footer .social-networks .networks img {
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+.keypad .AdminH2 .btnH2:hover {
+  color: black;
 }
 
 .conten-P {
