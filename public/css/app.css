@@ -2320,7 +2320,11 @@ footer .social-networks .networks img {
   width: 80%;
   height: 50px;
 }
+.conten-P .txt-Name-admin {
+  width: 40%;
+}
 .conten-P .btn-Edit {
+  width: 20%;
   color: #060300;
   font-family: Open Sans;
   font-weight: bold;
@@ -2329,7 +2333,10 @@ footer .social-networks .networks img {
 .conten-P .btn-Edit:hover {
   color: #ff4300;
 }
-.conten-P .btn-Delete-A {
+.conten-P .AdminB2 {
+  width: 20%;
+}
+.conten-P .AdminB2 .btn-Delete-A {
   font-family: Open Sans;
   font-weight: bold;
   font-size: 18px;

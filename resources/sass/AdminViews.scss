@@ -45,7 +45,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    .linea{
+        .linea{
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -59,8 +59,12 @@
         width: 80%;
         height: 50px;
     }
+    .txt-Name-admin{
+        width: 40%;
+    }
 
     .btn-Edit{
+        width: 20%;
         color: #060300;
         font-family:Open Sans;
         font-weight: bold;
@@ -70,11 +74,13 @@
     .btn-Edit:hover{
         color: #ff4300;
     }
-
-    .btn-Delete-A{
-        font-family:Open Sans;
-        font-weight: bold;
-        font-size: 18px;
+    .AdminB2{
+        width: 20%;
+        .btn-Delete-A{
+            font-family:Open Sans;
+            font-weight: bold;
+            font-size: 18px;
+        }
     }
     .btn-Delete-A:hover{      
         color: #ff4300;

@@ -27,7 +27,9 @@
 @foreach($workshop as $workshops)
     <div class="conten-P">
         <div class="linea">
-                <h2> <strong>{{$workshops->title}}</strong></h2>
+
+                <h2 class="txt-Name-admin" > <strong>{{$workshops->title}}</strong></h2>
+            
                 <button class="btn-Edit">
                     <a href="{{ route('edit',['id'=>$workshops->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i> Modificar</a>
                 </button>
