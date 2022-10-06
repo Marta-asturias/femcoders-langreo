@@ -2248,6 +2248,7 @@ footer .social-networks .networks img {
   color: #cbbfe8;
 }
 
+<<<<<<< HEAD
 .adminForm {
   background-color: rgb(203, 191, 232);
   position: relative;
@@ -2303,10 +2304,65 @@ footer .social-networks .networks img {
   margin-top: 1%;
   border: solid 1px #ff4300;
   background: #fed2c0;
+=======
+.title-admin {
+  color: #060300;
+  font-family: Open Sans;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  font-size: 40px;
+  margin: 2%;
+}
+.title-admin .title-Ad {
+  text-align: center;
+}
+
+.admin-Conten {
+  display: flex;
+  justify-content: center;
+}
+.admin-Conten .title-admin1 {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: 1%;
+  padding: 5px;
+}
+.admin-Conten .title-admin1 label {
+  font-size: 25px;
+}
+.admin-Conten .title-admin1 .the-title1 {
+  margin: 1%;
+}
+.admin-Conten .title-admin1 .the-input1 {
+  display: flex;
+  text-align: center;
+  border: 1px solid #4311b9;
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
+}
+.admin-Conten .conten-admin {
+  width: 80%;
+}
+.admin-Conten .conten-admin .title-admin2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.admin-Conten .conten-admin .title-admin2 .the-title {
+  width: 20%;
+  height: 30px;
+  font-family: Open Sans;
+  font-size: 15px;
+  text-align: center;
+>>>>>>> origin/marta
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+<<<<<<< HEAD
   width: 80%;
   height: 50px;
 }
@@ -2326,6 +2382,91 @@ footer .social-networks .networks img {
 }
 .conten-P .btn-Delete-A:hover {
   color: #ff4300;
+=======
+  border: solid 1px #4311b9;
+  background: #cbbfe8;
+}
+.admin-Conten .conten-admin .title-admin2 .the-input {
+  width: 60%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  padding: 5px;
+  text-align: center;
+}
+.admin-Conten .conten-admin .title-admin2 .the-title2 {
+  width: 20%;
+  height: 30px;
+  margin-top: 3%;
+  font-family: Open Sans;
+  font-size: 15px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  background: #cbbfe8;
+}
+.admin-Conten .conten-admin .title-admin2 .the-input2 {
+  width: 60%;
+  height: 100px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  padding: 5px;
+  text-align: center;
+}
+.admin-Conten .conten-admin .create-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+.admin-Conten .conten-admin .create-1 input[type=file] {
+  width: 70%;
+  border: solid 1px #4311b9;
+}
+.admin-Conten .conten-admin .btn-general {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1%;
+}
+.admin-Conten .conten-admin .btn-general .btn-create {
+  width: 20%;
+  height: 30px;
+  margin-top: 3%;
+  font-family: Open Sans;
+  font-size: 15px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  background: #cbbfe8;
+}
+.admin-Conten .conten-admin .btn-general .btn-create:hover {
+  color: #4311b9;
+}
+.admin-Conten .conten-admin .btn-general .btn-cancelar {
+  width: 20%;
+  height: 30px;
+  margin-top: 3%;
+  font-family: Open Sans;
+  font-size: 15px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  background: #cbbfe8;
+>>>>>>> origin/marta
 }
 
 .sesion {
