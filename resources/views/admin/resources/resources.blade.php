@@ -27,7 +27,7 @@
 @foreach($resource as $resources)
     <div class="conten-P">
         <div class="linea">
-            <h2 class="txt-Name-admin">{{$resources->title}}</h2>
+            <h2 class="txt-Name-admin"><strong>{{$resources->title}}</strong></h2>
 
             <button class="btn-Edit">
                 <a href="{{ route('resource.edit',['id'=>$resources->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i> Modificar</a>
