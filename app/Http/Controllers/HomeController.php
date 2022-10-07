@@ -9,7 +9,6 @@ class HomeController extends Controller
 {
     public function welcome(Request $request){
         $workshop=Workshop::all()->sortByDesc("id");
-        //dd($workshop);
         return view('/welcome')->with('workshop', $workshop);
     }
 }
