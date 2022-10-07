@@ -1,4 +1,5 @@
 <x-head/> 
+@include('sweetalert::alert')
 @include('layouts.adminNavigation')
 
 <div class="titlePrincipal2">

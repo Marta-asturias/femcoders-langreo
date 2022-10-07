@@ -4,6 +4,7 @@ namespace App\Repositories\MiniGame;
 use App\Models\MiniGame;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MiniGameRepository  {
 
@@ -63,7 +64,8 @@ private MiniGame $MiniGame;
 
     public function destroyMiniGame(Request $request)
     {
-        $MiniGame = MiniGame::find($request->id);        
+        $MiniGame = MiniGame::find($request->id);
+        Alert::warning('Eliminado', 'El Minijuego Ha sido Borrado');        
         return $MiniGame->delete();
     
     }
