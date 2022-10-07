@@ -24,6 +24,7 @@ private ParticipantRepository $repository;
 
     public function createParticipant(){
         return view("participant");
+   
 
     }
 
