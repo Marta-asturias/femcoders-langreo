@@ -64,6 +64,10 @@ npm i
 ```
 
 ***
+## Laravel Excel
+composer require maatwebsite/excel
+En php.ini de xampp fue necesario agregar la siguiente linea: extension=php_gd.dll 
+
 
 
 ## Soporte

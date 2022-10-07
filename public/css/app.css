@@ -1551,7 +1551,7 @@ input::placeholder, textarea::placeholder {
   color: #4311B9;
   font-family: Open Sans;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 footer {
@@ -1606,31 +1606,49 @@ footer .social-networks .networks img {
 
 .conten-clain {
   position: relative;
+  width: 100%;
 }
 .conten-clain .img-principal {
   overflow: hidden;
   width: 100%;
-  height: 800px;
+  filter: brightness(0.6);
 }
-.conten-clain .img-principal img {
+.conten-clain .img-principal video {
   width: 100%;
-  height: 800px;
 }
 .conten-clain .text-clain {
-  position: absolute;
-  left: 50px;
-  top: 80px;
-  width: 40%;
-  height: 100px;
-  opacity: 90%;
+  width: 100%;
 }
-.conten-clain .text-clain .txt-clain {
-  color: #f6f3ef;
-  -webkit-text-stroke: 1.5px black;
-  line-height: 1.5em;
+.conten-clain .text-clain .txt-clain1 {
+  width: 40%;
+  position: absolute;
+  left: 2%;
+  top: 4%;
+  color: white;
   text-align: justify;
   font-family: Open Sans;
-  font-size: 25px;
+  font-size: 22px;
+}
+.conten-clain .text-clain .text-clain2 {
+  width: 50%;
+  position: absolute;
+  right: 8%;
+  bottom: 12%;
+  color: white;
+  text-align: justify;
+  font-family: Open Sans;
+  font-size: 30px;
+  text-shadow: 0px 2px 2px #4311b9;
+}
+.conten-clain .text-clain .txt-clain3 {
+  width: 50%;
+  position: absolute;
+  right: 2%;
+  top: 18%;
+  color: white;
+  text-align: justify;
+  font-family: Open Sans;
+  font-size: 22px;
 }
 .conten-clain .img-logo {
   position: absolute;
@@ -1687,7 +1705,7 @@ footer .social-networks .networks img {
   justify-content: space-around;
   align-items: center;
   box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4499999881);
-  border: solid 1px black;
+  border: solid 1.5px #4311b9;
 }
 .contenedor-cartasW .cardw .img-cardW {
   margin-top: 5%;
@@ -2126,15 +2144,113 @@ footer .social-networks .networks img {
   color: #ff4300;
 }
 
-.adminHeader {
-  position: absolute;
+.description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #cbbfe8;
+}
+.description-container .description-form {
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.description-container .description-form .form-line {
+  display: flex;
+  width: 100%;
+  height: 30px;
   margin-top: 1%;
-  background-color: rgb(203, 191, 232);
+  margin-bottom: 1%;
+}
+.description-container .description-form .form-line .label-form {
+  width: 30%;
+  padding-right: 2%;
+  font-family: Open Sans;
+  font-size: 15px;
+  color: black;
+}
+.description-container .description-form .form-line .input-form {
+  width: 80%;
+  padding-left: 2%;
+  border: solid 1px black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.description-container .description-form .form-line .form-check-input {
+  padding-right: 2%;
+  border: solid 1px black;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.description-container .description-form .form-line .form-check-label {
+  padding-left: 2%;
+  font-family: Open Sans;
+  font-size: 15px;
+  color: black;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.description-container .description-form .btn-form {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+}
+.description-container .description-form .btn-form .btn-F {
+  border: solid 1px black;
+  width: 30%;
+  background: #4311B9;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.description-container .description-form .btn-form .btn-F:hover {
+  color: black;
+}
+.description-container .legals-line {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.description-container .legals-line .txt-F {
+  font-family: Open Sans;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+}
+.description-container .privacy-politics {
+  font-size: 15px;
+  font-family: Open Sans;
+  overflow: scroll;
+  height: 100px;
+  width: 90%;
+  overflow-x: hidden;
+  margin-bottom: 2%;
+}
+
+.adminHeader {
+  position: relative;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4499999881);
+  border-bottom: 1px;
+  border-style: solid;
   width: 100%;
   height: 150px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.adminHeader .logOut {
+  font-size: xx-large;
 }
 .adminHeader .logo {
   width: 33%;
@@ -2150,6 +2266,10 @@ footer .social-networks .networks img {
 .adminHeader .logo .img-logo img {
   width: 130px;
   height: 100px;
+}
+
+.navUser {
+  font-size: 50px;
 }
 
 .contenD {
@@ -2183,6 +2303,7 @@ footer .social-networks .networks img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 .contenD .cardD .card-bodyD .card-titleD {
   font-family: Open Sans;
@@ -2198,14 +2319,11 @@ footer .social-networks .networks img {
   width: 100%;
   height: 30px;
 }
-.contenD .cardD .card-bodyD .btnD {
+.contenD .cardD .card-bodyD .btn-Dash {
   font-family: Open Sans;
   text-align: center;
-  padding: 1px 50px;
-  position: relative;
-  right: -70px;
-  width: 50%;
   height: 30px;
+  width: 50%;
   color: white;
   border: 1px solid #cbbfe8;
   background: #4311b9;
@@ -2216,6 +2334,239 @@ footer .social-networks .networks img {
 }
 .contenD .cardD .card-bodyD .btnD:hover {
   color: #cbbfe8;
+}
+
+.adminForm {
+  background-color: rgb(203, 191, 232);
+  position: relative;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4499999881);
+}
+
+.titlePrincipal2 {
+  margin: 2%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.titlePrincipal2 .txtprincipal2 {
+  color: #060300;
+  font-family: Open Sans;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  font-size: 50px;
+}
+
+.keypad {
+  display: flex;
+}
+.keypad .AdminH2 {
+  margin: 1%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.keypad .AdminH2 .btnH2 {
+  color: #faf9f7;
+  font-family: Open Sans;
+  padding-top: 1%;
+  width: 40%;
+  font-size: 15px;
+  height: 40px;
+  border: solid 1px #ff4300;
+  background: #ff4300;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.keypad .AdminH2 .btnH2:hover {
+  color: black;
+}
+
+.conten-P {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.conten-P .linea {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1%;
+  border: solid 1px #ff4300;
+  background: #fed2c0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 80%;
+  height: 50px;
+}
+.conten-P .txt-Name-admin {
+  width: 40%;
+}
+.conten-P .btn-Edit {
+  width: 20%;
+  color: #060300;
+  font-family: Open Sans;
+  font-size: 18px;
+}
+.conten-P .btn-Edit:hover {
+  color: #ff4300;
+}
+.conten-P .AdminB2 {
+  width: 20%;
+}
+.conten-P .AdminB2 .btn-Delete-A {
+  font-family: Open Sans;
+  font-size: 18px;
+}
+.conten-P .btn-Delete-A:hover {
+  color: #ff4300;
+}
+
+.title-admin {
+  color: #060300;
+  font-family: Open Sans;
+  text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+  font-size: 40px;
+  margin: 2%;
+}
+.title-admin .title-Ad {
+  text-align: center;
+}
+
+.admin-Conten {
+  display: flex;
+  justify-content: center;
+}
+.admin-Conten .title-admin1 {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: 1%;
+  padding: 5px;
+}
+.admin-Conten .title-admin1 label {
+  font-size: 25px;
+}
+.admin-Conten .title-admin1 .the-title1 {
+  margin: 1%;
+}
+.admin-Conten .title-admin1 .the-input1 {
+  display: flex;
+  text-align: center;
+  border: 1px solid #4311b9;
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
+}
+.admin-Conten .conten-admin {
+  width: 80%;
+}
+.admin-Conten .conten-admin .title-admin2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.admin-Conten .conten-admin .title-admin2 .the-title {
+  width: 20%;
+  height: 30px;
+  font-family: Open Sans;
+  font-size: 15px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  background: #cbbfe8;
+}
+.admin-Conten .conten-admin .title-admin2 .the-input {
+  width: 60%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  padding: 5px;
+  text-align: center;
+}
+.admin-Conten .conten-admin .title-admin2 .the-title2 {
+  width: 20%;
+  height: 30px;
+  margin-top: 3%;
+  font-family: Open Sans;
+  font-size: 15px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  background: #cbbfe8;
+}
+.admin-Conten .conten-admin .title-admin2 .the-input2 {
+  width: 60%;
+  height: 100px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  padding: 5px;
+  text-align: center;
+}
+.admin-Conten .conten-admin .create-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+.admin-Conten .conten-admin .create-1 input[type=file] {
+  width: 70%;
+  border: solid 1px #4311b9;
+}
+.admin-Conten .conten-admin .btn-general {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1%;
+}
+.admin-Conten .conten-admin .btn-general .btn-create {
+  width: 20%;
+  height: 30px;
+  margin-top: 3%;
+  font-family: Open Sans;
+  font-size: 15px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  background: #cbbfe8;
+}
+.admin-Conten .conten-admin .btn-general .btn-create:hover {
+  color: #4311b9;
+}
+.admin-Conten .conten-admin .btn-general .btn-cancelar {
+  width: 20%;
+  height: 30px;
+  margin-top: 3%;
+  font-family: Open Sans;
+  font-size: 15px;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: solid 1px #4311b9;
+  background: #cbbfe8;
 }
 
 .sesion {

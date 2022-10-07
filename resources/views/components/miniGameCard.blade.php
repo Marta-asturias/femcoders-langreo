@@ -8,8 +8,8 @@
 
     <div class="card-bodyMG">
       <div class="card-titleMG">
-        <h5  class="cardMg-title "><strong>Titulo:</strong> {{$minigame
-        ->title}}</h5>
+        <h5  class="cardMg-title "><strong>{{$minigame
+        ->title}} </strong></h5>
         <p class="cardMg-text"> <strong>Detalles:</strong> {{$minigame
         ->details}}</p>
         <p class="cardMg-text1"><strong>Edad:</strong> {{$minigame
