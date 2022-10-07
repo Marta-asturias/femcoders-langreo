@@ -1,6 +1,6 @@
 <section class="conten-clain">
 
-  <div class="img-principal" >
+    <div class="img-principal" >
     <video src="{{ asset('img/f5.mp4') }}" autoplay="true" muted="false" loop="true"></video>
     {{-- <img class="girl" src="{{ asset('img/foto3.jpeg') }}" alt="">  --}}
     </div> 
@@ -40,7 +40,7 @@
     </div>
     
     <button class="btn-clain">
-        <a href="{{ url('/') }}" class="btn-A">Apuntate Gratis</a>
+        <a href="{{ url('/workshops') }}" class="btn-A">Apuntate Gratis</a>
     </button>
     
     </section>

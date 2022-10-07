@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Participant;
 use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Http\Request;
 
@@ -22,13 +23,18 @@ private ParticipantRepository $repository;
     }
 
     public function createParticipant(){
-        return view("welcome");
+        return view("participant");
 
     }
 
     public function save(Request $request)
     {
-        $this->repository->saveParticipant($request);
-        return $this->index();
-    }
+        if (isset($_POST['sendForm'])) {
+            if (isset($_POST['legals']) && $_POST['legals'] == '1')
+                echo '<div class="alert alert-success">Has aceptado correctamente las condiciones de uso.</div>';
+                $this->repository->saveParticipant($request);
+                return $this->index();
+ 
+}
+}
 }

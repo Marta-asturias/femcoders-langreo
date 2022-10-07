@@ -6,14 +6,28 @@
     <h1 class="txtprincipal2">Recursos</h1>
 </div>
 
-<button class="AdminH2">
-    <a href="{{ url('/admin/resources/create') }}" class="btnH2">Agregar Nuevo</a>
-</button>
+<div class="keypad" >
+    <button class="AdminH2">
+        <a href="{{ url('/dashboard#') }}" class="btnH2">Volver</a>
+    </button>
+
+    <button class="AdminH2">
+        <a href="{{ url('/admin/resources/create') }}" class="btnH2">Agregar Nuevo</a>
+    </button>
+
+    <button class="AdminH2">
+        <a href="{{ route('export') }}" class="btnH2" > Exportar Recursos</a>
+    </button>
+</div>
+
+
+
+
 
 @foreach($resource as $resources)
     <div class="conten-P">
         <div class="linea">
-            <h2>{{$resources->title}}</h2>
+            <h2 class="txt-Name-admin"><strong>{{$resources->title}}</strong></h2>
 
             <button class="btn-Edit">
                 <a href="{{ route('resource.edit',['id'=>$resources->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i> Modificar</a>
