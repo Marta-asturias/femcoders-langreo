@@ -1,4 +1,5 @@
 <x-head />
+@include('sweetalert::alert')
 
 
 <h1>Lista de Administradores</h1>
@@ -44,73 +45,3 @@
 
 
 
-@section('js')
-
-<script type="text/javascript">
-    
-    
-    
-    
-    
-    
-    
-    
-    {{--  if (deleteMsg) {
-        $.ajax({
-            type: "POST",
-            url: SITEURL + '/fullcalendar-ajax',
-            data: {
-                id: event.id,
-                type: 'delete'
-            },
-            success: function(response) {
-                calendar.fullCalendar('removeEvents', event.id);
-                swal({
-                    title: "Borrar evento",
-                    text: "¿Estas seguro? Si eliminas el evento tendrás que volver a crearlo",
-                    icon: "warning",
-                    buttons: true,
-                    dangerMode: true,
-                })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        swal("Tu evento ha sido eliminado", {
-                        icon: "success",
-                });
-                    } else {
-                        swal("No has eliminado el evento");
-                    }
-                });  --}}
-
-
-
-
-
-    {{--  $('.form-delete').submit(async function(e){
-        e.preventDefault();
-        console.log("Hola")
-        
-
-    await swal({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
-      }).then((result) => {
-        if (result.isConfirmed) {
-            console.log("Borrado Correctamente")
-            swal(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-              )
-          this.submit();
-        }
-      })
-    })  --}}
-
-</script>
-@endsection
