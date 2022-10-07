@@ -19,7 +19,7 @@
     </div>
 
     <div class="btn-R"> 
-        <a href="">
+        <a href=>
         <button type="button" class="R-btn">Ver Más</button> 
         </a>
     </div>
