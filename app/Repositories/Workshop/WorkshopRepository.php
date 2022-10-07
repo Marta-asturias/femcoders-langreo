@@ -82,7 +82,7 @@ private Workshop $workshop;
     public function destroyWorkshop(Request $request)
     {
         $workshop = workshop::find($request->id); 
-        Alert::error('Success', 'You\'lo has borrado');       
+        Alert::success('Success', 'Has eliminado el workshop');       
         return $workshop->delete();
     
     }
