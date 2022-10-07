@@ -10,7 +10,7 @@
       @endif
 
   <div class="description-container">
-      <form class="description-form" action="{{ route('inscription'$workshop) }}" method="POST" enctype="multipart/form-data">
+      <form class="description-form" action="{{ route('inscription') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="form-line">
