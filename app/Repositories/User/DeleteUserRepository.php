@@ -20,9 +20,9 @@ class DeleteUserRepository  {
 
   public function destroyUser(Request $request)
     {
-        $this->User = User::find($request->id);   
-        Alert::success('Success', 'Administrador registrado Exitosamente');     
+        $this->User = User::find($request->id);  
+        Alert::warning('Eliminado', 'El administrador Ha sido Borrado');     
         return $this->User->delete();
     
     }
-}
+  }
