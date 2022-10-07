@@ -1,8 +1,10 @@
-@foreach ($workshop as $workshops)
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
 
-            <div class="carousel-item active" data-bs-interval="500" to a .carousel-item >
+<div id="carouselExampleSlidesOnly" class="carousel" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+        @foreach ($workshop as $workshops)
+
+            <div class="carousel-item active" data-bs-interval="2000">
                 <div class="section-courses">
                     
                     <div class="conten-courses">
@@ -18,6 +20,7 @@
                                 <p>{{$workshops->details}}</p>
                             </div>
                         </div>
+                        
                         <div class="btn-cuorses"> 
                             <a href="">
                                 <button type="button" class="C-btn">Inscribete</button> 
