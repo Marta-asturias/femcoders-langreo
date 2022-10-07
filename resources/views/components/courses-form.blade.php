@@ -49,6 +49,26 @@
         </div>
 
         <div class="form-line">
+          <input type="checkbox" class="form-check-input" id="date1" name="date1" value="1">
+          <label class="form-check-label" for="date">12/11/2023</label>
+         </div>
+
+         <div class="form-line">
+          <input type="checkbox" class="form-check-input" id="date2" name="date2" value="1">
+          <label class="form-check-label" for="date">12/12/2022</label>
+         </div>
+
+         <div class="form-line">
+          <input type="checkbox" class="form-check-input" id="date3" name="date3" value="1">
+          <label class="form-check-label" for="date">12/01/2023</label>
+         </div>
+
+         <div class="form-line">
+          <input type="checkbox" class="form-check-input" id="date4" name="date4" value="1">
+          <label class="form-check-label" for="date">12/02/2023</label>
+         </div>
+
+        <div class="form-line">
          <input type="checkbox" class="form-check-input" id="legals" name="legals" value="1">
          <label class="form-check-label" for="legals">He leído y acepto a Factoría F5, como responsable del tratamiento de mis datos con la finalidad de dar respuesta a mi consulta o petición. Y politica de privacidad</label>
         </div>
