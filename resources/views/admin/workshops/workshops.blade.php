@@ -1,4 +1,5 @@
 <x-head/>
+@include('sweetalert::alert')
 @include('layouts.adminNavigation') 
 
 <a href="{{ route('export') }}"> Export </a>

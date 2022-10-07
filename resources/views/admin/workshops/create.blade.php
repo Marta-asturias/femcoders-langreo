@@ -1,4 +1,5 @@
 <x-head />
+@include('sweetalert::alert')
 <x-header />
 <div class="title-admin">
     <h1 class="title-Ad">Añadir Talleres</h1>

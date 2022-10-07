@@ -5,6 +5,7 @@ namespace App\Repositories\Workshop;
 use App\Models\Workshop;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class WorkshopRepository  {
 private Workshop $workshop;
@@ -36,7 +37,10 @@ private Workshop $workshop;
         $this->workshop->age = $request->get('age');
         $this->workshop->duration = $request->get('duration');
         $this->workshop->format = $request->get('format');
-        return $this->workshop->save();    
+        
+        return $this->workshop->save();  
+ 
+        
     }
 
     public function editWorkshop(Request $request, $id){
@@ -69,9 +73,11 @@ private Workshop $workshop;
 
     public function destroyWorkshop(Request $request)
     {
-        $workshop = workshop::find($request->id);        
+        $workshop = workshop::find($request->id); 
+        Alert::error('Success', 'You\'lo has borrado');       
         return $workshop->delete();
     
     }
+ 
 
 }
