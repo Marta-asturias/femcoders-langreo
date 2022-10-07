@@ -38,3 +38,7 @@ private ParticipantRepository $repository;
 }
 }
 }
+
+/* $workshop = $this->repository->getAll();
+$this->repository->updateWorkshop($request,$id);
+return view('/workshops')->with('workshop',$workshop); */
