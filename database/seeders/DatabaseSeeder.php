@@ -20,11 +20,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       /*  $this->call(
+         $this->call(
             [
                 WorkshopSeeder::class
             ]
-            );  */
+            );  
       
         DB::statement("SET foreign_key_checks=0");
             DB::table('participant_workshop')->truncate();
