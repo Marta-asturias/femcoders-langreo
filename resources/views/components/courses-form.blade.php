@@ -11,7 +11,7 @@
 
   <div class="description-container">
       <form class="description-form" action="{{ route('inscription') }}" method="POST" enctype="multipart/form-data">
-         @csrf
+        @csrf
 
         <div class="form-line">
          <x-label class="label-form" for="first_name" :value="__('Nombre')" />

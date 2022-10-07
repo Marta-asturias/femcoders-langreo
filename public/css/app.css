@@ -1613,8 +1613,7 @@ footer .social-networks .networks img {
   width: 100%;
   filter: brightness(0.6);
 }
-.conten-clain .img-principal .girl {
-  opacity: 70%;
+.conten-clain .img-principal video {
   width: 100%;
 }
 .conten-clain .text-clain {
@@ -2149,18 +2148,19 @@ footer .social-networks .networks img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(169, 141, 223);
+  background-color: #cbbfe8;
 }
 .description-container .description-form {
   margin: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 60%;
 }
 .description-container .description-form .form-line {
   display: flex;
   width: 100%;
+  height: 30px;
   margin-top: 1%;
   margin-bottom: 1%;
 }
@@ -2303,6 +2303,7 @@ footer .social-networks .networks img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 .contenD .cardD .card-bodyD .card-titleD {
   font-family: Open Sans;
@@ -2318,14 +2319,11 @@ footer .social-networks .networks img {
   width: 100%;
   height: 30px;
 }
-.contenD .cardD .card-bodyD .btnD {
+.contenD .cardD .card-bodyD .btn-Dash {
   font-family: Open Sans;
   text-align: center;
-  padding: 1px 50px;
-  position: relative;
-  right: -70px;
-  width: 50%;
   height: 30px;
+  width: 50%;
   color: white;
   border: 1px solid #cbbfe8;
   background: #4311b9;
@@ -2359,18 +2357,22 @@ footer .social-networks .networks img {
   font-size: 50px;
 }
 
-.AdminH2 {
+.keypad {
+  display: flex;
+}
+.keypad .AdminH2 {
   margin: 1%;
   width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
 }
-.AdminH2 .btnH2 {
+.keypad .AdminH2 .btnH2 {
   color: #faf9f7;
   font-family: Open Sans;
-  font-size: 20px;
-  width: 15%;
+  padding-top: 1%;
+  width: 40%;
+  font-size: 15px;
   height: 40px;
   border: solid 1px #ff4300;
   background: #ff4300;
@@ -2378,6 +2380,9 @@ footer .social-networks .networks img {
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+.keypad .AdminH2 .btnH2:hover {
+  color: black;
 }
 
 .conten-P {
@@ -2400,18 +2405,23 @@ footer .social-networks .networks img {
   width: 80%;
   height: 50px;
 }
+.conten-P .txt-Name-admin {
+  width: 40%;
+}
 .conten-P .btn-Edit {
+  width: 20%;
   color: #060300;
   font-family: Open Sans;
-  font-weight: bold;
   font-size: 18px;
 }
 .conten-P .btn-Edit:hover {
   color: #ff4300;
 }
-.conten-P .btn-Delete-A {
+.conten-P .AdminB2 {
+  width: 20%;
+}
+.conten-P .AdminB2 .btn-Delete-A {
   font-family: Open Sans;
-  font-weight: bold;
   font-size: 18px;
 }
 .conten-P .btn-Delete-A:hover {

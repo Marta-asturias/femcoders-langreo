@@ -2,18 +2,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color:rgb(169, 141, 223);
+        background-color:#cbbfe8;
 
         .description-form{
             margin: 1%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 80%;
+            width: 60%;
 
             .form-line{               
                 display: flex;
                 width: 100%;
+                height: 30px;
                 margin-top: 1%;
                 margin-bottom: 1%;
 
