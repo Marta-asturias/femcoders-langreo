@@ -1,8 +1,10 @@
+@foreach ($workshop as $workshops)
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-        @foreach ($workshop as $workshops)
-            <div class="carousel-item active">
+
+            <div class="carousel-item active" data-bs-interval="500" to a .carousel-item >
                 <div class="section-courses">
+                    
                     <div class="conten-courses">
                         <div class="img-courses">
                             <img src="{{$workshops->image }}" />
