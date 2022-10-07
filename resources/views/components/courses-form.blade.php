@@ -10,7 +10,7 @@
       @endif
 
   <div class="description-container">
-      <form class="description-form" action="{{ route('inscription') }}" method="POST" enctype="multipart/form-data">
+      <form class="description-form" action="{{ route('inscription'$workshop) }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="form-line">
@@ -47,26 +47,28 @@
          <x-label class="label-form" for="how_did_you_meet_us" :value="__('¿Como nos has conocido?')" />
          <x-input id="how_did_you_meet_us" class="input-form" type="text" name="how_did_you_meet_us" :value="old('how_did_you_meet_us')" required autofocus />
         </div>
-
+{{-- 
         <div class="form-line">
           <input type="checkbox" class="form-check-input" id="date1" name="date1" value="1">
-          <label class="form-check-label" for="date">12/11/2023</label>
+          <label class="form-check-label" for="date1">{{$workshops->date1}}</label>
          </div>
 
          <div class="form-line">
           <input type="checkbox" class="form-check-input" id="date2" name="date2" value="1">
-          <label class="form-check-label" for="date">12/12/2022</label>
+          <label class="form-check-label" for="date2">{{$workshops->date2}}</label>
          </div>
+
+       <x-input id="title" class="input-tilte-edit" type="checkbox" name="title" :value="old('title') ?? $workshop->title" required /> 
 
          <div class="form-line">
           <input type="checkbox" class="form-check-input" id="date3" name="date3" value="1">
-          <label class="form-check-label" for="date">12/01/2023</label>
+          <label class="form-check-label" for="date">{{$workshops->date3}}</label>
          </div>
 
          <div class="form-line">
           <input type="checkbox" class="form-check-input" id="date4" name="date4" value="1">
-          <label class="form-check-label" for="date">12/02/2023</label>
-         </div>
+          <label class="form-check-label" for="date">{{$workshops->date4}}</label>
+         </div> --}}
 
         <div class="form-line">
          <input type="checkbox" class="form-check-input" id="legals" name="legals" value="1">
