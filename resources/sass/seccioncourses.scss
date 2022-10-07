@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: space-around;
 .conten-courses{
+    background: white;
     border: solid black 1px;
     box-shadow:5px 5px 5px rgba(0, 0, 0, 0.44999998807907104);
     border-radius: 60px;
@@ -28,6 +29,7 @@
         }
     }
     .conten2-courses{
+        margin-top: 1%;
         width: 55%;
         height: 250px;
         display: flex;

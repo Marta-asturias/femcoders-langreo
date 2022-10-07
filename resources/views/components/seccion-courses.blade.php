@@ -1,32 +1,33 @@
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-    @foreach ($workshop as $workshops)
-        <div class="carousel-item active">
-            <div class="section-courses">
-                <div class="conten-courses">
-                    <div class="img-courses">
-                        <img src="{{$workshops->image }}" />
-                    </div>
-                    <div class="conten2-courses">
-                        <div class="title-courses">
-                            <h4>{{$workshops->title }}</h4>
+        @foreach ($workshop as $workshops)
+            <div class="carousel-item active">
+                <div class="section-courses">
+                    <div class="conten-courses">
+                        <div class="img-courses">
+                            <img src="{{$workshops->image }}" />
                         </div>
-                        <div class="separador"></div>
-                        <div class="text-course">
-                            <p>{{$workshops->details}}</p>
+                        <div class="conten2-courses">
+                            <div class="title-courses">
+                                <h4>{{$workshops->title }}</h4>
+                            </div>
+                            <div class="separador"></div>
+                            <div class="text-course">
+                                <p>{{$workshops->details}}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="btn-cuorses"> 
-                        <a href="">
-                            <button type="button" class="C-btn">Inscribete</button> 
-                        </a>
+                        <div class="btn-cuorses"> 
+                            <a href="">
+                                <button type="button" class="C-btn">Inscribete</button> 
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    @endforeach
+        @endforeach
     </div>
 </div>
+
 <div class="btn2-cuorses"> 
     <a href="">
     <button type="button" class="C2-btn" >Ver Más</button> 
