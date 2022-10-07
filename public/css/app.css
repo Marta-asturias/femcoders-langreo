@@ -1912,6 +1912,7 @@ footer .social-networks .networks img {
   justify-content: space-around;
 }
 .section-courses .conten-courses {
+  margin-bottom: 2%;
   background: white;
   border: solid black 1px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4499999881);
