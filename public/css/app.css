@@ -1776,7 +1776,7 @@ footer .social-networks .networks img {
 
 .mini-game {
   width: 100%;
-  height: 500px;
+  height: 600px;
   background: #4311b9;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -1790,30 +1790,48 @@ footer .social-networks .networks img {
   font-family: Open Sans;
   font-size: 30px;
 }
-.mini-game .cardMj {
+.mini-game .conte-MG {
+  margin: 2%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.mini-game .conte-MG .cardMj {
+  margin-top: 1%;
+  margin-bottom: 1%;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
   background: #cbbfe8;
   margin: 1%;
   padding: 1%;
   width: 15%;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.mini-game .cardMj .card-mj {
+.mini-game .conte-MG .cardMj .card-mg {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
   width: 100%;
-  height: 200px;
+  height: 250px;
 }
-.mini-game .cardMj .mjtitle {
+.mini-game .conte-MG .cardMj .card-mg .card-mj {
+  width: 100%;
+  height: 250px;
+}
+.mini-game .conte-MG .cardMj .mgtitle {
+  margin-top: 2%;
+  width: 100%;
+  height: 50px;
+}
+.mini-game .conte-MG .cardMj .mgtitle .mjtitle {
   color: #f6f3ef;
   font-family: Open Sans;
   text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
-  font-size: 20px;
-  margin: 10%;
+  font-size: 15px;
+  text-align: center;
+  padding: 2%;
 }
-.mini-game .cardMj .btnMjCard {
+.mini-game .conte-MG .cardMj .btnMjCard {
   margin: 1%;
   color: #4311b9;
   background: rgb(203, 191, 232);
@@ -1825,7 +1843,7 @@ footer .social-networks .networks img {
   border-bottom-right-radius: 20px;
   text-align: center;
 }
-.mini-game .cardMj .btnMjCard:hover {
+.mini-game .conte-MG .cardMj .btnMjCard:hover {
   color: #f6f3ef;
 }
 .mini-game .btn-mj2 {
