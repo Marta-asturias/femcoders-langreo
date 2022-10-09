@@ -9,7 +9,7 @@
     </div>
         @endforeach
     <div class="btn-R"> 
-        <a href=>
+        <a href="{{ url('/resources') }}">
         <button type="button" class="R-btn">Ver Más</button> 
         </a>
     </div>

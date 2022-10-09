@@ -40,7 +40,7 @@
     </div>
     
     <button class="btn-clain">
-        <a href="{{ url('/') }}" class="btn-A">Apuntate Gratis</a>
+        <a href="{{ url('/participant') }}" class="btn-A">Apuntate Gratis</a>
     </button>
     
     </section>
