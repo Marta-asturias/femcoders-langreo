@@ -3,5 +3,5 @@
 <x-seccionclain/>
 <x-mini-game/>
 <x-seccion-courses :workshop="$workshop"/>
-<x-seccionresources/>
+<x-seccionresources :resource="$resource"/>
 <x-footer/>
