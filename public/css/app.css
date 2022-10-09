@@ -2108,6 +2108,7 @@ footer .social-networks .networks img {
   flex-wrap: wrap;
 }
 .contenedor-cartasR .cardR {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
   padding: 1%;
   width: 15%;
   height: 350px;
@@ -2115,10 +2116,8 @@ footer .social-networks .networks img {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
 }
 .contenedor-cartasR .cardR .img-cardR {
-  border: 1px black solid;
   width: 100%;
   height: 250px;
 }
@@ -2128,7 +2127,6 @@ footer .social-networks .networks img {
 }
 .contenedor-cartasR .cardR .card-bodyR {
   padding: 3%;
-  border: 1px black solid;
   width: 100%;
   height: 60px;
   display: flex;
