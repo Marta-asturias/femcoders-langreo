@@ -6,15 +6,16 @@ use Illuminate\View\Component;
 
 class miniGame extends Component
 {
+    public $minigames;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($minigames)
     {
-        //
-    }
+        $this->minigames=$minigames;
+  }
 
     /**
      * Get the view / contents that represent the component.
