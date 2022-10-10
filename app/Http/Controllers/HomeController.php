@@ -14,7 +14,5 @@ class HomeController extends Controller
         $resource=Resource::take(4)->orderBy('id', 'desc')->get();
         $minigames=MiniGame::take(5)->orderBy('id', 'desc')->get();
         return view('/welcome')->with('workshop', $workshop)->with('resource', $resource)->with('minigames', $minigames);
-        $workshop=Workshop::all()->sortByDesc("id");
-        return view('/welcome')->with('workshop', $workshop);
     }
 }
