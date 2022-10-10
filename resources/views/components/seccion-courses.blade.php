@@ -13,16 +13,25 @@
                         </div>
                         <div class="conten2-courses">
                             <div class="title-courses">
-                                <h4>{{$workshops->title }}</h4>
+                                <h2> <strong> {{$workshops->title }} </strong></h2>
                             </div>
                             <div class="separador"></div>
                             <div class="text-course">
-                                <p>{{$workshops->details}}</p>
+                                <p><strong>Formato: </strong>{{$workshops->format}}</p>
+                            </div>
+                            <div class="text-course">
+                                <p><strong>Edad: </strong>{{$workshops->age}}</p>
+                            </div>
+                            <div class="text-course">
+                                <p><strong>Duración: </strong>{{$workshops->duration}}</p>
+                            </div>
+                            <div class="text-course">
+                                <p><strong>Detalles: </strong>{{$workshops->details}}</p>
                             </div>
                         </div>
                         
                         <div class="btn-cuorses"> 
-                            <a href="">
+                            <a href="{{ url('/participant') }}">
                                 <button type="button" class="C-btn">Inscribete</button> 
                             </a>
                         </div>
@@ -34,74 +43,7 @@
 </div>
 
 <div class="btn2-cuorses"> 
-    <a href="">
+    <a href="{{ url('/workshops') }}">
     <button type="button" class="C2-btn" >Ver Más</button> 
     </a>
 </div>
-
-
-
-          
-
-
-{{-- @foreach ($event as $events)
-          <div class="carousel-item active">
-            <img src="{{$events->image }}" class="d-block w-100" height="200" alt="...">
-          </div>
-          @endforeach
-        </div> --}}
-
-
-
-
-
-
-
-
-            {{-- <div class="carousel-item">
-        <div class="section-courses">
-            <div class="conten-courses">
-                <div class="img-courses">
-                    <img src="{{ asset('img/foto8.jpg') }}" />
-                </div>
-                <div class="conten2-courses">
-                    <div class="title-courses">
-                        <h4>Título del Curso</h4>
-                    </div>
-                    <div class="separador"></div>
-                    <div class="text-course">
-                        <p>HOLA</p>
-                    </div>
-                </div>
-                <div class="btn-cuorses"> 
-                <a href="">
-                <button type="button" class="C-btn">Inscribete</button> 
-                </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="carousel-item">
-        <div class="section-courses">
-            <div class="conten-courses">
-                <div class="img-courses">
-                    <img src="{{ asset('img/foto9.jpg') }}" />
-                </div>
-                <div class="conten2-courses">
-                    <div class="title-courses">
-                        <h4>Título del Curso</h4>
-                    </div>
-                    <div class="separador"></div>
-                    <div class="text-course">
-                        <p>HOLA</p>
-                    </div>
-                </div>
-                <div class="btn-cuorses"> 
-                <a href="">
-                <button type="button" class="C-btn">Inscribete</button> 
-                </a>
-                </div>
-            </div>
-        </div>
-    </div> --}}
