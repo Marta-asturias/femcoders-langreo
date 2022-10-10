@@ -10,9 +10,3 @@
         <button type="submit" class="btn btn-danger">Yes, Delete Project</button>
     </div>
 </form>
-
-{{--  <form class="form-delete" action="{{ route('destroyUser',['id'=>$users->id]) }}" method="POST">
-    <button type="submit" class="btn-delete delete-confirm" data-name="{{$users->name}}" title="Eliminar"><i class="bi bi-trash"></i></button>
-    @csrf
-    @method('DELETE')
-</form>  --}}

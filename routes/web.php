@@ -32,7 +32,7 @@ Route::get('/', function () {
 
 Route::get('/admin/workshops/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('/admin/users/users', [ShowUserController::class, 'index' ])->name("users");
-Route::get('admin/delete/{id}', [DeleteUserController::class, 'delete'])->name('deleteUser');
+
 Route::delete('/admin/users/users', [DeleteUserController::class, 'destroy'])->name('destroyUser');
 Route::get('/admin/users/{id}/edit', [UpdateUSerController::class, 'edit' ])->name("editUser");
 Route::put('/admin/users/{id}/edit', [UpdateUSerController ::class, 'update' ])->name("updateUser");

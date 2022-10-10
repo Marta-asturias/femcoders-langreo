@@ -35,7 +35,7 @@
                             @csrf
                             @method('DELETE')
                         </form>  --}}
-                        <a data-toggle="modal" id="smallButton" data-target="#smallModal" data-attr="{{ route('deleteUser', ['id'=>$users->id]) }}" title="Delete User">
+                        <a data-toggle="modal" id="smallButton" data-target="#smallModal"  title="Delete User">
                             <i class="bi bi-trash"></i>
                         </a>
                     </td>
@@ -46,23 +46,29 @@
     </div>
 @endempty
 
-<!-- small modal -->
-<div class="modal fade" id="smallModal" tabindex="-1" role="dialog" aria-labelledby="smallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="smallBody">
-                <div>
-                    <!-- the result to be displayed apply here -->
-                </div>
-            </div>
+<!-- Modal -->
+<div class="modal fade" id="smallModal" tabindex="-1" aria-labelledby="smallModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="smallModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="{{ route('destroyUser', ['id'=>$users->id]) }}" method="post">
+        <div class="modal-body">
+            @csrf
+            @method('DELETE')
+            <h5 class="text-center">Are you sure you want to delete {{ $users->name }} ?</h5>
         </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-danger">Yes, Delete Project</button>
+        </div>
+    </form>
     </div>
+  </div>
 </div>
+
 
 <script>
     // display a modal (small modal)
@@ -93,21 +99,6 @@
 
 </script>
 
-@section('js')
-@include('sweetalert::alert')
 
-    {{--  <script>
-        {{--  let btnDelete = document.getElementsByClassName("delete-confirm");
-        btnDelete.addEventListener('click', () => {
-           alert("hello");
-           
-        });  --}}
-
-    
-    </script>  --}}
-
-    
-
-@endsection
 
 

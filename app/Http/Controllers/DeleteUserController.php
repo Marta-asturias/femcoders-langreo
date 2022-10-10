@@ -40,10 +40,5 @@ private DeleteUserRepository $repository;
         return redirect('/admin/users/users');
     }
 
-    public function delete(Request $request)
-{
-    $this->repository->destroyUser($request);
-    return view('admin.users.delete');
-}
 
 }
