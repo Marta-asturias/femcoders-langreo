@@ -1776,7 +1776,7 @@ footer .social-networks .networks img {
 
 .mini-game {
   width: 100%;
-  height: 500px;
+  height: 600px;
   background: #4311b9;
   margin-top: 1%;
   margin-bottom: 1%;
@@ -1790,30 +1790,48 @@ footer .social-networks .networks img {
   font-family: Open Sans;
   font-size: 30px;
 }
-.mini-game .cardMj {
+.mini-game .conte-MG {
+  margin: 2%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.mini-game .conte-MG .cardMj {
+  margin-top: 1%;
+  margin-bottom: 1%;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
   background: #cbbfe8;
   margin: 1%;
   padding: 1%;
   width: 15%;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-.mini-game .cardMj .card-mj {
+.mini-game .conte-MG .cardMj .card-mg {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
   width: 100%;
-  height: 200px;
+  height: 250px;
 }
-.mini-game .cardMj .mjtitle {
+.mini-game .conte-MG .cardMj .card-mg .card-mj {
+  width: 100%;
+  height: 250px;
+}
+.mini-game .conte-MG .cardMj .mgtitle {
+  margin-top: 2%;
+  width: 100%;
+  height: 50px;
+}
+.mini-game .conte-MG .cardMj .mgtitle .mjtitle {
   color: #f6f3ef;
   font-family: Open Sans;
   text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
-  font-size: 20px;
-  margin: 10%;
+  font-size: 15px;
+  text-align: center;
+  padding: 2%;
 }
-.mini-game .cardMj .btnMjCard {
+.mini-game .conte-MG .cardMj .btnMjCard {
   margin: 1%;
   color: #4311b9;
   background: rgb(203, 191, 232);
@@ -1825,7 +1843,7 @@ footer .social-networks .networks img {
   border-bottom-right-radius: 20px;
   text-align: center;
 }
-.mini-game .cardMj .btnMjCard:hover {
+.mini-game .conte-MG .cardMj .btnMjCard:hover {
   color: #f6f3ef;
 }
 .mini-game .btn-mj2 {
@@ -1905,19 +1923,21 @@ footer .social-networks .networks img {
 
 .section-courses {
   width: 100%;
-  height: 300px;
+  height: 400px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
 }
 .section-courses .conten-courses {
+  margin-top: 2%;
+  margin-bottom: 2%;
   background: white;
   border: solid black 1px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4499999881);
   border-radius: 60px;
-  width: 95%;
-  height: 300px;
+  width: 80%;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1936,9 +1956,9 @@ footer .social-networks .networks img {
   border-radius: 60px;
 }
 .section-courses .conten-courses .conten2-courses {
-  margin-top: 1%;
   width: 55%;
-  height: 250px;
+  height: 300px;
+  padding: 1%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1951,11 +1971,11 @@ footer .social-networks .networks img {
   align-items: center;
   justify-content: space-around;
   font-family: Open Sans;
-  font-size: 20px;
+  font-size: 25px;
 }
 .section-courses .conten-courses .conten2-courses .separador {
   background: black;
-  width: 90%;
+  width: 70%;
   height: 2px;
   font-family: Open Sans;
   font-size: 20px;
@@ -1963,10 +1983,10 @@ footer .social-networks .networks img {
 .section-courses .conten-courses .conten2-courses .text-course {
   padding: 2%;
   width: 100%;
-  height: 190px;
+  height: 25px;
 }
 .section-courses .conten-courses .btn-cuorses {
-  width: 10%;
+  width: 15%;
   padding: 1%;
 }
 .section-courses .conten-courses .btn-cuorses .C-btn {
@@ -2088,25 +2108,25 @@ footer .social-networks .networks img {
   flex-wrap: wrap;
 }
 .contenedor-cartasR .cardR {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
+  padding: 1%;
   width: 15%;
-  height: 320px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
 }
 .contenedor-cartasR .cardR .img-cardR {
   width: 100%;
-  height: 240px;
-  padding: 1%;
+  height: 250px;
 }
 .contenedor-cartasR .cardR .img-cardR img {
   width: 100%;
   height: 240px;
-  padding: 1%;
 }
 .contenedor-cartasR .cardR .card-bodyR {
+  padding: 3%;
   width: 100%;
   height: 60px;
   display: flex;
@@ -2122,28 +2142,8 @@ footer .social-networks .networks img {
 .contenedor-cartasR .cardR .card-bodyR .card-title2R .card-titleR {
   width: 100%;
   font-family: Open Sans;
-  text-align: justify;
-  word-wrap: break-word;
-}
-.contenedor-cartasR .cardR .card-bodyR .button-cardsR {
-  width: 100%;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-}
-.contenedor-cartasR .cardR .card-bodyR .button-cardsR .btnR {
-  width: 70%;
-  height: 23px;
-  border: solid 1px #ff4300;
-  background: #fed2c0;
   text-align: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.contenedor-cartasR .cardR .card-bodyR .button-cardsR .btnR:hover {
-  color: #ff4300;
+  word-wrap: break-word;
 }
 
 .description-container {

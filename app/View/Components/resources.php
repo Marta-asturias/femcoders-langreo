@@ -6,14 +6,15 @@ use Illuminate\View\Component;
 
 class resources extends Component
 {
+  public $resources;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($resources)
     {
-        //
+      $this->resources =$resources;
     }
 
     /**
