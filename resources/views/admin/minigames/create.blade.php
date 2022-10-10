@@ -1,7 +1,7 @@
-<x-head />
-<x-header />
+<x-head/>
+@include('layouts.adminNavigation') 
 <div class="title-admin">
-    <h1 class="title-Ad">Añadir MiniJuego</h1>
+    <h1 class="title-Ad">Añadir Juegos</h1>
 </div>
 
 @if ($errors->any())

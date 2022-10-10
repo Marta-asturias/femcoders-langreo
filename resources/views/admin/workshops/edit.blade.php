@@ -69,3 +69,6 @@
 
     </form>
 </div>
+
+
+<x-footer/>

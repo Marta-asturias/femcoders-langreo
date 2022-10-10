@@ -2,7 +2,7 @@
 @include('layouts.adminNavigation')
 
 <div class="titlePrincipal2">
-    <h1 class="txtprincipal2">Mini Juegos</h1>
+    <h1 class="txtprincipal2">Juegos</h1>
 </div>
 
 <div class="keypad" >
@@ -15,7 +15,7 @@
     </button>
 
     <button class="AdminH2">
-        <a href="{{ route('export') }}" class="btnH2" > Exportar Mini juegos</a>
+        <a href="{{ route('export') }}" class="btnH2" >Exportar Juegos</a>
     </button>
 </div>
 
@@ -35,3 +35,5 @@
         </div>
     </div>
 @endforeach
+
+<x-footer/>

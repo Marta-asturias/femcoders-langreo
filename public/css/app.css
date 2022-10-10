@@ -2329,13 +2329,6 @@ footer .social-networks .networks img {
   width: 100%;
   height: 30px;
 }
-.contenD .cardD .card-bodyD .card-textD {
-  font-family: Open Sans;
-  font-size: 15px;
-  text-align: justify;
-  width: 100%;
-  height: 30px;
-}
 .contenD .cardD .card-bodyD .btn-Dash {
   font-family: Open Sans;
   text-align: center;
@@ -2486,6 +2479,7 @@ footer .social-networks .networks img {
 }
 .admin-Conten .conten-admin {
   width: 80%;
+  height: 500px;
 }
 .admin-Conten .conten-admin .title-admin2 {
   width: 100%;
@@ -2550,6 +2544,10 @@ footer .social-networks .networks img {
 }
 .admin-Conten .conten-admin .create-1 input[type=file] {
   width: 70%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   border: solid 1px #4311b9;
 }
 .admin-Conten .conten-admin .btn-general {

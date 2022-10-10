@@ -1,5 +1,5 @@
-<x-head />
-<x-header />
+<x-head/>
+@include('layouts.adminNavigation')
 <div class="title-admin">
     <h1 class="title-Ad">Añadir Talleres</h1>
 </div>
@@ -14,9 +14,7 @@
     </div>
 @endif
 
-
 <div class="admin-Conten">
-
     <form class="conten-admin" action="{{ route('admin.save') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
@@ -50,6 +48,7 @@
         <div class="create-1">
             <input class="" type="file" name="file">
         </div>
+
         <div class="btn-general">
             <div class="btn-create">
                 <button class="btn-c">
@@ -64,4 +63,5 @@
 
     </form>
 </div>
-<x-footer />
+
+<x-footer/>

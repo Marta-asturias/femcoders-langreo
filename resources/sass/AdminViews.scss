@@ -40,51 +40,51 @@
 }
 }
 
-.conten-P{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-        .linea{
+    .conten-P{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        margin-top: 1%;
-        border: solid 1px #ff4300;
-        background: #fed2c0;
-        border-top-left-radius:20px;
-        border-top-right-radius:20px;
-        border-bottom-left-radius:20px;
-        border-bottom-right-radius:20px;
-        width: 80%;
-        height: 50px;
-    }
-    .txt-Name-admin{
-        width: 40%;
-        height: 30px;
-    }
+            .linea{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 1%;
+            border: solid 1px #ff4300;
+            background: #fed2c0;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            width: 80%;
+            height: 50px;
+        }
+        .txt-Name-admin{
+            width: 40%;
+            height: 30px;
+        }
 
-    .btn-Edit{
-        width: 20%;
-        height: 30px;
-        color: #060300;
-        font-family:Open Sans;
-        font-size: 18px;
-    }
+        .btn-Edit{
+            width: 20%;
+            height: 30px;
+            color: #060300;
+            font-family:Open Sans;
+            font-size: 18px;
+        }
 
-    .btn-Edit:hover{
-        color: #ff4300;
-    }
-    .AdminB2{
-        margin-top: 0.5%;
-        width: 20%;
-        height: 30px;
-        color: #060300;
-        font-family:Open Sans;
-        font-size: 18px;
-    }
-    .btn-Delete-A:hover{      
-        color: #ff4300;
-    } 
+        .btn-Edit:hover{
+            color: #ff4300;
+        }
+        .AdminB2{
+            margin-top: 0.5%;
+            width: 20%;
+            height: 30px;
+            color: #060300;
+            font-family:Open Sans;
+            font-size: 18px;
+        }
+        .btn-Delete-A:hover{      
+            color: #ff4300;
+        } 
 
-}
+    }
