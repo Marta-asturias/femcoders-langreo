@@ -4,7 +4,7 @@
     <div class="cardR">
 
       <div class="img-cardR">
-        <a href="{{ url('/welcome') }}">
+        <a href="{{$resource->link}}">
           <img src="{{$resource->image}}" alt="...">
         </a>
       </div>
