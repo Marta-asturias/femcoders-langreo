@@ -27,6 +27,11 @@
                 <h2 class="txt-Name-admin"><strong>{{$resources->title}}</strong></h2>
 
                 <button class="btn-Edit">
+                    <input class="input-clip" type="text" placeholder="0">
+                    <a href=""><i class="bi bi-mouse2-fill">Nº de Click</i></a>
+                </button>
+
+                <button class="btn-Edit">
                     <a href="{{ route('resource.edit',['id'=>$resources->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i> Modificar</a>
                 </button>
 

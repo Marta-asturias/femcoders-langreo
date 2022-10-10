@@ -2416,11 +2416,11 @@ footer .social-networks .networks img {
   height: 50px;
 }
 .conten-P .txt-Name-admin {
-  width: 40%;
+  width: 35%;
   height: 30px;
 }
 .conten-P .btn-Edit {
-  width: 20%;
+  width: 18%;
   height: 30px;
   color: #060300;
   font-family: Open Sans;
@@ -2431,7 +2431,7 @@ footer .social-networks .networks img {
 }
 .conten-P .AdminB2 {
   margin-top: 0.5%;
-  width: 20%;
+  width: 18%;
   height: 30px;
   color: #060300;
   font-family: Open Sans;
@@ -2439,6 +2439,11 @@ footer .social-networks .networks img {
 }
 .conten-P .btn-Delete-A:hover {
   color: #ff4300;
+}
+
+.input-clip {
+  width: 45%;
+  border: #ff4300 1px solid;
 }
 
 .title-admin {
