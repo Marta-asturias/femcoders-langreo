@@ -39,7 +39,6 @@
             <x-input class="the-input" id="format" type="text" name="format" :value="old('format')" required />
         </div>
 
-
         <div class="title-admin2">
             <x-label class="the-title2" for="price" :value="__('detalles')" />
             <x-input class="the-input2" type="text" name="details" :value="old('details')" required />
