@@ -6,14 +6,15 @@ use Illuminate\View\Component;
 
 class seccionCourses extends Component
 {
+    public $workshop;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($workshop)
     {
-        //
+        $this->workshop = $workshop;
     }
 
     /**
