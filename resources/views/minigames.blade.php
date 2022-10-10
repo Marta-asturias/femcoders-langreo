@@ -7,5 +7,7 @@
 <div class="img-principal">
     <img src="{{ asset('img/foto9.jpg') }}" alt="">
 </div>
+
 <x-miniGameCard :minigame="$minigame"/>
+
 <x-footer/>
