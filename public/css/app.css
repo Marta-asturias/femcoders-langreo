@@ -2409,9 +2409,11 @@ footer .social-networks .networks img {
 }
 .conten-P .txt-Name-admin {
   width: 40%;
+  height: 30px;
 }
 .conten-P .btn-Edit {
   width: 20%;
+  height: 30px;
   color: #060300;
   font-family: Open Sans;
   font-size: 18px;
@@ -2420,9 +2422,10 @@ footer .social-networks .networks img {
   color: #ff4300;
 }
 .conten-P .AdminB2 {
+  margin-top: 1.5%;
   width: 20%;
-}
-.conten-P .AdminB2 .btn-Delete-A {
+  height: 30px;
+  color: #060300;
   font-family: Open Sans;
   font-size: 18px;
 }

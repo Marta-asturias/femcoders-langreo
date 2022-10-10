@@ -61,10 +61,12 @@
     }
     .txt-Name-admin{
         width: 40%;
+        height: 30px;
     }
 
     .btn-Edit{
         width: 20%;
+        height: 30px;
         color: #060300;
         font-family:Open Sans;
         font-size: 18px;
@@ -74,11 +76,12 @@
         color: #ff4300;
     }
     .AdminB2{
+        margin-top: 1.5%;
         width: 20%;
-        .btn-Delete-A{
-            font-family:Open Sans;
-            font-size: 18px;
-        }
+        height: 30px;
+        color: #060300;
+        font-family:Open Sans;
+        font-size: 18px;
     }
     .btn-Delete-A:hover{      
         color: #ff4300;
