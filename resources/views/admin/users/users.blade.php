@@ -4,6 +4,9 @@
 
 <h1>Lista de Administradores</h1>
 
+<a href="
+{{route('register')}}">Agregar</a>
+
 @empty ($user)
 <div class="alert alert-warning">
     La lista de Usuarios está Vacía

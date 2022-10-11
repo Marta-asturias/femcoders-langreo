@@ -8,6 +8,7 @@
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
         </x-slot>
+        {{--  <h1 class="sesion">Iniciar Sesión</h1>  --}}
 
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -54,6 +55,8 @@
                 <x-button class="ml-3">
                     {{ __('Acceder') }}
                 </x-button>
+
+              
             </div>
         </form>
     </x-auth-card>

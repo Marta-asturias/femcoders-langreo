@@ -1,5 +1,7 @@
 <x-head/> 
+@include('sweetalert::alert')
 @include('layouts.adminNavigation')
+
 
 <div class="conten-create">
     @if($errors->any())

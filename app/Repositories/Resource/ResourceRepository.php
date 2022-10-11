@@ -53,6 +53,7 @@ private Resource $Resource;
         $this->Resource->title = $request->get('title');
         $this->Resource->link = $request->get('link');
         $this->Resource->image = $url_file;
+        Alert::success('Actualizado', 'Este administrador ha sido actualizado con éxito');
         return $this->Resource->save(); 
     }
 

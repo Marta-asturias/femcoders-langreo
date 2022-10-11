@@ -59,6 +59,7 @@ private MiniGame $MiniGame;
         $this->MiniGame->age = $request->get('age');
         $this->MiniGame->link = $request->get('link');
         $this->MiniGame->image = $url_file;
+        Alert::success('Actualizado', 'Este administrador ha sido actualizado con éxito');
         return $this->MiniGame->save(); 
     }
 

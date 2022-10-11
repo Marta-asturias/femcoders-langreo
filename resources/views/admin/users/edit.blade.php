@@ -1,4 +1,5 @@
 <x-guest-layout>
+    @include('sweetalert::alert')
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -34,9 +35,7 @@
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
-                                name="password"
-                                
-                                required/>
+                                name="password" required/>
             </div>
 
             <!-- Confirm Password -->

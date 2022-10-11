@@ -17,7 +17,7 @@ class WorkshopFactory extends Factory
              return [
                 'title' => $this->faker->name(),
                 'image'=> $this->faker->image(),
-                'details'=>$this->faker->sentences(4,true),
+                'details'=>$this->faker->sentences(4),
                 'age'=> $this->faker->name(),
                 'duration'=> $this->faker->name(),
                 'format'=> $this->faker->name(),
