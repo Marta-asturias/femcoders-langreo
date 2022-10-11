@@ -1,14 +1,14 @@
 .contenedor-cartasR{
-    margin: 1%;
+    margin: 4%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;  
     
     .cardR{
-        box-shadow:4px 4px 4px rgba(0, 0, 0, 0.44999998807907104);
+        border: 2px solid #4311b9;
         padding: 1%;
         width: 15%;
-        height: 350px;
+        height: 270px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -17,10 +17,10 @@
         
         .img-cardR{
             width: 100%;
-            height: 250px;
+            height: 200px;
             img{
                 width: 100%;
-                height: 240px;
+                height: 200px;
             }
         }
 

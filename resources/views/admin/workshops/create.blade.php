@@ -1,6 +1,5 @@
-<x-head />
-@include('sweetalert::alert')
-<x-header />
+<x-head/>
+@include('layouts.adminNavigation')
 <div class="title-admin">
     <h1 class="title-Ad">Añadir Talleres</h1>
 </div>
@@ -15,9 +14,7 @@
     </div>
 @endif
 
-
 <div class="admin-Conten">
-
     <form class="conten-admin" action="{{ route('admin.save') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
@@ -41,7 +38,6 @@
             <x-label class="the-title" for="price" :value="__('Formato')" />
             <x-input class="the-input" id="format" type="text" name="format" :value="old('format')" required />
         </div>
-
 
         <div class="title-admin2">
             <x-label class="the-title2" for="price" :value="__('detalles')" />
@@ -69,6 +65,7 @@
         <div class="create-1">
             <input class="" type="file" name="file">
         </div>
+
         <div class="btn-general">
             <div class="btn-create">
                 <button class="btn-c">
@@ -83,4 +80,5 @@
 
     </form>
 </div>
-<x-footer />
+
+<x-footer/>

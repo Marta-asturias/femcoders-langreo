@@ -1,6 +1,6 @@
 <section class="mini-game">
 <div class="title-mg">
-    <h2 class="txtMg">Mini Juegos</h2>
+    <h2 class="txtMg">Juega, Crea Código y Divierte</h2>
 </div>
     <div class="conte-MG">
         @foreach ($minigames as $minigame)

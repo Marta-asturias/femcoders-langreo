@@ -1,42 +1,51 @@
-<x-head/> 
-@include('layouts.adminNavigation') 
+<x-head/>
+@include('layouts.adminNavigation')
+<div class="title-admin">
+    <h1 class="title-Ad">Editar Talleres</h1>
+</div>
 
-<div class="conten-create">
-    @if($errors->any())
-        <div 
-        role="alert">
+
+@if($errors->any())
+    <div role="alert">
         <ul>
-        @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
         </ul>
-        </div>
-        @endif 
-    <form action="{{route('update', $workshop)}}" method="POST" enctype="multipart/form-data">
-    @csrf
-    @method('PUT')
-
-
-    <div class="title-edit">
-        <x-label for="title" :value="__('')" />
-        <span class="text-title">Editar Titulo del Curso </span>
-        <x-input id="title" class="input-tilte-edit" type="text" name="title" :value="old('title') ?? $workshop->title" required />
     </div>
+@endif 
 
+<div class="admin-Conten">
+    <form class="conten-admin" action="{{route('update', $workshop)}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
 
-        <div class="descrip-edit2">
-        <div class="img-edit">
-        <img src="{{ old('image') ?? $workshop->image }}" />
+        <div class="title-admin1">
+            <x-label class="the-title1" for="title" :value="__('Editar Titulo del Curso')" />
+            <x-input class="the-input1" id="title"  type="text" name="title" :value="old('title') ?? $workshop->title" required />
         </div>
 
-        <div class="btn-img">
-        <input type="file" name="file" class="form-control">
-        </div> 
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Edad:')" />
+            <x-input class="the-input" id="age"  type="text" name="age" :value="old('age') ?? $workshop->age" required />
+        </div>
 
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Duracion:')" />
+            <x-input class="the-input" id="duration" type="text" name="duration" :value="old('duration') ?? $workshop->duration" required />
+        </div>
 
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Formato:')" />
+            <x-input class="the-input" id="format" type="text" name="format" :value="old('format') ?? $workshop->format" required />
+        </div>
 
-<div class="descrip-edit">
+        <div class="title-admin2">
+            <x-label class="the-title"  for="price" :value="__('Detalles:')" />
+            <x-input class="the-input"  id="details" type="text" name="details" :value="old('details') ?? $workshop->details" required />
+        </div>
 
+<<<<<<< HEAD
     <div class="text-des-edit text-des-edit2">
         <x-label for="price" :value="__('')" />
         <span>Detalles:</span><x-input id="details" class="mt-1 w-24" type="text" name="details" :value="old('details') ?? $workshop->details" required />
@@ -85,7 +94,25 @@
     {{ __('Actualizar') }}
 </button>
 </div>
+=======
+        <div class="create-1">
+            <input type="file" name="file" class="form-control">
+        </div>
+>>>>>>> juliet
 
+        <div class="btn-general">
+            <div class="btn-create">
+                <button class="btn-c">
+                    {{ __('Actualizar') }}
+                </button>
+            </div>
 
+            <div class="btn-cancelar">
+                <a href="{{ url('/admin/workshops/workshops') }}" class=" btn-cancelar-admin">Cancelar</a>
+            </div>
+        </div>
     </form>
 </div>
+
+
+<x-footer/>

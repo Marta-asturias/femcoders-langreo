@@ -2,7 +2,7 @@
 @include('layouts.adminNavigation')
 
 <div class="titlePrincipal2">
-    <h1 class="txtprincipal2">Mini Juegos</h1>
+    <h1 class="txtprincipal2">Juegos</h1>
 </div>
 
 <div class="keypad" >
@@ -15,7 +15,7 @@
     </button>
 
     <button class="AdminH2">
-        <a href="{{ route('export') }}" class="btnH2" > Exportar Mini juegos</a>
+        <a href="{{ route('export') }}" class="btnH2" >Exportar Juegos</a>
     </button>
 </div>
 
@@ -23,8 +23,14 @@
     <div class="conten-P">
         <div class="linea">
             <h2 class="txt-Name-admin"><strong>{{$minigames->title}}</strong></h2>
+
             <button class="btn-Edit">
-                <a href="{{ route('edit',['id'=>$minigames->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i>Modificar</a>
+                <input class="input-clip" type="text" placeholder="0">
+                <a href=""><i class="bi bi-mouse2-fill">Nº de Click</i></a>
+            </button>
+
+            <button class="btn-Edit">
+                <a href="{{ route('minigame.edit',['id'=>$minigames->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i>Modificar</a>
             </button>
 
             <form   action="{{ route('minigame.destroy',['id'=>$minigames->id]) }}" method="POST">
@@ -35,3 +41,5 @@
         </div>
     </div>
 @endforeach
+
+<x-footer/>
