@@ -26,11 +26,7 @@ private WorkshopRepository $workshopRepository;
 
     }
 
-    public function createParticipant(){
-        return view("participant");
-   
 
-    }
 
     public function save(Request $request)
     {

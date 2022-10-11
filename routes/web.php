@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\DeleteUserController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MiniGamesController;
 use App\Http\Controllers\ParticipantController;
@@ -26,8 +27,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/participant', [ParticipantController::class, 'createParticipant' ])->name("create");
+Route::get('/{id}/participant', [WorkshopController::class, 'getDates' ])->name("edit.participant");
+Route::get('/{id}/participant', [FormController::class, 'createParticipant' ])->name("create.participant");
 Route::post('/participant', [ParticipantController::class, 'save' ])->name("inscription");
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
 Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
@@ -38,6 +39,8 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
+
+
 
 Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("adminwelcome");
  Route::group(['middleware' => ['auth']], function (){
