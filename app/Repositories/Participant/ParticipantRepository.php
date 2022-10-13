@@ -26,6 +26,7 @@ class ParticipantRepository{
                 'whatsapp'  => 'required',
                 'city'  => 'required',
                 'how_did_you_meet_us'  => 'required',
+                'date'  => 'required',
                 'legals'  => 'required',
             ]);
             $this->participant->first_name = $request->get('first_name');
@@ -35,6 +36,7 @@ class ParticipantRepository{
             $this->participant->whatsapp = $request->get('whatsapp');
             $this->participant->city = $request->get('city');
             $this->participant->how_did_you_meet_us = $request->get('how_did_you_meet_us');
+            $this->participant->date = $request->get('date');
             $this->participant->legals = $request->get('legals');
             //pivot workshop
 /*             $participant->workshops()->sync([ $workshop->id ]);

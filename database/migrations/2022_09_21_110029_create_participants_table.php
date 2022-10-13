@@ -22,6 +22,7 @@ class CreateParticipantsTable extends Migration
             $table->string ("whatsapp");
             $table->string ("city");
             $table->string ("how_did_you_meet_us");
+            $table->string ("date");
             $table->integer ("legals");
             $table->timestamps();
         });

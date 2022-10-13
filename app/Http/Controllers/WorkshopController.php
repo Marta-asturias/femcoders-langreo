@@ -73,6 +73,6 @@ class WorkshopController
     {
         $this->repository->destroyWorkshop($request);
        
-        return redirect('/admin/workshops/workshops');
+        return redirect('/admin/workshopsgi/workshops');
     }
 }

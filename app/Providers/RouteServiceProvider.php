@@ -18,13 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      * 
      */
-    public const HOME = '/admin/users/users';
-    
-    /* if (Request::url() == route('login')) {
-        HOME = '/dashboard';
-    } else {
-         HOME = '/admin/users/users';  
-    } */
+    public const HOME = '/welcome';
 
     /**
      * The controller namespace for the application.

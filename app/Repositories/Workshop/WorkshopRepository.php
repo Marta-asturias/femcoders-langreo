@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
+
 class WorkshopRepository  {
 private Workshop $workshop;
 
@@ -91,7 +92,7 @@ private Workshop $workshop;
     public function destroyWorkshop(Request $request)
     {
         $workshop = workshop::find($request->id); 
-        Alert::success('Éxitos', 'Has eliminado el workshop');       
+        // Alert::success('Success', 'Has eliminado el workshop');       
         return $workshop->delete();
     
     }

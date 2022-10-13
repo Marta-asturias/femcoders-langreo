@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\DeleteUserController;
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MiniGamesController;
 use App\Http\Controllers\ParticipantController;
@@ -39,6 +40,8 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
+
+
 
 Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("adminwelcome");
  Route::group(['middleware' => ['auth']], function (){
