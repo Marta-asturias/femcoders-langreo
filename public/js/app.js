@@ -5032,13 +5032,11 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './clain'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
-
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
-window.waitForImages = Object(function webpackMissingModule() { var e = new Error("Cannot find module './clain'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+window.waitForImages = waitForImages;
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 window.waitForImages();
 

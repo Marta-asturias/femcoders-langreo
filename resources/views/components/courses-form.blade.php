@@ -10,7 +10,7 @@
       @endif
 
   <div class="description-container">
-      <form class="description-form" action="{{ route('inscription') }}" method="POST" enctype="multipart/form-data">
+      <form class="description-form" action="{{ route('inscription', ['id' => $workshop->id] ) }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="form-line">
@@ -46,7 +46,9 @@
         <div class="form-line">
           <x-label class="label-form" for="city" :value="__('Ciudad')" />
           <x-input id="city" class="input-form" type="text" name="city" :value="old('city')" required autofocus />
-          </div>
+        </div>
+
+        <x-data :workshop="$workshop"/>
 
       
         <div class="form-line">
@@ -65,11 +67,10 @@
               {{ __('Guardar') }}
           </button>
         </div>
-        <x-data :workshop="$workshop"/>
       </form>
 
       <div class="legals-line">
-       <x-label class="txt-F" for="legals" :value="__('Política de privacidad')" />
+      <x-label class="txt-F" for="legals" :value="__('Política de privacidad')" />
       </div>
       
       <section class="privacy-politics">

@@ -26,9 +26,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/{id}/participant', [WorkshopController::class, 'getdate' ])->name("getdate");
-Route::get('/participant', [ParticipantController::class, 'createParticipant' ])->name("create");
-Route::post('/participant', [ParticipantController::class, 'save' ])->name("inscription");
+Route::get('/{id}/participant', [ParticipantController::class, 'createParticipant' ])->name("createParticipant");
+Route::post('/{id}/participant', [ParticipantController::class, 'save' ])->name("inscription");
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
 Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
 Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
