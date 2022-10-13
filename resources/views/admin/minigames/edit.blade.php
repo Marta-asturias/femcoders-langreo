@@ -2,68 +2,82 @@
 @include('sweetalert::alert')
 @include('layouts.adminNavigation')
 
+<<<<<<< HEAD
 
 <div class="conten-create">
     @if($errors->any())
         <div 
         role="alert">
+=======
+<div class="title-admin">
+    <h1 class="title-Ad">Editar Juegos</h1>
+</div>
+
+@if($errors->any())
+    <div role="alert">
+>>>>>>> pivot
         <ul>
-        @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
         </ul>
-        </div>
-        @endif 
-    <form action="{{route('minigame.update', $minigame)}}" method="POST" enctype="multipart/form-data">
-    @csrf
-    @method('PUT')
-
-
-    <div class="title-edit">
-        <x-label for="title" :value="__('')" />
-        <span class="text-title">Editar Titulo del Mini Juego </span>
-        <x-input id="title" class="input-tilte-edit" type="text" name="title" :value="old('title') ?? $minigame->title" required />
     </div>
-    <div class="title-edit">
-        <x-label for="details" :value="__('')" />
-        <span class="text-title">Editar Detalles del Mini Juego </span>
-        <x-input id="details" class="input-tilte-edit" type="text" name="details" :value="old('details') ?? $minigame->details" required />
-    </div>
-    <div class="title-edit">
-        <x-label for="age" :value="__('')" />
-        <span class="text-title">Editar Edad  </span>
-        <x-input id="age" class="input-tilte-edit" type="text" name="age" :value="old('age') ?? $minigame->age" required />
-    </div>
+@endif 
 
 
-        <div class="descrip-edit2">
-        <div class="img-edit">
-        <img src="{{ old('image') ?? $minigame->image }}" />
+<div class="admin-Conten">
+    
+    <form class="conten-admin" action="{{route('minigame.update', $minigame)}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
+
+
+        <div class="title-admin1">
+            <x-label class="the-title1" for="title" :value="__('Editar Titulo del Juego')" />
+            <x-input class="the-input1" id="title"  type="text" name="title" :value="old('title') ?? $minigame->title" required />
         </div>
 
-        <div class="btn-img">
-        <input type="file" name="file" class="form-control">
+        <div class="title-admin2">
+            <x-label class="the-title"  for="details" :value="__('Editar Detalles del Juego')" />
+            <x-input class="the-input" id="details"  type="text" name="details" :value="old('details') ?? $minigame->details" required />
+        </div>
+
+        <div class="title-admin2">
+            <x-label class="the-title" for="age" :value="__('Editar Edad')" />
+            <x-input  class="the-input"  id="age"  type="text" name="age" :value="old('age') ?? $minigame->age" required />
+        </div>
+
+        <div class="title-admin2">
+            <x-label class="the-title"  for="price" :value="__('Link:')" />
+            <x-input class="the-input" id="link" type="text" name="link" :value="old('link') ?? $minigame->link" required />
+        </div>
+
+
+        <div class="create-1">
+            <input type="file" name="file" class="form-control">
         </div> 
 
+        
+
+        <div class="btn-general">
+            <div class="btn-create">
+                <button class="btn-c">
+                    {{ __('Actualizar') }}
+                </button>
+            </div>
+
+            <div class="btn-cancelar">
+                <a href="{{ url('/admin/workshops/workshops') }}" class=" btn-cancelar-admin">Cancelar</a>
+            </div>
+        
+        </div>
 
 
-<div class="descrip-edit">
 
-    <div class="text-des-edit text-des-edit2">
-        <x-label for="price" :value="__('')" />
-        <span>Link:</span><x-input id="link" class="mt-1 w-24" type="text" name="link" :value="old('link') ?? $minigame->link" required />
-    </div>
-
-   
-
-</div>
-
-<div class="btn-act">
-<button class="btn-A">
-    {{ __('Actualizar') }}
-</button>
-</div>
+        
 
 
     </form>
 </div>
+
+<x-footer/>

@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class CoursesForm extends Component
+class Data extends Component
 {
     public $workshop;
     /**
@@ -24,6 +24,6 @@ class CoursesForm extends Component
      */
     public function render()
     {
-      return view('components.courses-form'); 
+        return view('components.data');
     }
 }

@@ -1,6 +1,6 @@
 <div class="conten-resources">
     <div class="title-resources">
-        <h3 class="txt-R">Recursos</h3>
+        <h3 class="txt-R">Descubre Más</h3>
     </div>
 
         @foreach ($resource as $resources)

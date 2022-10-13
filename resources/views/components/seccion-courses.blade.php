@@ -1,10 +1,14 @@
 
-<div id="carouselExampleSlidesOnly" class="carousel" data-bs-ride="carousel">
+<div class="section-courses" id="carouselExampleSlidesOnly" class="carousel" data-bs-ride="carousel">
+    
+    <div class="title-C">
+        <h2 class="txt-C">Aprende a crear tus propisos juego y mucho Más</h2>
+    </div>
 
     <div class="carousel-inner">
         @foreach ($workshop as $workshops)
 
-            <div class="carousel-item active" data-bs-interval="2000">
+            <div class="carousel-item active" data-bs-interval="9000">
                 <div class="section-courses">
                     
                     <div class="conten-courses">
@@ -25,13 +29,13 @@
                             <div class="text-course">
                                 <p><strong>Duración: </strong>{{$workshops->duration}}</p>
                             </div>
-                            <div class="text-course">
+                            <div class="text-course2">
                                 <p><strong>Detalles: </strong>{{$workshops->details}}</p>
                             </div>
                         </div>
                         
                         <div class="btn-cuorses"> 
-                            <a href="{{ url('/participant') }}">
+                            <a href="{{ route('getdate',['id'=>$workshops->id]) }}">
                                 <button type="button" class="C-btn">Inscribete</button> 
                             </a>
                         </div>

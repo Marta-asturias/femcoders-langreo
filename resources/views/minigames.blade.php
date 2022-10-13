@@ -1,7 +1,7 @@
 <x-head/> 
 <x-header/>
 <div class="title-principal">
-    <h1 class="txt-principal">Mini Juegos</h1>
+    <h1 class="txt-principal">Juega, Crea Código y Divierte</h1>
 </div>
 
 <div class="img-principal">

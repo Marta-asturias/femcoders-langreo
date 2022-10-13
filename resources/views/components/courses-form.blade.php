@@ -14,85 +14,50 @@
         @csrf
 
         <div class="form-line">
-         <x-label class="label-form" for="first_name" :value="__('Nombre')" />
-         <x-input id="first_name" class="input-form" type="text" name="first_name" :value="old('first_name')" required autofocus />
+        <x-label class="label-form" for="first_name" :value="__('Nombre')" />
+        <x-input id="first_name" class="input-form" type="text" name="first_name" :value="old('first_name')" required autofocus />
         </div>
 
         <div class="form-line">
-         <x-label class="label-form" for="last_name" :value="__('Apellidos')" />
-         <x-input id="last_name" class="input-form" type="text" name="last_name" :value="old('last_name')" required autofocus />
+        <x-label class="label-form" for="last_name" :value="__('Apellidos')" />
+        <x-input id="last_name" class="input-form" type="text" name="last_name" :value="old('last_name')" required autofocus />
         </div>
 
         <div class="form-line">
-         <x-label class="label-form" for="birth_date" :value="__('Fecha Nacimiento')" />
-         <x-input id="birth_date" class="input-form" type="text" name="birth_date" :value="old('birth_date')" required autofocus />
+        <x-label class="label-form" for="birth_date" :value="__('Fecha Nacimiento')" />
+        <x-input id="birth_date" class="input-form" type="text" name="birth_date" :value="old('birth_date')" required autofocus />
         </div>
 
         <div class="form-line">
-         <x-label class="label-form" for="email" :value="__('Email')" />
-         <x-input id="email" class="input-form" type="text" name="email" :value="old('email')" required autofocus />
+        <x-label class="label-form" for="email" :value="__('Email')" />
+        <x-input id="email" class="input-form" type="text" name="email" :value="old('email')" required autofocus />
         </div>
 
         <div class="form-line">
-         <x-label class="label-form" for="whatsapp" :value="__('Whatsapp')" />
-         <x-input id="whatsapp" class="input-form" type="text" name="whatsapp" :value="old('whatsapp')" required autofocus />
+        <x-label class="label-form" for="whatsapp" :value="__('Whatsapp')" />
+        <x-input id="whatsapp" class="input-form" type="text" name="whatsapp" :value="old('whatsapp')" required autofocus />
         </div>
 
         <div class="form-line">
-         <x-label class="label-form" for="city" :value="__('Ciudad')" />
-         <x-input id="city" class="input-form" type="text" name="city" :value="old('city')" required autofocus />
+        <x-label class="label-form" for="city" :value="__('Ciudad')" />
+        <x-input id="city" class="input-form" type="text" name="city" :value="old('city')" required autofocus />
         </div>
+
+        <div class="form-line">
+          <x-label class="label-form" for="city" :value="__('Ciudad')" />
+          <x-input id="city" class="input-form" type="text" name="city" :value="old('city')" required autofocus />
+          </div>
+
       
         <div class="form-line">
-         <x-label class="label-form" for="how_did_you_meet_us" :value="__('¿Como nos has conocido?')" />
-         <x-input id="how_did_you_meet_us" class="input-form" type="text" name="how_did_you_meet_us" :value="old('how_did_you_meet_us')" required autofocus />
+        <x-label class="label-form" for="how_did_you_meet_us" :value="__('¿Como nos has conocido?')" />
+        <x-input id="how_did_you_meet_us" class="input-form" type="text" name="how_did_you_meet_us" :value="old('how_did_you_meet_us')" required autofocus />
         </div>
- 
- <div class="conten-create">
-
-  <form action="{{route('updateDates', $workshop)}}" method="POST" enctype="multipart/form-data">
-  @csrf
-  @method('PUT')
-
-
- 
-
-
-<div class="descrip-edit">
-
-
-
-  <div class="text-des-edit">
-      <x-label for="price" :value="__('')" />
-      <span>Fecha 1:</span><x-input id="date1" class="mt-1 w-24" type="text" name="date1" :value="old('date1') ?? $workshop->date1" required />
-  </div>
-
-  <div class="text-des-edit">
-      <x-label for="price" :value="__('')" />
-      <span>Fecha 2:</span><x-input id="date2" class="mt-1 w-24" type="text" name="date2" :value="old('date2') ?? $workshop->date2" required />
-  </div>
-
-  <div class="text-des-edit">
-      <x-label for="price" :value="__('')" />
-      <span>Fecha 3:</span><x-input id="date3" class="mt-1 w-24" type="text" name="date3" :value="old('date3') ?? $workshop->date3" required />
-  </div>
-
-  <div class="text-des-edit">
-      <x-label for="price" :value="__('')" />
-      <span>Fecha 4:</span><x-input id="date4" class="mt-1 w-24" type="text" name="date4" :value="old('date4') ?? $workshop->date4" required />
-  </div>
-</div>
-
-</div>
-
-<h1>hola</h1>
-
-  </form>
-</div>
-
-       <div class="form-line">
-         <input type="checkbox" class="form-check-input" id="legals" name="legals" value="1">
-         <label class="form-check-label" for="legals">He leído y acepto a Factoría F5, como responsable del tratamiento de mis datos con la finalidad de dar respuesta a mi consulta o petición. Y politica de privacidad</label>
+        
+        
+        <div class="form-line">
+        <input type="checkbox" class="form-check-input" id="legals" name="legals" value="1">
+        <label class="form-check-label" for="legals">He leído y acepto a Factoría F5, como responsable del tratamiento de mis datos con la finalidad de dar respuesta a mi consulta o petición. Y politica de privacidad</label>
         </div>
 
         <div class="btn-form">
@@ -100,6 +65,7 @@
               {{ __('Guardar') }}
           </button>
         </div>
+        <x-data :workshop="$workshop"/>
       </form>
 
       <div class="legals-line">

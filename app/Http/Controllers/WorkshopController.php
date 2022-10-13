@@ -75,4 +75,14 @@ class WorkshopController
        
         return redirect('/admin/workshopsgi/workshops');
     }
+
+    public function getdate(Request $request, $id)
+    {
+        $workshop=$this->repository->editWorkshop($request,$id);
+        if(!$workshop){
+            return view('workshop.notexist');
+        }
+        return view('participant')->with('workshop',$workshop);
+    }
+
 }

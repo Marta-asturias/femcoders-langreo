@@ -16,9 +16,13 @@ class Workshop extends Model
         'duration',
         'format',
         'date1',
+<<<<<<< HEAD
         'date2',
         'date3',
         'date4',
+=======
+
+>>>>>>> pivot
     ];
 
     public function participants(){
