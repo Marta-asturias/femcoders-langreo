@@ -29,28 +29,34 @@
         </div>
 
         <div class="form-line">
-         <x-label class="label-form" for="email" :value="__('Email')" />
-         <x-input id="email" class="input-form" type="text" name="email" :value="old('email')" required autofocus />
+        <x-label class="label-form" for="email" :value="__('Email')" />
+        <x-input id="email" class="input-form" type="text" name="email" :value="old('email')" required autofocus />
         </div>
 
         <div class="form-line">
-         <x-label class="label-form" for="whatsapp" :value="__('Whatsapp')" />
-         <x-input id="whatsapp" class="input-form" type="text" name="whatsapp" :value="old('whatsapp')" required autofocus />
+        <x-label class="label-form" for="whatsapp" :value="__('Whatsapp')" />
+        <x-input id="whatsapp" class="input-form" type="text" name="whatsapp" :value="old('whatsapp')" required autofocus />
         </div>
 
         <div class="form-line">
-         <x-label class="label-form" for="city" :value="__('Ciudad')" />
-         <x-input id="city" class="input-form" type="text" name="city" :value="old('city')" required autofocus />
+        <x-label class="label-form" for="city" :value="__('Ciudad')" />
+        <x-input id="city" class="input-form" type="text" name="city" :value="old('city')" required autofocus />
         </div>
+
+        <div class="form-line">
+          <x-label class="label-form" for="city" :value="__('Ciudad')" />
+          <x-input id="city" class="input-form" type="text" name="city" :value="old('city')" required autofocus />
+          </div>
+
       
         <div class="form-line">
-         <x-label class="label-form" for="how_did_you_meet_us" :value="__('¿Como nos has conocido?')" />
-         <x-input id="how_did_you_meet_us" class="input-form" type="text" name="how_did_you_meet_us" :value="old('how_did_you_meet_us')" required autofocus />
+        <x-label class="label-form" for="how_did_you_meet_us" :value="__('¿Como nos has conocido?')" />
+        <x-input id="how_did_you_meet_us" class="input-form" type="text" name="how_did_you_meet_us" :value="old('how_did_you_meet_us')" required autofocus />
         </div>
 
         <div class="form-line">
-         <input type="checkbox" class="form-check-input" id="legals" name="legals" value="1">
-         <label class="form-check-label" for="legals">He leído y acepto a Factoría F5, como responsable del tratamiento de mis datos con la finalidad de dar respuesta a mi consulta o petición. Y politica de privacidad</label>
+        <input type="checkbox" class="form-check-input" id="legals" name="legals" value="1">
+        <label class="form-check-label" for="legals">He leído y acepto a Factoría F5, como responsable del tratamiento de mis datos con la finalidad de dar respuesta a mi consulta o petición. Y politica de privacidad</label>
         </div>
 
         <div class="btn-form">
