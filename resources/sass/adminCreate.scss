@@ -41,6 +41,7 @@
 
     .conten-admin {
         width: 80%;
+        height: 500px;
 
         .title-admin2 {
             width: 100%;
@@ -108,19 +109,22 @@
             margin-top: 2%;
             margin-bottom: 1%;
 
-           input[type="file"] {
-                width: 70%;
-                border: solid 1px #4311b9;
+        input[type="file"] {
+            width: 70%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border: solid 1px #4311b9;
+        } 
+    }
 
-
-             } 
-       }
-       .btn-general{
+    .btn-general{
         display: flex;
         justify-content: space-around;
         margin-bottom: 1%;
 
-       .btn-create{
+    .btn-create{
         width: 20%;
         height: 30px;
         margin-top: 3%;

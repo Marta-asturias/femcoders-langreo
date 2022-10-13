@@ -1,9 +1,6 @@
 <x-head/>
 @include('layouts.adminNavigation') 
 
-
-
-{{-- Aqui va la cabecera  --}}
 <div class="titlePrincipal2">
     <h1 class="txtprincipal2">Talleres</h1>
 </div>
@@ -18,7 +15,7 @@
     </button>
 
     <button class="AdminH2">
-        <a href="{{ route('export') }}" class="btnH2" > Exportar Talleres</a>
+        <a href="{{ route('export') }}" class="btnH2"> Exportar Talleres</a>
     </button>
 
 </div>
@@ -33,7 +30,6 @@
                 <button class="btn-Edit">
                     <a href="{{ route('edit',['id'=>$workshops->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i> Modificar</a>
                 </button>
-
                 <form   class="AdminB2" action="{{ route('destroy',['id'=>$workshops->id]) }}" method="POST">
                     <button class="btn-Delete-A" type="submit"> <i class="bi bi-trash"></i>Borrar</button>
                     @csrf

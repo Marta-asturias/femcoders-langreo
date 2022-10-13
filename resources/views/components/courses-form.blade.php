@@ -14,18 +14,18 @@
         @csrf
 
         <div class="form-line">
-         <x-label class="label-form" for="first_name" :value="__('Nombre')" />
-         <x-input id="first_name" class="input-form" type="text" name="first_name" :value="old('first_name')" required autofocus />
+        <x-label class="label-form" for="first_name" :value="__('Nombre')" />
+        <x-input id="first_name" class="input-form" type="text" name="first_name" :value="old('first_name')" required autofocus />
         </div>
 
         <div class="form-line">
-         <x-label class="label-form" for="last_name" :value="__('Apellidos')" />
-         <x-input id="last_name" class="input-form" type="text" name="last_name" :value="old('last_name')" required autofocus />
+        <x-label class="label-form" for="last_name" :value="__('Apellidos')" />
+        <x-input id="last_name" class="input-form" type="text" name="last_name" :value="old('last_name')" required autofocus />
         </div>
 
         <div class="form-line">
-         <x-label class="label-form" for="birth_date" :value="__('Fecha Nacimiento')" />
-         <x-input id="birth_date" class="input-form" type="text" name="birth_date" :value="old('birth_date')" required autofocus />
+        <x-label class="label-form" for="birth_date" :value="__('Fecha Nacimiento')" />
+        <x-input id="birth_date" class="input-form" type="text" name="birth_date" :value="old('birth_date')" required autofocus />
         </div>
 
         <div class="form-line">

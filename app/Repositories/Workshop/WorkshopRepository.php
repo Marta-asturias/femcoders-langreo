@@ -25,7 +25,11 @@ private Workshop $workshop;
             'details' => 'required',
             'age'  => 'required',
             'duration'  => 'required',
-            'format'  => 'required'
+            'format'  => 'required',
+            'date1' => 'requiered',
+            'date2' => 'requiered',
+            'date3' => 'requiered',
+            'date4' => 'requiered',
         ]);
         $fileName = time().'.'.$request->file->extension();
         $request->file->move(public_path('storage'), $fileName);
@@ -36,6 +40,10 @@ private Workshop $workshop;
         $this->workshop->age = $request->get('age');
         $this->workshop->duration = $request->get('duration');
         $this->workshop->format = $request->get('format');
+        $this->workshop->date1= $request->get('date1');
+        $this->workshop->date2= $request->get('date2');
+        $this->workshop->date3= $request->get('date3');
+        $this->workshop->date4= $request->get('date4');
         return $this->workshop->save();    
     }
 
@@ -51,7 +59,11 @@ private Workshop $workshop;
             'details' => 'required',
             'age'  => 'required',
             'duration'  => 'required',
-            'format'  => 'required'
+            'format'  => 'required',
+            'date1' => 'requiered',
+            'date2' => 'requiered',
+            'date3' => 'requiered',
+            'date4' => 'requiered',
         ]);
 
         $fileName = time().'.'.$request->file->extension();
@@ -64,6 +76,10 @@ private Workshop $workshop;
         $this->workshop->age = $request->get('age');
         $this->workshop->duration = $request->get('duration');
         $this->workshop->format = $request->get('format');
+        $this->workshop->date1= $request->get('date1');
+        $this->workshop->date2= $request->get('date2');
+        $this->workshop->date3= $request->get('date3');
+        $this->workshop->date4= $request->get('date4');
         return $this->workshop->save(); 
     }
 

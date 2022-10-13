@@ -4,17 +4,16 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class resources extends Component
+class Data extends Component
 {
-  public $resources;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($resources)
+    public function __construct()
     {
-      $this->resources =$resources;
+        //
     }
 
     /**
@@ -24,6 +23,6 @@ class resources extends Component
      */
     public function render()
     {
-        return view('components.resources');
+        return view('components.data');
     }
 }

@@ -1,7 +1,8 @@
-<x-head />
-<x-header />
+<x-head/>
+@include('layouts.adminNavigation') 
+
 <div class="title-admin">
-    <h1 class="title-Ad">Añadir MiniJuego</h1>
+    <h1 class="title-Ad">Añadir Juegos</h1>
 </div>
 
 @if ($errors->any())
@@ -13,6 +14,8 @@
         </ul>
     </div>
 @endif
+
+
 <div class="admin-Conten">
 
     <form class="conten-admin" action="{{ route('minigame.save') }}" method="POST" enctype="multipart/form-data">
@@ -23,6 +26,7 @@
             <x-input class="the-input1" id="title" type="text" name="title" :value="old('title')" required
                 autofocus />
         </div>
+        
         <div class="title-admin2">
             <x-label class="the-title" for="price" :value="__('detalles')" />
             <x-input class="the-input" type="text" name="details" :value="old('details')" required />

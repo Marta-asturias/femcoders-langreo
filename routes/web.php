@@ -40,7 +40,7 @@ Route::get('/welcome', function () {
 Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
 
 Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("adminwelcome");
- Route::group(['middleware' => ['auth']], function (){
+Route::group(['middleware' => ['auth']], function (){
 
 
     Route::group(['prefix' => 'admin/workshops'], function () {

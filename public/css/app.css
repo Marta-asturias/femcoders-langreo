@@ -1782,13 +1782,13 @@ footer .social-networks .networks img {
   margin-bottom: 1%;
 }
 .mini-game .title-mg {
-  padding-top: 1%;
-  margin-bottom: 1%;
+  padding-top: 2%;
+  margin: 2%;
   color: #f6f3ef;
   text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
   text-align: center;
   font-family: Open Sans;
-  font-size: 30px;
+  font-size: 40px;
 }
 .mini-game .conte-MG {
   margin: 2%;
@@ -1922,16 +1922,26 @@ footer .social-networks .networks img {
 }
 
 .section-courses {
+  margin-top: 1%;
   width: 100%;
-  height: 400px;
+  height: 600px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+}
+.section-courses .title-C {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.section-courses .title-C .txt-C {
+  color: #020100;
+  text-shadow: 0.1em 0.1em 0.1em #020100;
+  text-align: center;
+  font-family: Open Sans;
+  font-weight: 800px;
+  font-size: 40px;
 }
 .section-courses .conten-courses {
-  margin-top: 2%;
-  margin-bottom: 2%;
   background: white;
   border: solid black 1px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4499999881);
@@ -1957,16 +1967,15 @@ footer .social-networks .networks img {
 }
 .section-courses .conten-courses .conten2-courses {
   width: 55%;
-  height: 300px;
+  height: 350px;
   padding: 1%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 }
 .section-courses .conten-courses .conten2-courses .title-courses {
   width: 100%;
-  height: 45px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -1981,9 +1990,14 @@ footer .social-networks .networks img {
   font-size: 20px;
 }
 .section-courses .conten-courses .conten2-courses .text-course {
-  padding: 2%;
+  margin: 1%;
   width: 100%;
   height: 25px;
+}
+.section-courses .conten-courses .conten2-courses .text-course2 {
+  margin: 1%;
+  width: 100%;
+  height: 180px;
 }
 .section-courses .conten-courses .btn-cuorses {
   width: 15%;
@@ -2008,7 +2022,7 @@ footer .social-networks .networks img {
 }
 
 .btn2-cuorses {
-  margin: 1%;
+  margin-bottom: 2%;
   display: flex;
   justify-content: center;
 }
@@ -2039,7 +2053,7 @@ footer .social-networks .networks img {
 .contenedor-MG .card-homeMG {
   margin: 2%;
   width: 19%;
-  height: 500px;
+  height: 450px;
   padding: 1%;
   display: flex;
   flex-direction: column;
@@ -2056,27 +2070,28 @@ footer .social-networks .networks img {
 }
 .contenedor-MG .card-bodyMG {
   margin-top: 2%;
-  height: 250px;
+  height: 200px;
   width: 95%;
 }
 .contenedor-MG .card-bodyMG .card-titleMG {
+  text-align: center;
   padding: 2%;
 }
 .contenedor-MG .card-bodyMG .card-titleMG .cardMg-title {
   font-family: Open Sans;
-  font-size: 25px;
+  font-size: 20px;
 }
 .contenedor-MG .card-bodyMG .card-titleMG .cardMg-text {
   font-family: Open Sans;
   text-align: justify;
   word-wrap: break-word;
-  font-size: 18px;
-  height: 120px;
+  font-size: 15px;
+  height: 100px;
   margin-top: 5%;
 }
 .contenedor-MG .card-bodyMG .card-titleMG .cardMg-text1 {
   font-family: Open Sans;
-  font-size: 18px;
+  font-size: 15px;
 }
 .contenedor-MG .button-cardsMG {
   width: 100%;
@@ -2102,16 +2117,16 @@ footer .social-networks .networks img {
 }
 
 .contenedor-cartasR {
-  margin: 1%;
+  margin: 4%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 .contenedor-cartasR .cardR {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4499999881);
+  border: 2px solid #4311b9;
   padding: 1%;
   width: 15%;
-  height: 350px;
+  height: 270px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2119,11 +2134,11 @@ footer .social-networks .networks img {
 }
 .contenedor-cartasR .cardR .img-cardR {
   width: 100%;
-  height: 250px;
+  height: 200px;
 }
 .contenedor-cartasR .cardR .img-cardR img {
   width: 100%;
-  height: 240px;
+  height: 200px;
 }
 .contenedor-cartasR .cardR .card-bodyR {
   padding: 3%;
@@ -2314,13 +2329,6 @@ footer .social-networks .networks img {
   width: 100%;
   height: 30px;
 }
-.contenD .cardD .card-bodyD .card-textD {
-  font-family: Open Sans;
-  font-size: 15px;
-  text-align: justify;
-  width: 100%;
-  height: 30px;
-}
 .contenD .cardD .card-bodyD .btn-Dash {
   font-family: Open Sans;
   text-align: center;
@@ -2408,10 +2416,12 @@ footer .social-networks .networks img {
   height: 50px;
 }
 .conten-P .txt-Name-admin {
-  width: 40%;
+  width: 35%;
+  height: 30px;
 }
 .conten-P .btn-Edit {
-  width: 20%;
+  width: 18%;
+  height: 30px;
   color: #060300;
   font-family: Open Sans;
   font-size: 18px;
@@ -2420,14 +2430,20 @@ footer .social-networks .networks img {
   color: #ff4300;
 }
 .conten-P .AdminB2 {
-  width: 20%;
-}
-.conten-P .AdminB2 .btn-Delete-A {
+  margin-top: 0.5%;
+  width: 18%;
+  height: 30px;
+  color: #060300;
   font-family: Open Sans;
   font-size: 18px;
 }
 .conten-P .btn-Delete-A:hover {
   color: #ff4300;
+}
+
+.input-clip {
+  width: 45%;
+  border: #ff4300 1px solid;
 }
 
 .title-admin {
@@ -2468,6 +2484,7 @@ footer .social-networks .networks img {
 }
 .admin-Conten .conten-admin {
   width: 80%;
+  height: 500px;
 }
 .admin-Conten .conten-admin .title-admin2 {
   width: 100%;
@@ -2532,6 +2549,10 @@ footer .social-networks .networks img {
 }
 .admin-Conten .conten-admin .create-1 input[type=file] {
   width: 70%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   border: solid 1px #4311b9;
 }
 .admin-Conten .conten-admin .btn-general {
