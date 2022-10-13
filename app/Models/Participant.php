@@ -17,6 +17,7 @@ class Participant extends Model
         "city",
         "how_did_you_meet_us",
         "legals",
+        "date",
     ];
 
     public function workshops(){

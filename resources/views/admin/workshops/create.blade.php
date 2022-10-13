@@ -44,6 +44,24 @@
             <x-input class="the-input2" type="text" name="details" :value="old('details')" required />
         </div>
 
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Fecha 1')" />
+            <x-input class="the-input" type="text" name="date1" :value="old('date1')" required />
+        </div>
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Fecha 2')" />
+            <x-input class="the-input" type="text" name="date2" :value="old('date2')" required/>
+        </div>
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Fecha 3')" />
+            <x-input class="the-input" type="text" name="date3" :value="old('date3')" required/>
+        </div>
+
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Fecha 4')" />
+            <x-input class="the-input" type="text" name="date4" :value="old('date4')" required/>
+        </div>
+
         <div class="create-1">
             <input class="" type="file" name="file">
         </div>
@@ -63,4 +81,3 @@
     </form>
 </div>
 
-<x-footer/>
