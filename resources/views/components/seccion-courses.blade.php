@@ -35,7 +35,7 @@
                         </div>
                         
                         <div class="btn-cuorses"> 
-                            <a href="{{ url('/participant') }}">
+                            <a href="{{ route('getdate',['id'=>$workshops->id]) }}">
                                 <button type="button" class="C-btn">Inscribete</button> 
                             </a>
                         </div>
