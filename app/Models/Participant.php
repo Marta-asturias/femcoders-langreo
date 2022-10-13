@@ -18,8 +18,8 @@ class Participant extends Model
         "how_did_you_meet_us",
         "legals",
     ];
-
+/* 
     public function workshops(){
         return $this->belongsToMany(Workshop::class)->withTimestamps();;
-    }
+    } */
 }
