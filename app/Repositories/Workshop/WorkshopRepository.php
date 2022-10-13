@@ -26,10 +26,8 @@ private Workshop $workshop;
             'age'  => 'required',
             'duration'  => 'required',
             'format'  => 'required',
-            'date1' => 'requiered',
-            'date2' => 'requiered',
-            'date3' => 'requiered',
-            'date4' => 'requiered',
+            'date1' => 'required',
+
         ]);
         $fileName = time().'.'.$request->file->extension();
         $request->file->move(public_path('storage'), $fileName);
@@ -60,10 +58,8 @@ private Workshop $workshop;
             'age'  => 'required',
             'duration'  => 'required',
             'format'  => 'required',
-            'date1' => 'requiered',
-            'date2' => 'requiered',
-            'date3' => 'requiered',
-            'date4' => 'requiered',
+            'date1' => 'required',
+
         ]);
 
         $fileName = time().'.'.$request->file->extension();

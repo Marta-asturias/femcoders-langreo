@@ -19,8 +19,8 @@ class Participant extends Model
         "legals",
         "date",
     ];
-/* 
+
     public function workshops(){
         return $this->belongsToMany(Workshop::class)->withTimestamps();;
-    } */
+    }
 }
