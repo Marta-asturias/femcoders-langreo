@@ -47,8 +47,50 @@
          <x-label class="label-form" for="how_did_you_meet_us" :value="__('¿Como nos has conocido?')" />
          <x-input id="how_did_you_meet_us" class="input-form" type="text" name="how_did_you_meet_us" :value="old('how_did_you_meet_us')" required autofocus />
         </div>
+ 
+ <div class="conten-create">
 
-        <div class="form-line">
+  <form action="{{route('updateDates', $workshop)}}" method="POST" enctype="multipart/form-data">
+  @csrf
+  @method('PUT')
+
+
+ 
+
+
+<div class="descrip-edit">
+
+
+
+  <div class="text-des-edit">
+      <x-label for="price" :value="__('')" />
+      <span>Fecha 1:</span><x-input id="date1" class="mt-1 w-24" type="text" name="date1" :value="old('date1') ?? $workshop->date1" required />
+  </div>
+
+  <div class="text-des-edit">
+      <x-label for="price" :value="__('')" />
+      <span>Fecha 2:</span><x-input id="date2" class="mt-1 w-24" type="text" name="date2" :value="old('date2') ?? $workshop->date2" required />
+  </div>
+
+  <div class="text-des-edit">
+      <x-label for="price" :value="__('')" />
+      <span>Fecha 3:</span><x-input id="date3" class="mt-1 w-24" type="text" name="date3" :value="old('date3') ?? $workshop->date3" required />
+  </div>
+
+  <div class="text-des-edit">
+      <x-label for="price" :value="__('')" />
+      <span>Fecha 4:</span><x-input id="date4" class="mt-1 w-24" type="text" name="date4" :value="old('date4') ?? $workshop->date4" required />
+  </div>
+</div>
+
+</div>
+
+<h1>hola</h1>
+
+  </form>
+</div>
+
+       <div class="form-line">
          <input type="checkbox" class="form-check-input" id="legals" name="legals" value="1">
          <label class="form-check-label" for="legals">He leído y acepto a Factoría F5, como responsable del tratamiento de mis datos con la finalidad de dar respuesta a mi consulta o petición. Y politica de privacidad</label>
         </div>
@@ -74,7 +116,7 @@
           El tratamiento de los datos de los menores de catorce años, fundado en el consentimiento, solo será lícito si consta el del titular de la patria potestad o tutela.
       </section>
   </div>
-
+ 
   
 
 

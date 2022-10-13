@@ -52,11 +52,20 @@ class WorkshopController
         return view('admin.workshops.edit')->with('workshop',$workshop);
     }
 
-    public function update(Request $request, $id)
+    public function editDates(Request $request, $id)
+    {
+        $workshop=$this->repository->editWorkshop($request,$id);
+        if(!$workshop){
+            return view('workshop.notexist');
+        }
+        return view('participant')->with('workshop',$workshop);
+    }
+
+    public function updateDates(Request $request, $id)
     {
         $workshop = $this->repository->getAll();
         $this->repository->updateWorkshop($request,$id);
-       return view('/workshops')->with('workshop',$workshop);
+       return view('/participant')->with('workshop',$workshop);
        
     }
 
