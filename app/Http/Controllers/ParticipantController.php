@@ -35,13 +35,12 @@ private ParticipantRepository $repository;
 
     public function save(Request $request)
     {
-
         if (isset($_POST['sendForm'])) {
-            if (isset($_POST['legals']) && $_POST['legals'] == '1')  
-            echo '<div class="alert alert-success">Has aceptado correctamente las condiciones de uso.</div>';
+            if (isset($_POST['legals']) && $_POST['legals'] == '1')
+                echo '<div class="alert alert-success">Has aceptado correctamente las condiciones de uso.</div>';
                 $this->repository->saveParticipant($request);
                 return $this->index();
-
+ 
 }
 }
 }

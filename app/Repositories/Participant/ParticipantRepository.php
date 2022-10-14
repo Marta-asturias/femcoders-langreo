@@ -27,10 +27,8 @@ class ParticipantRepository{
                 'city'  => 'required',
                 'how_did_you_meet_us'  => 'required',
                 'legals'  => 'required',
-              /*   'date' => 'required', */
+                'date' => 'requiered',
             ]);
-
-            
             $this->participant->first_name = $request->get('first_name');
             $this->participant->last_name = $request->get('last_name');
             $this->participant->birth_date = $request->get('birth_date');
