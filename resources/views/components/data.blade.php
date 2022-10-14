@@ -1,18 +1,25 @@
 <div class="conten-data">
-            <div class="text-data">
-                <x-label class="label-data" for="price" :value="$workshop->date1" />
-                <x-input class="input-data" id="date1" type="radio" name="date" :value="old('date1') ?? $workshop->date1" required />
-            </div>
-            <div class="text-data">
-                <x-label class="label-data" for="price" :value="$workshop->date2" />
-                <x-input class="input-data" id="date" type="radio" name="date" :value="old('date2') ?? $workshop->date2" required />
-            </div>
-            <div class="text-data">
-                <x-label class="label-data" for="price" :value="$workshop->date3" />
-                <x-input class="input-data" id="date3"  type="radio" name="date" :value="old('date3') ?? $workshop->date3" required />
-            </div>
-            <div class="text-data">
-                <x-label class="label-data"  for="price" :value="$workshop->date4" />
-                <x-input class="input-data" id="date4"  type="radio" name="date" :value="old('date4') ?? $workshop->date4" required />
-            </div>
+    @foreach ($workshop as $workshops)
+    <form class="form-data" action="{{ route('getdate', $workshops) }}" method="GET" enctype="multipart/form-data">
+        @csrf
+        @endforeach
+        <div class="text-data">
+            <x-label class="label-data" for="price" :value="__('Fecha 1:')" />
+            <x-input id="date1" class="mt-1 w-24" type="text" name="date1" :value="old('date1') ?? $workshop->date1" required />
+        </div>
+        <div class="text-data">
+            <x-label class="label-data"  for="price" :value="__('Fecha 2:')" />
+            <x-input id="date1" class="mt-1 w-24" type="text" name="date2" :value="old('date2') ?? $workshop->date2" required />
+        </div>
+        <div class="text-data">
+            <x-label class="label-data"  for="price" :value="__('Fecha 3:')" />
+            <x-input id="date1" class="mt-1 w-24" type="text" name="date3" :value="old('date3') ?? $workshop->date3" required />
+        </div>
+        <div class="text-data">
+            <x-label class="label-data"  for="price" :value="__('Fecha 4:')" />
+            <x-input id="date1" class="mt-1 w-24" type="text" name="date4" :value="old('date4') ?? $workshop->date4" required />
+        </div>
+        
+    </form>
+  
 </div>

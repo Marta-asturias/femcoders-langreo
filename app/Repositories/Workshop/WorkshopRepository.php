@@ -46,10 +46,6 @@ private Workshop $workshop;
     }
 
     public function editWorkshop(Request $request, $id){
-        return $this->getWorkshop($id);
-    }
-
-    public function getWorkshop($id){
         return Workshop::find($id);
     }
 

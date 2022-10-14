@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Participant;
 use App\Repositories\Participant\ParticipantRepository;
-use App\Repositories\Workshop\WorkshopRepository;
 use Illuminate\Http\Request;
 
 
@@ -15,7 +14,6 @@ private ParticipantRepository $repository;
 
     public function __construct() {
     $this->repository= new ParticipantRepository(); 
-    $this->repositoryWorkshop= new WorkshopRepository();
     }
 
     public function index(){
@@ -24,13 +22,9 @@ private ParticipantRepository $repository;
 
     }
 
-    public function createParticipant(Request $request, $id)
-    {
-        $workshop=$this->repositoryWorkshop->getWorkshop($id);
-        if(!$workshop){
-            return view('workshop.notexist');
-        }
-        return view('participant')->with('workshop',$workshop);
+    public function createParticipant(){
+        return view("participant");
+
     }
 
     public function save(Request $request)
