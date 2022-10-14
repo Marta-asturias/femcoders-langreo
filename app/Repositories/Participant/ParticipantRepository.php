@@ -27,7 +27,7 @@ class ParticipantRepository{
                 'city'  => 'required',
                 'how_did_you_meet_us'  => 'required',
                 'legals'  => 'required',
-                'date' => 'required',
+              /*   'date' => 'required', */
             ]);
 
             
