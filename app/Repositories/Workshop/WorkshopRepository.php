@@ -62,7 +62,7 @@ private Workshop $workshop;
             'age'  => 'required',
             'duration'  => 'required',
             'format'  => 'required',
-           /*  'date1' => 'required', */
+            'date1' => 'required',
 
         ]);
 

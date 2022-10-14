@@ -23,6 +23,7 @@ class CreateParticipantsTable extends Migration
             $table->string ("city");
             $table->string ("how_did_you_meet_us");
             $table->integer ("legals");
+            $table->string("date");
             $table->timestamps();
         });
     }
