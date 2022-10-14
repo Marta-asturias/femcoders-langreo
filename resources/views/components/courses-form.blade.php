@@ -65,7 +65,7 @@
               {{ __('Guardar') }}
           </button>
         </div>
-        <x-data :workshop="$workshop"/>
+        
       </form>
 
       <div class="legals-line">
