@@ -67,6 +67,7 @@
               {{ __('Guardar') }}
           </button>
         </div>
+        
       </form>
 
       <div class="legals-line">
