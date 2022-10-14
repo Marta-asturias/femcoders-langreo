@@ -16,9 +16,9 @@ class ParticipantRepository{
     public function getAll(){
         return $this->participant->all()->sortByDesc("id");
         }
-    public function saveParticipant(Request $request)
+    public function saveParticipant(Request $request,$id)
     {  
-            $request->validate([     
+            /* $request->validate([     
                 'first_name'=> 'required', 
                 'last_name' => 'required',
                 'birth_date'  => 'required',
@@ -27,8 +27,10 @@ class ParticipantRepository{
                 'city'  => 'required',
                 'how_did_you_meet_us'  => 'required',
                 'legals'  => 'required',
-                'date' => 'requiered',
-            ]);
+                'date' => 'required',
+            ]); */
+
+            
             $this->participant->first_name = $request->get('first_name');
             $this->participant->last_name = $request->get('last_name');
             $this->participant->birth_date = $request->get('birth_date');
@@ -38,10 +40,15 @@ class ParticipantRepository{
             $this->participant->how_did_you_meet_us = $request->get('how_did_you_meet_us');
             $this->participant->legals = $request->get('legals');
             $this->participant->date = $request->get('date');
+            
+            $newParticipant = $this->participant->save();    
+
+            $this->participant->workshops()->attach($id);
+
             //pivot workshop
 /*             $participant->workshops()->sync([ $workshop->id ]);
             $date->workshops()->sync([ $workshop->id ]); */
-            return $this->participant->save();    
+            return $newParticipant;
         }
 
 

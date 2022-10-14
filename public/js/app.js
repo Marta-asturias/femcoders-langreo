@@ -5032,13 +5032,11 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var alpinejs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/module.esm.js");
-/* harmony import */ var _clain__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./clain */ "./resources/js/clain.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
-
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
-window.waitForImages = _clain__WEBPACK_IMPORTED_MODULE_1__["default"];
+window.waitForImages = waitForImages;
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 window.waitForImages();
 
@@ -5072,195 +5070,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/clain.js":
-/*!*******************************!*\
-  !*** ./resources/js/clain.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-console.clear();
-var _window = window,
-    gsap = _window.gsap,
-    imagesLoaded = _window.imagesLoaded;
-var buttons = {};
-var cardsContainerEl = document.querySelector(".cards__wrapper");
-var appBgContainerEl = document.querySelector(".Sectio-Clain__bg");
-var cardInfosContainerEl = document.querySelector(".info__wrapper");
-
-function swapCards(direction) {
-  var currentCardEl = cardsContainerEl.querySelector(".current--card");
-  var previousCardEl = cardsContainerEl.querySelector(".previous--card");
-  var nextCardEl = cardsContainerEl.querySelector(".next--card");
-  var currentBgImageEl = appBgContainerEl.querySelector(".current--image");
-  var previousBgImageEl = appBgContainerEl.querySelector(".previous--image");
-  var nextBgImageEl = appBgContainerEl.querySelector(".next--image");
-  changeInfo(direction);
-  swapCardsClass();
-  removeCardEvents(currentCardEl);
-
-  function swapCardsClass() {
-    currentCardEl.classList.remove("current--card");
-    previousCardEl.classList.remove("previous--card");
-    nextCardEl.classList.remove("next--card");
-    currentBgImageEl.classList.remove("current--image");
-    previousBgImageEl.classList.remove("previous--image");
-    nextBgImageEl.classList.remove("next--image");
-    currentCardEl.style.zIndex = "50";
-    currentBgImageEl.style.zIndex = "-2";
-
-    if (direction === "right") {
-      previousCardEl.style.zIndex = "20";
-      nextCardEl.style.zIndex = "30";
-      nextBgImageEl.style.zIndex = "-1";
-      currentCardEl.classList.add("previous--card");
-      previousCardEl.classList.add("next--card");
-      nextCardEl.classList.add("current--card");
-      currentBgImageEl.classList.add("previous--image");
-      previousBgImageEl.classList.add("next--image");
-      nextBgImageEl.classList.add("current--image");
-    } else if (direction === "left") {
-      previousCardEl.style.zIndex = "30";
-      nextCardEl.style.zIndex = "0";
-      previousBgImageEl.style.zIndex = "-1";
-      currentCardEl.classList.add("next--card");
-      previousCardEl.classList.add("current--card");
-      nextCardEl.classList.add("previous--card");
-      currentBgImageEl.classList.add("next--image");
-      previousBgImageEl.classList.add("current--image");
-      nextBgImageEl.classList.add("previous--image");
-    }
-  }
-}
-
-function changeInfo(direction) {
-  var currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
-  var previousInfoEl = cardInfosContainerEl.querySelector(".previous--info");
-  var nextInfoEl = cardInfosContainerEl.querySelector(".next--info");
-
-  function swapInfosClass() {
-    currentInfoEl.classList.remove("current--info");
-    previousInfoEl.classList.remove("previous--info");
-    nextInfoEl.classList.remove("next--info");
-
-    if (direction === "right") {
-      currentInfoEl.classList.add("previous--info");
-      nextInfoEl.classList.add("current--info");
-      previousInfoEl.classList.add("next--info");
-    } else if (direction === "left") {
-      currentInfoEl.classList.add("next--info");
-      nextInfoEl.classList.add("previous--info");
-      previousInfoEl.classList.add("current--info");
-    }
-  }
-}
-
-function updateCard(e) {
-  var card = e.currentTarget;
-  var box = card.getBoundingClientRect();
-  var centerPosition = {
-    x: box.left + box.width / 2,
-    y: box.top + box.height / 2
-  };
-  var angle = Math.atan2(e.pageX - centerPosition.x, 0) * (35 / Math.PI);
-  gsap.set(card, {
-    "--current-card-rotation-offset": "".concat(angle, "deg")
-  });
-  var currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
-  gsap.set(currentInfoEl, {
-    rotateY: "".concat(angle, "deg")
-  });
-}
-
-function resetCardTransforms(e) {
-  var card = e.currentTarget;
-  var currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
-  gsap.set(card, {
-    "--current-card-rotation-offset": 0
-  });
-  gsap.set(currentInfoEl, {
-    rotateY: 0
-  });
-}
-
-function initCardEvents() {
-  var currentCardEl = cardsContainerEl.querySelector(".current--card");
-  currentCardEl.addEventListener("pointermove", updateCard);
-  currentCardEl.addEventListener("pointerout", function (e) {
-    resetCardTransforms(e);
-  });
-}
-
-initCardEvents();
-
-function removeCardEvents(card) {
-  card.removeEventListener("pointermove", updateCard);
-}
-
-function init() {
-  var tl = gsap.timeline();
-  tl.to(cardsContainerEl.children, {
-    delay: 0.20,
-    duration: 0.4,
-    stagger: 0.30,
-    "--card-translateY-offset": "0%"
-  }).to(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".text"), {
-    delay: 0.5,
-    duration: 0.4,
-    stagger: 0.1,
-    opacity: 1,
-    translateY: 0
-  });
-}
-
-var waitForImages = function waitForImages() {
-  var images = _toConsumableArray(document.querySelectorAll("img"));
-
-  var totalImages = images.length;
-  var loadedImages = 0;
-  gsap.set(cardsContainerEl.children, {
-    "--card-translateY-offset": "100vh"
-  });
-  gsap.set(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".text"), {
-    translateY: "40px",
-    opacity: 0
-  });
-  images.forEach(function (image) {
-    imagesLoaded(image, function (instance) {
-      if (instance.isComplete) {
-        loadedImages++;
-        var loadProgress = loadedImages / totalImages;
-
-        if (totalImages == loadedImages) {
-          gsap.timeline().call(function () {
-            return init();
-          });
-        }
-      }
-    });
-  });
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (waitForImages);
 
 /***/ }),
 
@@ -22480,7 +22289,11 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
   \*********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
 
 throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Can't find stylesheet to import.\n   ╷\n17 │ @import 'adminCreate';\r\n   │         ^^^^^^^^^^^^^\n   ╵\n  resources\\sass\\app.scss 17:9  root stylesheet\n    at processResult (C:\\xampp\\htdocs\\femcoders-langreo\\node_modules\\webpack\\lib\\NormalModule.js:758:19)\n    at C:\\xampp\\htdocs\\femcoders-langreo\\node_modules\\webpack\\lib\\NormalModule.js:860:5\n    at C:\\xampp\\htdocs\\femcoders-langreo\\node_modules\\loader-runner\\lib\\LoaderRunner.js:400:11\n    at C:\\xampp\\htdocs\\femcoders-langreo\\node_modules\\loader-runner\\lib\\LoaderRunner.js:252:18\n    at context.callback (C:\\xampp\\htdocs\\femcoders-langreo\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at C:\\xampp\\htdocs\\femcoders-langreo\\node_modules\\sass-loader\\dist\\index.js:54:7\n    at Function.call$2 (C:\\xampp\\htdocs\\femcoders-langreo\\node_modules\\sass\\sass.dart.js:101407:16)\n    at render_closure1.call$2 (C:\\xampp\\htdocs\\femcoders-langreo\\node_modules\\sass\\sass.dart.js:86406:12)\n    at _RootZone.runBinary$3$3 (C:\\xampp\\htdocs\\femcoders-langreo\\node_modules\\sass\\sass.dart.js:30016:18)\n    at _FutureListener.handleError$1 (C:\\xampp\\htdocs\\femcoders-langreo\\node_modules\\sass\\sass.dart.js:28545:21)");
 
@@ -22720,7 +22533,42 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -22770,13 +22618,68 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/js/app": 0,
+/******/ 			"css/app": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	__webpack_require__("./resources/js/app.js");
-/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./resources/sass/app.scss");
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;

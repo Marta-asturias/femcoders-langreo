@@ -2165,6 +2165,7 @@ footer .social-networks .networks img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 5%;
   background-color: #cbbfe8;
 }
 .description-container .description-form {
@@ -2213,8 +2214,8 @@ footer .social-networks .networks img {
 }
 .description-container .description-form .btn-form {
   width: 100%;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   display: flex;
   justify-content: center;
 }
@@ -2590,6 +2591,34 @@ footer .social-networks .networks img {
   border-bottom-right-radius: 20px;
   border: solid 1px #4311b9;
   background: #cbbfe8;
+}
+
+.conten-data {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.conten-data .text-data {
+  border: 1px solid #4311b9;
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  padding: 1%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.conten-data .text-data .label-data {
+  color: black;
+  font-family: Open Sans;
+  text-align: center;
+  font-size: 18px;
+}
+.conten-data .text-data .input-data {
+  width: 20%;
 }
 
 .sesion {
