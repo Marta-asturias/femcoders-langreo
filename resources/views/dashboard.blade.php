@@ -23,7 +23,7 @@
           <div class="card-bodyD">
             <h3 class="card-titleD"><strong>Administradores</strong></h3>
             <button class="btn-Dash">
-              <a href="#" class="btnD">Ingresar</a>
+              <a href="{{ url('/admin/users/users') }}" class="btnD">Ingresar</a>
           </button>
           </div>
       </div>
