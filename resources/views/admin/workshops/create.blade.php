@@ -50,16 +50,28 @@
         </div>
         <div class="title-admin2">
             <x-label class="the-title" for="price" :value="__('Fecha 2')" />
+<<<<<<< HEAD
             <x-input class="the-input" type="text" name="date2" :value="old('date2')" required />
         </div>
         <div class="title-admin2">
             <x-label class="the-title" for="price" :value="__('Fecha 3')" />
             <x-input class="the-input" type="text" name="date3" :value="old('date3')" required />
+=======
+            <x-input class="the-input" type="text" name="date2" :value="old('date2')" />
+        </div>
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Fecha 3')" />
+            <x-input class="the-input" type="text" name="date3" :value="old('date3')" />
+>>>>>>> juliet
         </div>
 
         <div class="title-admin2">
             <x-label class="the-title" for="price" :value="__('Fecha 4')" />
+<<<<<<< HEAD
             <x-input class="the-input" type="text" name="date4" :value="old('date4')" required />
+=======
+            <x-input class="the-input" type="text" name="date4" :value="old('date4')" />
+>>>>>>> juliet
         </div>
 
         <div class="create-1">
@@ -81,4 +93,3 @@
     </form>
 </div>
 
-<x-footer/>

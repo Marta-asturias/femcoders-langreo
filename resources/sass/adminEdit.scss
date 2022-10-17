@@ -1,0 +1,36 @@
+.conten-Edit{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    .FornEdit{
+        width: 80%;
+        border: 2px solid black;
+
+        .title-edit{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            font-size: 30px;
+            .theLabelE{
+                text-align: center;
+                font-family: open Sans;
+                width: 100%;
+                height: 50px;
+                font-size: 30px;
+            }
+            
+            .theinputE{
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                width: 100%;
+                height: 30px;
+                border: 2px solid #4311b9;
+            }
+        }
+    }
+}

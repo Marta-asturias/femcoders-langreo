@@ -46,6 +46,7 @@
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="text-des-edit text-des-edit2">
         <x-label for="price" :value="__('')" />
         <span>Detalles:</span><x-input id="details" class="mt-1 w-24" type="text" name="details" :value="old('details') ?? $workshop->details" required />
@@ -95,6 +96,26 @@
 </button>
 </div>
 =======
+=======
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Fecha 1')" />
+            <x-input class="the-input" type="text" name="date1" :value="old('date1') ?? $workshop->date1" required />
+        </div>
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Fecha 2')" />
+            <x-input class="the-input" type="text" name="date2" :value="old('date2') ?? $workshop->date2"  />
+        </div>
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Fecha 3')" />
+            <x-input class="the-input" type="text" name="date3" :value="old('date3') ?? $workshop->date3"  />
+        </div>
+
+        <div class="title-admin2">
+            <x-label class="the-title" for="price" :value="__('Fecha 4')" />
+            <x-input class="the-input" type="text" name="date4" :value="old('date4') ?? $workshop->date4"  />
+        </div>
+
+>>>>>>> juliet
         <div class="create-1">
             <input type="file" name="file" class="form-control">
         </div>
@@ -115,4 +136,4 @@
 </div>
 
 
-<x-footer/>
+
