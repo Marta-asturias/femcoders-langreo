@@ -1,4 +1,5 @@
-<x-head/> 
+<x-head/>
+@include('sweetalert::alert')
 @include('layouts.adminNavigation') 
 
 

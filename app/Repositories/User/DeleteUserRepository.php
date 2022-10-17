@@ -6,6 +6,7 @@ use App\Http\Controllers\User as ControllersUser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DeleteUserRepository  {
 
@@ -19,8 +20,9 @@ class DeleteUserRepository  {
 
   public function destroyUser(Request $request)
     {
-        $this->User = User::find($request->id);        
+        $this->User = User::find($request->id);  
+        Alert::warning('Eliminado', 'El administrador Ha sido Borrado');     
         return $this->User->delete();
     
     }
-}
+  }
