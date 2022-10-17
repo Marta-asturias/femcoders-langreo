@@ -15,6 +15,8 @@ class Workshop extends Model
         'age',
         'duration',
         'format',
+        'date1',
+
     ];
 
     public function participants(){
