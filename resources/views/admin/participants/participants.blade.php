@@ -14,10 +14,6 @@
     </button>
 
     <button class="AdminH2">
-        <a href="{{route('register')}}" class="btnH2">Agregar Nuevo</a>
-    </button>
-
-    <button class="AdminH2">
         <a href="{{ route('exportparticipants') }}" class="btnH2"> Exportar Participantes</a>
     </button>
 
