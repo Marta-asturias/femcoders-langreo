@@ -28,7 +28,7 @@ private Workshop $workshop;
             'duration'  => 'required',
             'format'  => 'required',
             'date1'  => 'required',
-           
+        
         ]);
         $fileName = time().'.'.$request->file->extension();
         $request->file->move(public_path('storage'), $fileName);
