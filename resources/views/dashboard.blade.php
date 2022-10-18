@@ -40,6 +40,18 @@
         </div>
       </div>
 
+      <div class="cardD">
+        <div class="car-imgD">
+            <img src="{{ asset('img/participant.png') }}" class="card-imgD" alt="...">
+          </div>
+        <div class="card-bodyD">
+          <h5 class="card-titleD"><strong>Participantes</strong></h5>
+          <button class="btn-Dash">
+            <a href="{{ url('/admin/participants/participants') }}"  class="btnD">Ver Más</a>
+        </button>
+        </div>
+      </div>
+
         <div class="cardD">
           <div class="car-imgD">
             <img src="{{ asset('img/juegos.png') }}" class="card-imgD" alt="...">

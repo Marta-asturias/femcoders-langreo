@@ -45,9 +45,6 @@ class ParticipantTest extends TestCase
 
         $this->assertEquals("jiji", $participant->first_name);
         $this->assertEquals("hola", $workshop->title);
-        $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $participant->workshops);
-        $this->assertEquals(1, $participant->workshops()->count());
-        $this->assertInstanceOf(Workshop::class, $participant->workshops[0]);
-        //$this->assertEquals($workshop->title, $participant->workshops()->find(1));
+        $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $participant->workshops());
     }
 }
