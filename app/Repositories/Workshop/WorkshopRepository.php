@@ -28,7 +28,8 @@ private Workshop $workshop;
             'age'  => 'required',
             'duration'  => 'required',
             'format'  => 'required',
-            'date1' => 'required',
+            'date1'  => 'required',
+           
         ]);
         $fileName = time().'.'.$request->file->extension();
         $request->file->move(public_path('storage'), $fileName);
@@ -39,7 +40,7 @@ private Workshop $workshop;
         $this->workshop->age = $request->get('age');
         $this->workshop->duration = $request->get('duration');
         $this->workshop->format = $request->get('format');
-<<<<<<< HEAD
+
         $this->workshop->date1 = $request->get('date1');
         $this->workshop->date2 = $request->get('date2');
         $this->workshop->date3 = $request->get('date3');
@@ -48,13 +49,12 @@ private Workshop $workshop;
         return $this->workshop->save();  
  
         
-=======
+
         $this->workshop->date1= $request->get('date1');
         $this->workshop->date2= $request->get('date2');
         $this->workshop->date3= $request->get('date3');
         $this->workshop->date4= $request->get('date4');
         return $this->workshop->save();    
->>>>>>> juliet
     }
 
     public function editWorkshop(Request $request, $id){
@@ -88,17 +88,29 @@ private Workshop $workshop;
         $this->workshop->age = $request->get('age');
         $this->workshop->duration = $request->get('duration');
         $this->workshop->format = $request->get('format');
+
         $this->workshop->date1= $request->get('date1');
         $this->workshop->date2= $request->get('date2');
         $this->workshop->date3= $request->get('date3');
         $this->workshop->date4= $request->get('date4');
+
+        $this->workshop->date1 = $request->get('date1');
+        $this->workshop->date2 = $request->get('date2');
+        $this->workshop->date3 = $request->get('date3');
+        $this->workshop->date4 = $request->get('date4');
+        Alert::success('Actualizado', 'Este administrador ha sido actualizado con éxito');
+
         return $this->workshop->save(); 
     }
 
     public function destroyWorkshop(Request $request)
     {
         $workshop = workshop::find($request->id); 
+
         // Alert::success('Success', 'Has eliminado el workshop');       
+
+        Alert::success('Éxitos', 'Has eliminado el workshop');       
+
         return $workshop->delete();
     
     }

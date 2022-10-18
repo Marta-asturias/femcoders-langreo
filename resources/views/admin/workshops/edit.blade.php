@@ -57,6 +57,7 @@
         <span>Edad:</span><x-input id="age" class="mt-1 w-24" type="text" name="age" :value="old('age') ?? $workshop->age" required />
     </div>
 
+<<<<<<< HEAD
     <div class="text-des-edit">
         <x-label for="price" :value="__('')" />
         <span>Duracion:</span><x-input id="duration" class="mt-1 w-24" type="text" name="duration" :value="old('duration') ?? $workshop->duration" required />
@@ -95,8 +96,8 @@
     {{ __('Actualizar') }}
 </button>
 </div>
-=======
-=======
+
+
         <div class="title-admin2">
             <x-label class="the-title" for="price" :value="__('Fecha 1')" />
             <x-input class="the-input" type="text" name="date1" :value="old('date1') ?? $workshop->date1" required />
@@ -115,11 +116,15 @@
             <x-input class="the-input" type="text" name="date4" :value="old('date4') ?? $workshop->date4"  />
         </div>
 
->>>>>>> juliet
         <div class="create-1">
             <input type="file" name="file" class="form-control">
         </div>
->>>>>>> juliet
+
+
+        <div class="create-1">
+            <input type="file" name="file" class="form-control">
+        </div>
+
 
         <div class="btn-general">
             <div class="btn-create">

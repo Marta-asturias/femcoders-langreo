@@ -17,7 +17,7 @@ class CreateParticipantsTable extends Migration
             $table->id();
             $table->string ('first_name');
             $table->string ("last_name");
-            $table->date ("birth_date");
+            $table->string ("birth_date");
             $table->string ('email');
             $table->string ("whatsapp");
             $table->string ("city");
