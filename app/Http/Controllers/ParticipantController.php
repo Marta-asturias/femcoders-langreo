@@ -25,7 +25,7 @@ class ParticipantController
         $participant = $this->repository->getall();
         $workshop = $this->workshopRepository->getAll();
         
-        /* return view('participant')->with([
+        /* return view('admin.participants.participants')->with([
             'participant' => $participant,
             'workshop' => $workshop
         ]); */
