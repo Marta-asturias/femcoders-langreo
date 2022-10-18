@@ -51,9 +51,4 @@ class ParticipantRepository{
             return $newParticipant;
         }
 
-
-
-
-
-
 }

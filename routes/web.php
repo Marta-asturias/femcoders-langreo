@@ -42,10 +42,12 @@ Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
 Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("adminwelcome");
 Route::group(['middleware' => ['auth']], function (){
 
+    Route::group(['prefix' => 'admin/participants'], function (){
+        Route::get('/participants', [ParticipantController::class, 'index' ])->name("participantslist");
+    });
 
     Route::group(['prefix' => 'admin/workshops'], function () {
 
-Route::get('/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('export/', [WorkshopController::class, 'export'])->name("export");
 Route::get('/create', [WorkshopController::class, 'create' ])->name("create");
