@@ -1,0 +1,32 @@
+.conten-Participants{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    .block-participants{
+        width: 30%;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom-left-radius:20px;
+        border-bottom-right-radius:20px;
+        border: 1px solid #ff4300;
+        background: #fed2c0;
+        .participant-person{
+            display: flex;
+            justify-content: space-around;
+            font-family: Open Sans;
+            font-size: 20px;
+            text-align: center;
+            .txt-Name-participants0{
+                padding: 2%;
+            }
+        }
+        .datos-participants{
+            .txt-Name-participants{
+                padding: 2%;
+                font-family: Open Sans;
+                font-size: 15px;
+            }
+        }
+    }
+}

@@ -23,7 +23,7 @@ private MiniGame $MiniGame;
         $request->validate([     
             'file' => 'required|mimes:jpg,png|max:2048',
             'link'=> 'required', 
-           
+        
         ]);
         $fileName = time().'.'.$request->file->extension();
         $request->file->move(public_path('storage'), $fileName);

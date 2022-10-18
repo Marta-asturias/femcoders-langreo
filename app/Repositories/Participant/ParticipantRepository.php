@@ -16,6 +16,10 @@ class ParticipantRepository{
     public function getAll(){
         return $this->participant->all()->sortByDesc("id");
         }
+    
+    public function getByemail(Request $request){
+        return $this->participant->where('email', $request->get('email'))->firstOrFail();
+    }
     public function saveParticipant(Request $request,$id)
     {  
             /* $request->validate([     
@@ -50,10 +54,5 @@ class ParticipantRepository{
             $date->workshops()->sync([ $workshop->id ]); */
             return $newParticipant;
         }
-
-
-
-
-
 
 }

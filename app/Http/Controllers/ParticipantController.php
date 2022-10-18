@@ -24,13 +24,13 @@ class ParticipantController
     {
         $participant = $this->repository->getall();
         $workshop = $this->workshopRepository->getAll();
-        
-        /* return view('admin.participants.participants')->with([
+        return view('admin.participants.participants')->with([
             'participant' => $participant,
             'workshop' => $workshop
-        ]); */
+        ]);
+    //     return view('admin.participants.participants')->with('participant',$participant);
     }
-
+ // 'workshop' => $workshop
     public function createParticipant(Request $request, $id)
     {
         $workshop = $this->workshopRepository->getWorkshop($id);
@@ -43,10 +43,19 @@ class ParticipantController
     public function save(Request $request, $id)
     {
 
+        
+        
+
         if (isset($_POST['sendForm'])) {
-            if (isset($_POST['legals']) && $_POST['legals'] == '1')
+            if (isset($_POST['legals']) && $_POST['legals'] == '1'){
                 echo '<div class="alert alert-success">Has aceptado correctamente las condiciones de uso.</div>';
-            $this->repository->saveParticipant($request, $id);
+            }
+            
+            if($participant = $this->repository->getByemail($request)){
+                $participant->workshops()->attach($id);
+            }else{
+                $this->repository->saveParticipant($request, $id);
+            }
             return redirect(route('getWorkshops'),302);
         }
 
