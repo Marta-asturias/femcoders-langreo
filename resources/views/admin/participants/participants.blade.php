@@ -18,7 +18,7 @@
     </button>
 
     <button class="AdminH2">
-        <a href="{{ route('export') }}" class="btnH2"> Exportar Participantes</a>
+        <a href="{{ route('exportparticipants') }}" class="btnH2"> Exportar Participantes</a>
     </button>
 
 </div>
