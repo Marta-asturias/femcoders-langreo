@@ -9,6 +9,7 @@ use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\ParticipantViewController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\ShowUserController;
+use App\Http\Controllers\UpdateUSerController;
 use App\Http\Controllers\UserMiniGamesController;
 use App\Http\Controllers\UserResourcesController;
 use App\Http\Controllers\UserWorkshopsController;
@@ -74,6 +75,8 @@ Route::delete('/minigames', [MiniGamesController::class, 'destroy' ])->name("min
 
 Route::get('/admin/users/users', [ShowUserController::class, 'index' ])->name("users");
 Route::delete('/admin/users/users', [DeleteUserController::class, 'destroy'])->name('destroyUser');
+Route::get('/admin/users/{id}/edit', [UpdateUSerController::class, 'edit' ])->name("editUser");
+Route::put('/admin/users/{id}/edit', [UpdateUSerController ::class, 'update' ])->name("updateUser");
 
 });
 

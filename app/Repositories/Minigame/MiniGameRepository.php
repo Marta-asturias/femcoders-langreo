@@ -4,6 +4,7 @@ namespace App\Repositories\MiniGame;
 use App\Models\MiniGame;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class MiniGameRepository  {
 
@@ -58,12 +59,14 @@ private MiniGame $MiniGame;
         $this->MiniGame->age = $request->get('age');
         $this->MiniGame->link = $request->get('link');
         $this->MiniGame->image = $url_file;
+        Alert::success('Actualizado', 'Este administrador ha sido actualizado con éxito');
         return $this->MiniGame->save(); 
     }
 
     public function destroyMiniGame(Request $request)
     {
-        $MiniGame = MiniGame::find($request->id);        
+        $MiniGame = MiniGame::find($request->id);
+        Alert::warning('Eliminado', 'El Minijuego Ha sido Borrado');        
         return $MiniGame->delete();
     
     }

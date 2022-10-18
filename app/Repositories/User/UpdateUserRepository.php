@@ -6,6 +6,7 @@ use App\Http\Controllers\User as ControllersUser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class UpdateUserRepository  {
 
@@ -35,6 +36,7 @@ private User $User;
         $this->User->name = $request->get('name');
         $this->User->email = $request->get('email');
         $this->User->password = $request->get('password');
+        Alert::success('Actualizado', 'Este administrador ha sido actualizado con éxito');
         return $this->User->save(); 
     }
 

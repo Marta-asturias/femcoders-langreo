@@ -1,5 +1,7 @@
 <x-head/>
 @include('layouts.adminNavigation')
+@include('sweetalert::alert')
+
 <div class="title-admin">
     <h1 class="title-Ad">Añadir Talleres</h1>
 </div>
