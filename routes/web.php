@@ -44,6 +44,7 @@ Route::group(['middleware' => ['auth']], function (){
 
     Route::group(['prefix' => 'admin/participants'], function (){
         Route::get('/participants', [ParticipantController::class, 'index' ])->name("participantslist");
+        Route::get('export/', [ParticipantController::class, 'export'])->name("exportparticipants");
     });
 
     Route::group(['prefix' => 'admin/workshops'], function () {

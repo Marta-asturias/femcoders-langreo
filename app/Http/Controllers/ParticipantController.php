@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ParticipantsExport;
 use App\Repositories\Participant\ParticipantRepository;
 use App\Repositories\Workshop\WorkshopRepository;
 use Illuminate\Http\Request;
-
+use Maatwebsite\Excel\Facades\Excel;
 
 
 class ParticipantController
@@ -30,6 +31,14 @@ class ParticipantController
         ]);
     //     return view('admin.participants.participants')->with('participant',$participant);
     }
+
+    public function export() 
+{
+   return Excel::download(new ParticipantsExport , 'participants.xlsx');
+}
+    
+
+
  // 'workshop' => $workshop
     public function createParticipant(Request $request, $id)
     {
