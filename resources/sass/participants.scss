@@ -1,7 +1,7 @@
 .conten-Participants{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: space-around;
     justify-content: center;
     .block-participants{
         width: 30%;
@@ -12,8 +12,6 @@
         border: 1px solid #ff4300;
         background: #fed2c0;
         .participant-person{
-            display: flex;
-            justify-content: space-around;
             font-family: Open Sans;
             font-size: 20px;
             text-align: center;
