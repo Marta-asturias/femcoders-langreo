@@ -53,7 +53,7 @@
             </div>
 
             <div class="btn-cancelar">
-                <a href="{{ url('/admin/workshops/workshops') }}" class=" btn-cancelar-admin">Cancelar</a>
+                <a href="{{ url('/admin/minigames/minigames') }}" class=" btn-cancelar-admin">Cancelar</a>
             </div>
         </div>
 
