@@ -16,6 +16,8 @@ use App\Http\Controllers\UserWorkshopsController;
 use App\Http\Controllers\WorkshopController;
 use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Support\Facades\Route;
+use App\Mail\InscriptionMail;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/inscriptionmail', function() {
+$mail = new InscriptionMail;
+
+Mail::to('Sarap120298@gmail.com')->send($mail);
+return "Mensaje enviado";
+}
+);
+
 Route::get('/{id}/participant', [ParticipantController::class, 'createParticipant' ])->name("createParticipant");
 Route::post('/{id}/participant', [ParticipantController::class, 'save' ])->name("inscription");
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");

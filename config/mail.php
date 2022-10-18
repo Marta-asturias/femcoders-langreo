@@ -36,11 +36,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'port' => env('MAIL_PORT', 587),
+            'host' => env('MAIL_HOST', 'smtp.mailtrap.io'),
+            'port' => env('MAIL_PORT', 2525),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('Sarap120298@gmail.com'),
-            'password' => env('Natang2012'),
+            'username' => env('1e191b0e644bf1'),
+            'password' => env('a52a4b1625e0c3'),
             'timeout' => null,
             'auth_mode' => null,
         ],
@@ -93,7 +93,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'Sarap120298@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'FemCoders'),
+        'name' => env('MAIL_FROM_NAME', 'InscriptionMail'),
     ],
 
     /*
