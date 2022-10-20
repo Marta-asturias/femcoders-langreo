@@ -11,7 +11,7 @@ class MailController extends Controller
     public function tryEmail() {
         $mail = new tryEmail;
 
-        Mail::to('Sarap120298@gmail.com')->send($mail);
+        Mail::to('graxyherrera@gmail.com')->send($mail);
         return 'Mensaje Enviado';
 
     }
