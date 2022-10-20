@@ -2487,6 +2487,10 @@ footer .social-networks .networks img {
   border: #ff4300 1px solid;
 }
 
+.btn-admin {
+  background: #4311b9;
+}
+
 .title-admin {
   color: #060300;
   font-family: Open Sans;
