@@ -28,22 +28,54 @@ return [
     | the Mailgun mail service which will provide reliable deliveries.
     |
     */
- 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
- 
-    /*
-    |--------------------------------------------------------------------------
-    | SMTP Host Port
-    |--------------------------------------------------------------------------
-    |
-    | This is the SMTP port used by your application to deliver e-mails to
-    | users of the application. Like the host we have set this value to
-    | stay compatible with the Mailgun e-mail application by default.
-    |
-    */
- 
-    'port' => env('MAIL_PORT', 587),
- 
+
+    'mailers' => [
+        'smtp' => [
+            'transport' => 'smtp',
+            'host' => env('MAIL_HOST', 'smtp.mailtrap.io'),
+            'port' => env('MAIL_PORT', 2525),
+            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+            'username' => env('1e191b0e644bf1'),
+            'password' => env('a52a4b1625e0c3'),
+            'timeout' => null,
+            'auth_mode' => null,
+        ],
+
+        'ses' => [
+            'transport' => 'ses',
+        ],
+
+        'mailgun' => [
+            'transport' => 'mailgun',
+        ],
+
+        'postmark' => [
+            'transport' => 'postmark',
+        ],
+
+        'sendmail' => [
+            'transport' => 'sendmail',
+            'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -t -i'),
+        ],
+
+        'log' => [
+            'transport' => 'log',
+            'channel' => env('MAIL_LOG_CHANNEL'),
+        ],
+
+        'array' => [
+            'transport' => 'array',
+        ],
+
+        'failover' => [
+            'transport' => 'failover',
+            'mailers' => [
+                'smtp',
+                'log',
+            ],
+        ],
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Global "From" Address
@@ -56,8 +88,8 @@ return [
     */
  
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'Sarap120298@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'InscriptionMail'),
     ],
  
     /*

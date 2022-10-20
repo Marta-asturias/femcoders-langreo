@@ -1,12 +1,10 @@
 <x-head/> 
 <x-header/>
-<app-layouts>
-
-
-
-
+<div class="title-principal">
+    <h1 class="txt-principal">Talleres</h1>
+</div>
+<div class="img-principal">
+    <img src="{{ asset('img/foto1.jpeg') }}" alt="">
+</div>
 <x-card :workshop="$workshop"/> 
-
-
-</app-layouts>
 <x-footer/>

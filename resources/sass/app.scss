@@ -2,3 +2,49 @@
 @import 'header';
 @import 'butto-nav';
 @import 'footer';
+@import 'seccionclain';
+@import 'cardworkshop';
+@import 'mini-game';
+@import 'seccionresources';
+@import 'seccioncourses';
+@import 'miniGameCard';
+@import 'resourceCard';
+@import 'inscriptionform';
+@import 'adminHeader';
+@import 'dashboard';
+@import 'adminForm';
+@import 'AdminViews';
+@import 'adminCreate';
+@import 'data';
+
+//inicio de sesion
+.sesion{
+    font-family:Open Sans;
+    font-weight:bold;
+    font-size: 15px;
+}
+
+
+//Mini Game, Resources and Workshop View main image and text
+.title-principal{
+    color: #060300;
+    font-family:Open Sans;
+    text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+    font-size: 50px;
+    margin: 2%;
+    .txt-principal{
+        text-align: center;
+    }
+}
+
+ .img-principal{ 
+    overflow:hidden;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 100%;
+    }
+} 

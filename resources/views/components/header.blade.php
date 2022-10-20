@@ -1,6 +1,8 @@
 <header class="header">
     <div class="img-header">
-    <img src="{{ asset('img/logofempng.png') }}" />
+        <a href="/welcome"><img src="{{ asset('img/logofempng.png') }}" />
+   </a>
     </div>
+    </a>
         <x-butto-nav/>
 </header>

@@ -1,0 +1,110 @@
+.titlePrincipal2{
+    margin: 2%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    .txtprincipal2{
+        color: #060300;
+        font-family:Open Sans;
+        text-shadow: 0.2em 0.2em 0.2em rgb(0, 0, 0);
+        font-size: 50px;
+    }
+}
+
+.keypad{
+    display: flex;
+    .AdminH2{
+    margin:1%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    .btnH2{
+        color: #faf9f7;
+        font-family:Open Sans;
+        padding-top: 1%;
+        width: 40%;
+        font-size: 15px;
+        height:40px;
+        border: solid 1px #ff4300;
+        background:#ff4300;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom-left-radius:20px;
+        border-bottom-right-radius:20px;
+    }
+
+    .btnH2:hover{
+        color: black;
+    }
+}
+}
+
+    .conten-P{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+            .linea{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 1%;
+            border: solid 1px #ff4300;
+            background: #fed2c0;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius:20px;
+            width: 80%;
+            height: 50px;
+        }
+        .txt-Name-admin{
+            width: 35%;
+            height: 30px;
+        }
+
+        .txt-Name-admin0{
+            border: #060300 solid 1px;
+            text-align: center;
+            width: 10%;
+            height: 30px;
+        }
+        .txt-Name-admin1{
+            width: 20%;
+            height: 30px;
+        }
+        .txt-Name-admin2{
+            width: 20%;
+            height: 30px;
+        }
+
+        .btn-Edit{
+            width: 18%;
+            height: 30px;
+            color: #060300;
+            font-family:Open Sans;
+            font-size: 18px;
+        }
+
+        .btn-Edit:hover{
+            color: #ff4300;
+        }
+        .AdminB2{
+            margin-top: 0.5%;
+            width: 18%;
+            height: 30px;
+            color: #060300;
+            font-family:Open Sans;
+            font-size: 18px;
+        }
+        .btn-Delete-A:hover{      
+            color: #ff4300;
+        } 
+
+    }
+
+    .input-clip{
+        width: 45%;
+        border: #ff4300 1px solid;
+    }

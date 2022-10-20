@@ -1,4 +1,10 @@
 <x-head/> 
-<x-header/> 
-<h1>hola</h1>
+<x-header/>
+<div class="title-principal">
+    <h1 class="txt-principal">Recursos</h1>
+</div>
+<div class="img-principal">
+    <img src="{{ asset('img/foto0.jpeg') }}" alt="">
+</div>
+<x-resourceCard :resource="$resource"/>
 <x-footer/>

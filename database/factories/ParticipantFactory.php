@@ -22,7 +22,8 @@ class ParticipantFactory extends Factory
                 "whatsapp"=> $this->faker->name(),
                 "city"=> $this->faker->name(),
                 "how_did_you_meet_us"=> $this->faker->name(),
-                'legals'=>$this->faker->boolean()
+                'legals'=>$this->faker->boolean(),
+                'date'=>$this->faker->date()
                 
             ]; 
         
