@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\DeleteUserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\MiniGamesController;
 use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\ParticipantViewController;
@@ -30,13 +31,7 @@ use Illuminate\Support\Facades\Mail;
 |
 */
 
-Route::get('/inscriptionmail', function() {
-$mail = new InscriptionMail;
-
-Mail::to('Sarap120298@gmail.com')->send($mail);
-return "Mensaje enviado";
-}
-);
+Route::get('/inscriptionmail', [MailController::class, 'try']);
 
 Route::get('/{id}/participant', [ParticipantController::class, 'createParticipant' ])->name("createParticipant");
 Route::post('/{id}/participant', [ParticipantController::class, 'save' ])->name("inscription");
