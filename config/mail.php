@@ -89,7 +89,7 @@ return [
  
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'Sarap120298@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'InscriptionMail'),
+        'name' => env('MAIL_FROM_NAME', 'tryEmail'),
     ],
  
     /*

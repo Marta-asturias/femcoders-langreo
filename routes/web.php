@@ -1,21 +1,6 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AdminWelcomeController;
-use App\Http\Controllers\DeleteUserController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MailController;
-use App\Http\Controllers\MiniGamesController;
-use App\Http\Controllers\ParticipantController;
-use App\Http\Controllers\ParticipantViewController;
-use App\Http\Controllers\ResourcesController;
-use App\Http\Controllers\ShowUserController;
-use App\Http\Controllers\UpdateUSerController;
-use App\Http\Controllers\UserMiniGamesController;
-use App\Http\Controllers\UserResourcesController;
-use App\Http\Controllers\UserWorkshopsController;
-use App\Http\Controllers\WorkshopController;
-use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Support\Facades\Route;
 use App\Mail\InscriptionMail;
 use Illuminate\Support\Facades\Mail;
@@ -31,15 +16,9 @@ use Illuminate\Support\Facades\Mail;
 |
 */
 
-Route::get('/inscriptionmail', [MailController::class, 'try']);
+Route::get('/mail', [MailController::class, 'tryEmail']);
 
-Route::get('/{id}/participant', [ParticipantController::class, 'createParticipant' ])->name("createParticipant");
-Route::post('/{id}/participant', [ParticipantController::class, 'save' ])->name("inscription");
-Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
-Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
-Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
-
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
