@@ -33,9 +33,7 @@ Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->nam
 Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
 Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+
 
 Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
 
