@@ -18,7 +18,7 @@ class ParticipantRepository{
         }
     
     public function getByemail(Request $request){
-        return $this->participant->where('email', $request->get('email'))->firstOrFail();
+        return $this->participant->where('email', $request->get('email'))->first();
     }
     public function saveParticipant(Request $request,$id)
     {  

@@ -59,38 +59,11 @@
                 :value="old('how_did_you_meet_us')" required autofocus />
         </div>
 
-        <div class="form-line">
-<<<<<<< HEAD
-          <input type="checkbox" class="form-check-input" id="date1" name="date1" value="1">
-          <label class="form-check-label" for="date1">{{$workshop->date1}}</label>
-         </div>
-
-         <div class="form-line">
-          <input type="checkbox" class="form-check-input" id="date2" name="date2" value="1">
-          <label class="form-check-label" for="date2">{{$workshop->date2}}</label>
-         </div>
-
-       <x-input id="title" class="input-tilte-edit" type="checkbox" name="title" :value="old('title') ?? $workshop->title" required /> 
-
-         <div class="form-line">
-          <input type="checkbox" class="form-check-input" id="date3" name="date3" value="1">
-          <label class="form-check-label" for="date">{{$workshop->date3}}</label>
-         </div>
-
-         <div class="form-line">
-          <input type="checkbox" class="form-check-input" id="date4" name="date4" value="1">
-          <label class="form-check-label" for="date">{{$workshop->date4}}</label>
-         </div>
-
-        <div class="form-line">
-         <input type="checkbox" class="form-check-input" id="legals" name="legals" value="1">
-         <label class="form-check-label" for="legals">He leído y acepto a Factoría F5, como responsable del tratamiento de mis datos con la finalidad de dar respuesta a mi consulta o petición. Y politica de privacidad</label>
-=======
+        {{-- <div class="form-line">
             <x-label class="label-form" for="date" :value="__('date')" />
             <x-input id="date" class="input-form" type="text" name="date" :value="old('date')" required
                 autofocus />
->>>>>>> juliet
-        </div>
+        </div> --}}
 
 
         <div class="form-line">
