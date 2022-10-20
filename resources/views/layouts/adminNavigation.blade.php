@@ -4,7 +4,7 @@
             <div class="img-logo"><img src="{{ asset('img/logofempng.png') }}" /></div>
             <div class="img-logo"> <img src="{{ asset('img/google.png') }}" /></div>
             <div class="img-logo"><img src="{{ asset('img/factoria-web.png') }}" /></div>
-           
+        
         </div>    
         <!-- Settings Dropdown -->
         <div class="hidden sm:flex sm:items-center sm:ml-6">
