@@ -18,9 +18,6 @@ use Illuminate\Support\Facades\Mail;
 
 Route::get('/mail', [MailController::class, 'tryEmail']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
 
