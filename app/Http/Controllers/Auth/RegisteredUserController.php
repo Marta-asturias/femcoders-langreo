@@ -13,6 +13,11 @@ use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
 {
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
+
     /**
      * Display the registration view.
      *
@@ -47,8 +52,9 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
+        // Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+       // return redirect(RouteServiceProvider::HOME);
+    return redirect('/admin/users/users');
     }
 }

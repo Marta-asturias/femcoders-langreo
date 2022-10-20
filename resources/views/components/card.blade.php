@@ -18,7 +18,7 @@
           </div>
 
           <div class="button-cardsW">
-            <a href="{{ route('getdate',['id'=>$workshop->id]) }}" class="btnyw">Solicitar Plaza</a>
+            <a href="{{ route('createParticipant',['id'=>$workshop->id]) }}" class="btnyw">Solicitar Plaza</a>
           </div>
 
       </div>

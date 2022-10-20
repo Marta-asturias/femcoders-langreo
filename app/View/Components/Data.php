@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Workshop;
 use Illuminate\View\Component;
 
 class Data extends Component

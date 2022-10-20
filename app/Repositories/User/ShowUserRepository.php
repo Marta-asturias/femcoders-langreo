@@ -16,6 +16,6 @@ private User $User;
     }
 
     public function getAll(){
-    return $this->User->all()->sortByDesc("id");
+    return $this->User->all();
     }
 }

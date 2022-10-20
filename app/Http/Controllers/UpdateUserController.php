@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Repositories\User\UpdateUserRepository;
 use Illuminate\Http\Request;
 
+
 class UpdateUSerController extends Controller
 {
     private UpdateUserRepository $repository;
@@ -12,7 +13,7 @@ class UpdateUSerController extends Controller
     public function __construct() {
 
         $this->repository = new UpdateUserRepository;
-        // parent::__construct();
+        
 
     }
 
@@ -29,7 +30,8 @@ class UpdateUSerController extends Controller
     {
         $user = $this->repository->getAll();
         $this->repository->updateUser($request,$id);
-        return view('/users')->with('user',$user);
+        
+        return redirect()->route('users');
     }
 
 }

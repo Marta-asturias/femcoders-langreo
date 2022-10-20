@@ -2,7 +2,7 @@
 <div class="section-courses" id="carouselExampleSlidesOnly" class="carousel" data-bs-ride="carousel">
     
     <div class="title-C">
-        <h2 class="txt-C">Aprende a crear tus propisos juego y mucho Más</h2>
+        <h2 class="txt-C">Aprende a crear tus propios juegos y mucho más</h2>
     </div>
 
     <div class="carousel-inner">
@@ -35,7 +35,7 @@
                         </div>
                         
                         <div class="btn-cuorses"> 
-                            <a href="{{ route('getdate',['id'=>$workshops->id]) }}">
+                            <a href="{{ route('createParticipant',['id'=>$workshops->id]) }}">
                                 <button type="button" class="C-btn">Inscribete</button> 
                             </a>
                         </div>

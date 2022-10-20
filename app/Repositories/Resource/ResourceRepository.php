@@ -4,6 +4,7 @@ namespace App\Repositories\Resource;
 use App\Models\Resource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ResourceRepository  {
 
@@ -52,12 +53,14 @@ private Resource $Resource;
         $this->Resource->title = $request->get('title');
         $this->Resource->link = $request->get('link');
         $this->Resource->image = $url_file;
+        Alert::success('Actualizado', 'Este administrador ha sido actualizado con éxito');
         return $this->Resource->save(); 
     }
 
     public function destroyResource(Request $request)
     {
-        $Resource = Resource::find($request->id);        
+        $Resource = Resource::find($request->id);
+        Alert::warning('Eliminado', 'El Recurso Ha sido Borrado');       
         return $Resource->delete();
     
     }

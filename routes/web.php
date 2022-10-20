@@ -9,10 +9,12 @@ use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\ParticipantViewController;
 use App\Http\Controllers\ResourcesController;
 use App\Http\Controllers\ShowUserController;
+use App\Http\Controllers\UpdateUSerController;
 use App\Http\Controllers\UserMiniGamesController;
 use App\Http\Controllers\UserResourcesController;
 use App\Http\Controllers\UserWorkshopsController;
 use App\Http\Controllers\WorkshopController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Support\Facades\Route;
 
@@ -26,9 +28,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/{id}/participant', [WorkshopController::class, 'getdate' ])->name("getdate");
-Route::get('/participant', [ParticipantController::class, 'createParticipant' ])->name("create");
-Route::post('/participant', [ParticipantController::class, 'save' ])->name("inscription");
+Route::get('/{id}/participant', [ParticipantController::class, 'createParticipant' ])->name("createParticipant");
+Route::post('/{id}/participant', [ParticipantController::class, 'save' ])->name("inscription");
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
 Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
 Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
@@ -42,10 +43,13 @@ Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
 Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("adminwelcome");
 Route::group(['middleware' => ['auth']], function (){
 
+    Route::group(['prefix' => 'admin/participants'], function (){
+        Route::get('/participants', [ParticipantController::class, 'index' ])->name("participantslist");
+        Route::get('export/', [ParticipantController::class, 'export'])->name("exportparticipants");
+    });
 
     Route::group(['prefix' => 'admin/workshops'], function () {
 
-Route::get('/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('export/', [WorkshopController::class, 'export'])->name("export");
 Route::get('/create', [WorkshopController::class, 'create' ])->name("create");
@@ -75,10 +79,13 @@ Route::delete('/minigames', [MiniGamesController::class, 'destroy' ])->name("min
 
 Route::get('/admin/users/users', [ShowUserController::class, 'index' ])->name("users");
 Route::delete('/admin/users/users', [DeleteUserController::class, 'destroy'])->name('destroyUser');
+Route::get('/admin/users/{id}/edit', [UpdateUSerController::class, 'edit' ])->name("editUser");
+Route::put('/admin/users/{id}/edit', [UpdateUSerController ::class, 'update' ])->name("updateUser");
 
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth','verified'])->name('dashboard');
+Route::get('/register', [RegisteredUserController::class, 'create'])->middleware(['auth.basic'])->name('register');
 
 require __DIR__.'/auth.php';
 

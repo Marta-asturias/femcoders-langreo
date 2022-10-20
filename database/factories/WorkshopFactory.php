@@ -14,14 +14,18 @@ class WorkshopFactory extends Factory
     public function definition()
     {
         
-           /*  return [
+/*             return [
                 'title' => $this->faker->name(),
-                'image',
+                'image', 
                 'details'=>$this->faker->sentences(4,true),
                 'age'=> $this->faker->name(),
                 'duration'=> $this->faker->name(),
                 'format'=> $this->faker->name(),
+                'date1'=> $this->faker->name(),
+                'date2'=> $this->faker->name(),
+                'date3'=> $this->faker->name(),
+                'date4'=> $this->faker->name(),
             ]; 
-         */
+          */
     }
 }

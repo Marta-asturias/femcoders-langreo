@@ -2,39 +2,67 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Participant;
+use App\Exports\ParticipantsExport;
 use App\Repositories\Participant\ParticipantRepository;
+use App\Repositories\Workshop\WorkshopRepository;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 
+class ParticipantController
+{
 
-class ParticipantController  {
+    private ParticipantRepository $repository;
+    private WorkshopRepository $workshopRepository;
 
-private ParticipantRepository $repository;
-
-    public function __construct() {
-    $this->repository= new ParticipantRepository(); 
+    public function __construct()
+    {
+        $this->repository = new ParticipantRepository();
+        $this->workshopRepository = new WorkshopRepository();
     }
 
-    public function index(){
-    $participant = $this->repository->getall();
-    return view('participant')->with('participant', $participant);
-
+    public function index()
+    {
+        $participant = $this->repository->getall();
+        $workshop = $this->workshopRepository->getAll();
+        return view('admin.participants.participants')->with([
+            'participant' => $participant,
+            'workshop' => $workshop
+        ]);
+    //     return view('admin.participants.participants')->with('participant',$participant);
     }
 
-    public function createParticipant(){
-        return view("participant");
+    public function export() 
+{
+   return Excel::download(new ParticipantsExport , 'participants.xlsx');
+}
+    
 
+
+ // 'workshop' => $workshop
+    public function createParticipant(Request $request, $id)
+    {
+        $workshop = $this->workshopRepository->getWorkshop($id);
+        if (!$workshop) {
+            return view('workshop.notexist');
+        }
+        return view('participant')->with('workshop', $workshop);
     }
 
-    public function save(Request $request)
+    public function save(Request $request, $id)
     {
         if (isset($_POST['sendForm'])) {
-            if (isset($_POST['legals']) && $_POST['legals'] == '1')
+            if (isset($_POST['legals']) && $_POST['legals'] == '1'){
                 echo '<div class="alert alert-success">Has aceptado correctamente las condiciones de uso.</div>';
-                $this->repository->saveParticipant($request);
-                return $this->index();
- 
-}
-}
+            }
+            $participant = $this->repository->getByemail($request);
+            if(!empty($participant)){
+                $participant->workshops()->attach($id);
+            }else{
+                $this->repository->saveParticipant($request, $id);
+            }
+        }
+
+        return redirect(route('getWorkshops'),302);
+    }
 }
