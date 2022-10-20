@@ -1,6 +1,21 @@
 <?php
 
-use App\Http\Controllers\MailController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminWelcomeController;
+use App\Http\Controllers\DeleteUserController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MiniGamesController;
+use App\Http\Controllers\ParticipantController;
+use App\Http\Controllers\ParticipantViewController;
+use App\Http\Controllers\ResourcesController;
+use App\Http\Controllers\ShowUserController;
+use App\Http\Controllers\UpdateUSerController;
+use App\Http\Controllers\UserMiniGamesController;
+use App\Http\Controllers\UserResourcesController;
+use App\Http\Controllers\UserWorkshopsController;
+use App\Http\Controllers\WorkshopController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Support\Facades\Route;
 use App\Mail\InscriptionMail;
 use Illuminate\Support\Facades\Mail;
@@ -66,6 +81,7 @@ Route::put('/admin/users/{id}/edit', [UpdateUSerController ::class, 'update' ])-
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth','verified'])->name('dashboard');
+Route::get('/register', [RegisteredUserController::class, 'create'])->middleware(['auth.basic'])->name('register');
 
 require __DIR__.'/auth.php';
 

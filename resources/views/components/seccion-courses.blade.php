@@ -8,7 +8,7 @@
     <div class="carousel-inner">
         @foreach ($workshop as $workshops)
 
-            <div class="carousel-item active" data-bs-interval="1000">
+            <div class="carousel-item active" data-bs-interval="9000">
                 <div class="section-courses">
                     
                     <div class="conten-courses">

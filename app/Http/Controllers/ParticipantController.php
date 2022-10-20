@@ -51,21 +51,16 @@ class ParticipantController
 
     public function save(Request $request, $id)
     {
-
-        
-        
-
         if (isset($_POST['sendForm'])) {
             if (isset($_POST['legals']) && $_POST['legals'] == '1'){
                 echo '<div class="alert alert-success">Has aceptado correctamente las condiciones de uso.</div>';
             }
-            
-            if($participant = $this->repository->getByemail($request)){
+            $participant = $this->repository->getByemail($request);
+            if(!empty($participant)){
                 $participant->workshops()->attach($id);
             }else{
                 $this->repository->saveParticipant($request, $id);
             }
-            return redirect(route('getWorkshops'),302);
         }
 
         return redirect(route('getWorkshops'),302);
