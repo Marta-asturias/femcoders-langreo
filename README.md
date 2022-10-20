@@ -68,6 +68,13 @@ npm i
 composer require maatwebsite/excel
 En php.ini de xampp fue necesario agregar la siguiente linea: extension=php_gd.dll 
 
+## Sweet Alert
+Ejecutando los siguientes comandos quedan instalados el sweetalert del admin 
+--composer require realrashid/sweet-alert
+--php artisan sweetalert:publish
+
+
+
 
 
 ## Soporte

@@ -17,8 +17,7 @@ use App\Http\Controllers\WorkshopController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Support\Facades\Route;
-use App\Mail\InscriptionMail;
-use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,5 +90,4 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['au
 Route::get('/register', [RegisteredUserController::class, 'create'])->middleware(['auth.basic'])->name('register');
 
 require __DIR__.'/auth.php';
-
 Route::get('mail/send', 'MailController@send');

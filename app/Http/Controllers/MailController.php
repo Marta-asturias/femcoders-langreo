@@ -19,7 +19,8 @@ class MailController extends Controller
         $participant = $this->participantRepository->getByemail($request);
         $mail = new tryEmail;
 
-        Mail::to($participant)->send($mail);
+       /*  Mail::to($participant)->send($mail); */
+        Mail::to('graxyherrera@gmail.com')->send($mail);
         return 'Mensaje Enviado';
 
     }
