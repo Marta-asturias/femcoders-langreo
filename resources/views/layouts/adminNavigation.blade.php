@@ -4,29 +4,21 @@
             <div class="img-logo"><img src="{{ asset('img/logofempng.png') }}" /></div>
             <div class="img-logo"> <img src="{{ asset('img/google.png') }}" /></div>
             <div class="img-logo"><img src="{{ asset('img/factoria-web.png') }}" /></div>
-           
-        </div>  
-        <button class="flex items-center   text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+        </div> 
+
+        <button class="botton-user flex items-center   text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
             <div class="navUser">{{ Auth::user()->name }}</div>
-            <form class="navUser" method="POST" action="{{ route('logout') }}">
-                @csrf
-
-                <x-dropdown-link :href="route('logout')"
-                        onclick="event.preventDefault();
-                                    this.closest('form').submit();">
-                    {{ __('Cerrar sesión') }}
-                </x-dropdown-link>
-            </form>
-
-       
+                <form class="button-CS" method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <x-dropdown-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Cerrar sesión') }}
+                    </x-dropdown-link>
+                </form>
+            </div>
         </button>  
-        <!-- Settings Dropdown -->
-
-
-        <!-- Hamburger -->
-       
     </div>
-</div>
 
 <!-- Responsive Navigation Menu -->
 <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">

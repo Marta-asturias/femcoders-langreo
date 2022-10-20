@@ -1,4 +1,5 @@
-@include('layouts.adminNavigation')
+@include('layouts.adminNavigationWelcome')
+
 
 <x-guest-layout>
     

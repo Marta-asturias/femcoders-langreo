@@ -2286,8 +2286,33 @@ footer .social-networks .networks img {
   height: 100px;
 }
 
-.navUser {
-  font-size: 50px;
+.botton-user {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.botton-user .navUser {
+  width: 50%;
+  color: black;
+  font-size: 30px;
+}
+.botton-user .button-CS {
+  width: 35%;
+  margin: 2%;
+  background: #4311b9;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.botton-user .button-CS .btn-CS {
+  font-size: 18px;
+  color: rgb(247, 244, 244);
+}
+.botton-user .button-CS .btn-CS:hover {
+  font-size: 18px;
+  color: #cbbfe8;
 }
 
 .contenD {
