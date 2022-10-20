@@ -39,8 +39,8 @@ return [
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('Sarap120298@gmail.com'),
-            'password' => env('Natang2012'),
+            'username' => env('MAIL_USERNAME'),
+            'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
             'auth_mode' => null,
         ],
@@ -93,7 +93,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'Sarap120298@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'FemCoders'),
+        'name' => env('MAIL_FROM_NAME', 'tryEmail'),
     ],
 
     /*

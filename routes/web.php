@@ -1,21 +1,9 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AdminWelcomeController;
-use App\Http\Controllers\DeleteUserController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\MiniGamesController;
-use App\Http\Controllers\ParticipantController;
-use App\Http\Controllers\ParticipantViewController;
-use App\Http\Controllers\ResourcesController;
-use App\Http\Controllers\ShowUserController;
-use App\Http\Controllers\UpdateUSerController;
-use App\Http\Controllers\UserMiniGamesController;
-use App\Http\Controllers\UserResourcesController;
-use App\Http\Controllers\UserWorkshopsController;
-use App\Http\Controllers\WorkshopController;
-use App\Repositories\Participant\ParticipantRepository;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
+use App\Mail\InscriptionMail;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +15,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/{id}/participant', [ParticipantController::class, 'createParticipant' ])->name("createParticipant");
-Route::post('/{id}/participant', [ParticipantController::class, 'save' ])->name("inscription");
-Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
-Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
-Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
 
+Route::get('/mail', [MailController::class, 'tryEmail']);
 
 
 Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
@@ -40,10 +24,13 @@ Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
 Route::get('/admin/welcome', [AdminWelcomeController::class, 'index' ])->name("adminwelcome");
 Route::group(['middleware' => ['auth']], function (){
 
+    Route::group(['prefix' => 'admin/participants'], function (){
+        Route::get('/participants', [ParticipantController::class, 'index' ])->name("participantslist");
+        Route::get('export/', [ParticipantController::class, 'export'])->name("exportparticipants");
+    });
 
     Route::group(['prefix' => 'admin/workshops'], function () {
 
-Route::get('/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('/workshops', [WorkshopController::class, 'index' ])->name("workshops");
 Route::get('export/', [WorkshopController::class, 'export'])->name("export");
 Route::get('/create', [WorkshopController::class, 'create' ])->name("create");
@@ -82,3 +69,5 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['au
 
 require __DIR__.'/auth.php';
 
+// Email related routes
+Route::get('mail/send', 'MailController@send');
