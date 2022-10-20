@@ -59,11 +59,11 @@
                 :value="old('how_did_you_meet_us')" required autofocus />
         </div>
 
-        <div class="form-line">
+        {{-- <div class="form-line">
             <x-label class="label-form" for="date" :value="__('date')" />
             <x-input id="date" class="input-form" type="text" name="date" :value="old('date')" required
                 autofocus />
-        </div>
+        </div> --}}
 
 
         <div class="form-line">
