@@ -30,9 +30,16 @@ use Illuminate\Support\Facades\Mail;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/mail', [MailController::class, 'tryEmail']);
+Route::get('/{id}/participant', [ParticipantController::class, 'createParticipant' ])->name("createParticipant");
+Route::post('/{id}/participant', [ParticipantController::class, 'save' ])->name("inscription");
+Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
+Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
+Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
 
@@ -85,5 +92,4 @@ Route::get('/register', [RegisteredUserController::class, 'create'])->middleware
 
 require __DIR__.'/auth.php';
 
-// Email related routes
 Route::get('mail/send', 'MailController@send');
