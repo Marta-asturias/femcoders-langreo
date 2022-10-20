@@ -1,5 +1,6 @@
 @include('layouts.adminNavigationWelcome')
 
+
 <x-guest-layout>
     
     <x-auth-card>
@@ -55,7 +56,7 @@
                     {{ __('Acceder') }}
                 </x-button>
 
-              
+            
             </div>
         </form>
     </x-auth-card>
