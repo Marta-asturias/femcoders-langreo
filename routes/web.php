@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\MailController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminWelcomeController;
 use App\Http\Controllers\DeleteUserController;
@@ -18,8 +17,7 @@ use App\Http\Controllers\WorkshopController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Support\Facades\Route;
-use App\Mail\InscriptionMail;
-use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +29,16 @@ use Illuminate\Support\Facades\Mail;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/mail', [MailController::class, 'tryEmail']);
+Route::get('/{id}/participant', [ParticipantController::class, 'createParticipant' ])->name("createParticipant");
+Route::post('/{id}/participant', [ParticipantController::class, 'save' ])->name("inscription");
+Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
+Route::get('/minigames', [UserMiniGamesController::class, 'getMiniGames' ])->name("minigames");
+Route::get('/resources', [UserResourcesController::class, 'getResources' ])->name("resources");
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
 
@@ -85,6 +90,4 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['au
 Route::get('/register', [RegisteredUserController::class, 'create'])->middleware(['auth.basic'])->name('register');
 
 require __DIR__.'/auth.php';
-
-// Email related routes
 Route::get('mail/send', 'MailController@send');
