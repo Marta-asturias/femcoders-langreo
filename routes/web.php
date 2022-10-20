@@ -85,7 +85,7 @@ Route::put('/admin/users/{id}/edit', [UpdateUSerController ::class, 'update' ])-
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth','verified'])->name('dashboard');
-Route::get('/register', [RegisteredUserController::class, 'create'])->middleware(['auth','verified'])->name('register');
+Route::get('/register', [RegisteredUserController::class, 'create'])->middleware(['auth.basic'])->name('register');
 
 require __DIR__.'/auth.php';
 
