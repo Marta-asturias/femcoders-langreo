@@ -11,7 +11,7 @@ class InscriptionMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subject = "Te has sucrito";
+    public $subject = "Te has suscrito";
     /**
      * Create a new message instance.
      *
