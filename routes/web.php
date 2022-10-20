@@ -14,6 +14,7 @@ use App\Http\Controllers\UserMiniGamesController;
 use App\Http\Controllers\UserResourcesController;
 use App\Http\Controllers\UserWorkshopsController;
 use App\Http\Controllers\WorkshopController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Support\Facades\Route;
 
@@ -84,6 +85,7 @@ Route::put('/admin/users/{id}/edit', [UpdateUSerController ::class, 'update' ])-
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth','verified'])->name('dashboard');
+Route::get('/register', [RegisteredUserController::class, 'create'])->middleware(['auth','verified'])->name('register');
 
 require __DIR__.'/auth.php';
 
