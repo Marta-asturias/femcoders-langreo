@@ -2,7 +2,7 @@
 
     <div class="img-principal" >
     {{-- <video src="{{ asset('img/f5.mp4') }}" autoplay="true" muted="false" loop="true"></video> --}}
-    <img class="girl" src="{{ asset('img/home.png') }}" alt=""> 
+    <img class="girl" src="{{ asset('img/1clain.png') }}" alt=""> 
     </div> 
     
     <div class="text-clain">
