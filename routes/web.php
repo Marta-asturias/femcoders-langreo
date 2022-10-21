@@ -15,8 +15,11 @@ use App\Http\Controllers\UserResourcesController;
 use App\Http\Controllers\UserWorkshopsController;
 use App\Http\Controllers\WorkshopController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\EmailController;
+use App\Mail\EmailReceived;
 use App\Repositories\Participant\ParticipantRepository;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +31,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/{id}/participant', [MailController::class, 'tryEmail'])->name("inscriptionMail");
 Route::get('/{id}/participant', [ParticipantController::class, 'createParticipant' ])->name("createParticipant");
 Route::post('/{id}/participant', [ParticipantController::class, 'save' ])->name("inscription");
 Route::get('/workshops', [UserWorkshopsController::class, 'getWorkshops' ])->name("getWorkshops");
@@ -37,6 +41,12 @@ Route::get('/resources', [UserResourcesController::class, 'getResources' ])->nam
 Route::get('/welcome', function () {
     return view('welcome');
 });
+Route::get('/sendEmail', function () {
+    return view('mails.emailF5');
+});
+
+ Route::post('/mail', [EmailController::class, 'subscribe'])->name("sendEmail");
+
 
 Route::get('/welcome', [HomeController::class, 'welcome' ])->name("welcome");
 
@@ -88,4 +98,4 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['au
 Route::get('/register', [RegisteredUserController::class, 'create'])->middleware(['auth.basic'])->name('register');
 
 require __DIR__.'/auth.php';
-
+Route::get('mail/send', 'MailController@send');

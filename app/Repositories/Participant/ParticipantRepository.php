@@ -16,6 +16,11 @@ class ParticipantRepository{
     public function getAll(){
         return $this->participant->all()->sortByDesc("id");
         }
+
+    // public function findParticipant(Request $request, $id){
+    //     return $this->participant->where('email', $request->get('email'));
+    // }
+
     
     public function getByemail(Request $request){
         return $this->participant->where('email', $request->get('email'))->first();
@@ -30,6 +35,7 @@ class ParticipantRepository{
                 'whatsapp'  => 'required',
                 'city'  => 'required',
                 'how_did_you_meet_us'  => 'required',
+                'date'  => 'required',
                 'legals'  => 'required',
                 'date' => 'required',
             ]); */
@@ -42,6 +48,7 @@ class ParticipantRepository{
             $this->participant->whatsapp = $request->get('whatsapp');
             $this->participant->city = $request->get('city');
             $this->participant->how_did_you_meet_us = $request->get('how_did_you_meet_us');
+            $this->participant->date = $request->get('date');
             $this->participant->legals = $request->get('legals');
             $this->participant->date = $request->get('date');
             

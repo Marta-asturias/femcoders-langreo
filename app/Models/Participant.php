@@ -16,6 +16,7 @@ class Participant extends Model
         "whatsapp",
         "city",
         "how_did_you_meet_us",
+        "date",
         "legals",
         "date",
     ];
