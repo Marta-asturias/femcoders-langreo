@@ -79,6 +79,7 @@
             <button class="btn-F" name="sendForm">
                 {{ __('Guardar') }}
             </button>
+        
         </div>
 
     </form>

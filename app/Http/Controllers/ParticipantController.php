@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Exports\ParticipantsExport;
+use App\Mail\tryEmail;
 use App\Repositories\Participant\ParticipantRepository;
 use App\Repositories\Workshop\WorkshopRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -51,15 +53,22 @@ class ParticipantController
 
     public function save(Request $request, $id)
     {
+        $mail = new tryEmail;
+
         if (isset($_POST['sendForm'])) {
             if (isset($_POST['legals']) && $_POST['legals'] == '1'){
                 echo '<div class="alert alert-success">Has aceptado correctamente las condiciones de uso.</div>';
             }
             $participant = $this->repository->getByemail($request);
+            $to = ['email'=>$request->email];
+            
             if(!empty($participant)){
                 $participant->workshops()->attach($id);
-            }else{
+               
+            }
+            else{
                 $this->repository->saveParticipant($request, $id);
+                Mail::to($to)->send($mail);
             }
         }
 
