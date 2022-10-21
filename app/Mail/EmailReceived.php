@@ -29,7 +29,7 @@ class EmailReceived extends Mailable
 
     return $this->view('mails.email')
         ->subject('Thank you for subscribing to our newsletter')
-        ->from('system@yoursite.com', 'System')
+        ->from('mazmorraf5@gmail.com', 'Factoria F5')
         ->with('data', $this->data);
 }
 }
