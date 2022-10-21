@@ -2487,6 +2487,10 @@ footer .social-networks .networks img {
   border: #ff4300 1px solid;
 }
 
+.btn-admin {
+  background: #4311b9;
+}
+
 .title-admin {
   color: #060300;
   font-family: Open Sans;
@@ -2661,14 +2665,19 @@ footer .social-networks .networks img {
   width: 20%;
 }
 
-.conten-Participants {
+.contenedor-P {
+  margin: 2%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-.conten-Participants .block-participants {
+.contenedor-P .conten-Participants {
+  margin-top: 1%;
+  margin-bottom: 1%;
   width: 30%;
+}
+.contenedor-P .conten-Participants .block-participants {
+  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -2676,15 +2685,15 @@ footer .social-networks .networks img {
   border: 1px solid #ff4300;
   background: #fed2c0;
 }
-.conten-Participants .block-participants .participant-person {
+.contenedor-P .conten-Participants .block-participants .participant-person {
   font-family: Open Sans;
   font-size: 20px;
   text-align: center;
 }
-.conten-Participants .block-participants .participant-person .txt-Name-participants0 {
+.contenedor-P .conten-Participants .block-participants .participant-person .txt-Name-participants0 {
   padding: 2%;
 }
-.conten-Participants .block-participants .datos-participants .txt-Name-participants {
+.contenedor-P .conten-Participants .block-participants .datos-participants .txt-Name-participants {
   padding: 2%;
   font-family: Open Sans;
   font-size: 15px;

@@ -1,4 +1,4 @@
-@include('layouts.adminNavigationWelcome')
+@include('layouts.adminNavigation')
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -51,6 +51,10 @@
                     {{ __('Already registered?') }}
                 </a>
 
+                <x-button class="ml-4" >
+                    <a href="{{ route('users') }}">Cancelar</a>
+                </x-button>
+                
                 <x-button class="ml-4">
                     {{ __('Register') }}
                 </x-button>
@@ -59,3 +63,4 @@
         </form>
     </x-auth-card>
 </x-guest-layout>
+<x-footer/>

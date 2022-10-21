@@ -1,3 +1,4 @@
+@include('layouts.adminNavigation')
 <x-guest-layout>
     @include('sweetalert::alert')
     <x-auth-card>
@@ -48,9 +49,10 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('users') }}">
-                    Cancelar
-                </a>
+
+                <x-button class="ml-4" >
+                    <a href="{{ route('users') }}">Cancelar</a>
+                </x-button>
 
                 <x-button class="ml-4">
                     Actualizar
@@ -59,3 +61,4 @@
         </form>
     </x-auth-card>
 </x-guest-layout>
+<x-footer/>
