@@ -1,4 +1,4 @@
-
+<div class="contenedor-MG">
   @foreach ($minigame ?? '' as $minigame)
   <div class="card-homeMG">
     

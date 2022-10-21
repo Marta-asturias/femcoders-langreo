@@ -21,10 +21,10 @@ class CreateWorkshopsTable extends Migration
             $table->string('age');
             $table->string('duration');
             $table->string('format');
-            $table->string('date1');
-            $table->string('date2');
-            $table->string('date3');
-            $table->string('date4');
+            $table->string('date1')->nullable();
+            $table->string('date2')->nullable();
+            $table->string('date3')->nullable();
+            $table->string('date4')->nullable();
             $table->timestamps();
         });
     }

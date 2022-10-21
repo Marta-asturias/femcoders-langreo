@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Exports\ParticipantsExport;
+use App\Mail\tryEmail;
 use App\Repositories\Participant\ParticipantRepository;
 use App\Repositories\Workshop\WorkshopRepository;
 use Illuminate\Http\Request;
+/* use Illuminate\Support\Facades\Mail; */
 use Maatwebsite\Excel\Facades\Excel;
 use App\Mail\EmailReceived;
 use App\Models\Participant;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Mail;
+
+/* use Illuminate\Support\Facades\Mail; */
 
 
 class ParticipantController
@@ -92,6 +96,8 @@ class ParticipantController
                 echo '<div class="alert alert-success">Has aceptado correctamente las condiciones de uso.</div>';
             }
             $participant = $this->repository->getByemail($request);
+            $to = ['email'=>$request->email];
+            
             if(!empty($participant)){
                 $participant->workshops()->attach($id);
             }else{
