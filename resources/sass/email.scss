@@ -1,0 +1,76 @@
+.conten-mail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .img-mail{
+        display: flex;
+        margin: 1%;
+        width:25% ;
+        height: 200px;
+        .imageEmail{
+            padding: 1%;
+            width:50% ;
+            height: 200px;
+            .img{
+                width:100% ;
+                height: 200px;
+            }
+        }
+    }
+
+    .greeting-mail{
+        width: 90%;
+        height: 50px;
+        margin: 1%;
+        display: flex;
+        justify-content: center;
+        .txt-greeting{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family:Open Sans;
+            font-size: 30px;
+            font-weight: 500;
+            width: 90%;
+            height: 50px;
+        }
+    }
+
+    .txt-mail{
+        width: 90%;
+        height: 150px;
+        margin: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .data-mail{
+            text-align: center;
+            font-family:Open Sans;
+            font-size: 18px;
+            font-weight: 300;
+            width: 90%;
+            height: 50px;
+        }
+    }
+    
+    .firms-mail{
+        width: 90%;
+        height: 150px;
+        margin: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .txt-firms{
+            text-align: center;
+            font-family:Open Sans;
+            font-size: 18px;
+            font-weight: 300;
+            width: 90%;
+            height: 50px;
+        }
+    }
+}
