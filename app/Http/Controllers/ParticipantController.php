@@ -68,10 +68,24 @@ class ParticipantController
 
    
     {
-              $data=[
-        'name'=>$request->name,
-        'email'=>$request->email,
-       ];
+
+        $to= [
+            [
+                'email' =>$request->email,
+                'first_name' => $request->first_name,
+                'last_name'=>$request->last_name,
+            ]
+        ];
+        $data=[
+            'first_name'=>$request->first_name,
+            'last_name'=>$request->last_name,
+            'email'=>$request->email,
+           
+           ];
+   
+      
+
+             
         if (isset($_POST['sendForm'])) {
             if (isset($_POST['legals']) && $_POST['legals'] == '1'){
                 echo '<div class="alert alert-success">Has aceptado correctamente las condiciones de uso.</div>';
@@ -82,11 +96,12 @@ class ParticipantController
             }else{
              
                    
-                $this->repository->saveParticipant($request, $id);
-                Mail::to('receiver@gmail.com')->send(new EmailReceived($data));
-                
+                $this->repository->saveParticipant($request, $id);                   
             }
+            Mail::to($to)->send(new EmailReceived($data));
         }
+       
+        return 'gracias por inscribirte';
 
         return redirect(route('getWorkshops'),302);
     }
