@@ -16,6 +16,11 @@ class ParticipantRepository{
     public function getAll(){
         return $this->participant->all()->sortByDesc("id");
         }
+
+    // public function findParticipant(Request $request, $id){
+    //     return $this->participant->where('email', $request->get('email'));
+    // }
+
     
     public function getByemail(Request $request){
         return $this->participant->where('email', $request->get('email'))->first();

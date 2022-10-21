@@ -2,6 +2,9 @@
 
 namespace App\Mail;
 
+use App\Models\Participant;
+use App\Repositories\Participant\ParticipantRepository;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -11,25 +14,22 @@ class tryEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subject = 'Prueba de Email';
+    private ParticipantRepository $participantRepository;
+    // private Participant $participant;
 
-    /**
-     * Create a new message instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
-        //
+        $this->participantRepository = new ParticipantRepository();
+        // $this->participant= new Participant();
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
+    public $subject = 'Prueba de Email';
+
+  
+    
     public function build()
     {
-        return $this->view('Mail.TryEmail');
+        $participant = $this->participantRepository->getAll();
+        return $this->view('Mail.TryEmail')->with('participant', $participant);
     }
 }
