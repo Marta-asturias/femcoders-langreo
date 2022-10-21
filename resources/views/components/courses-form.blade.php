@@ -76,9 +76,12 @@
 
 
         <div class="btn-form">
+        <form action="{{ route('inscriptionMail')}}" method="post">
+            @csrf
             <button class="btn-F" name="sendForm">
                 {{ __('Guardar') }}
             </button>
+        </form>
         </div>
 
     </form>
