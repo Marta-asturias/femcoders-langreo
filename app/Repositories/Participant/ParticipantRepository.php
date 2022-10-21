@@ -17,8 +17,8 @@ class ParticipantRepository{
         return $this->participant->all()->sortByDesc("id");
         }
 
-    // public function findParticipant($id){
-    //     return Participant::find($id);
+    // public function findParticipant(Request $request, $id){
+    //     return $this->participant->where('email', $request->get('email'));
     // }
 
     

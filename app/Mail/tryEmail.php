@@ -30,6 +30,6 @@ class tryEmail extends Mailable
     public function build()
     {
         $participant = $this->participantRepository->getAll();
-        return $this->view('Mail.TryEmail')->with('participant', $participant);;
+        return $this->view('Mail.TryEmail')->with('participant', $participant);
     }
 }

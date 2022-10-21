@@ -60,14 +60,15 @@ class ParticipantController
                 echo '<div class="alert alert-success">Has aceptado correctamente las condiciones de uso.</div>';
             }
             $participant = $this->repository->getByemail($request);
+            $to = ['email'=>$request->email];
+            
             if(!empty($participant)){
                 $participant->workshops()->attach($id);
-            }if(!empty($participant)){
-                Mail::to('graxyherrera@gmail.com')->send($mail);
-                return 'Mensaje Enviado';
+               
             }
             else{
                 $this->repository->saveParticipant($request, $id);
+                Mail::to($to)->send($mail);
             }
         }
 
