@@ -8,6 +8,8 @@
 
     Hemos recibido tu inscripción <strong>{{$data['first_name']}}</strong> <strong>{{$data['last_name']}}</strong><br>
     <strong> esperamos online el <strong>{{$data['date']}}</strong> para el taller Conoce Python!</strong> Recuerda que es imprescindible que tengas micrófono, cámara y ordenador para poder disfrutar del taller. 
+
+
 </p>
 
 <p>
