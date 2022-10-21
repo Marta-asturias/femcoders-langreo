@@ -1,28 +1,14 @@
 <section class="conten-clain">
 
     <div class="img-principal" >
-    <video src="{{ asset('img/f5.mp4') }}" autoplay="true" muted="false" loop="true"></video>
-    {{-- <img class="girl" src="{{ asset('img/foto3.jpeg') }}" alt="">  --}}
+    {{-- <video src="{{ asset('img/f5.mp4') }}" autoplay="true" muted="false" loop="true"></video> --}}
+    <img class="girl" src="{{ asset('img/home.png') }}" alt=""> 
     </div> 
     
     <div class="text-clain">
-    <p class="txt-clain1">
-        <strong>
-    ¿Conoces a Ada Lovelace o Grae Hopper? Son sólo dos ejemplo de las numerosas mujeres que revolucionaron el mundo de la tecnología.<br><br> 
-    Tú también puedes apender a crear tu propia app, juegos o páginas web.
-        ¡Es mucho más facil y divertido de lo que te imaginas!<br><br>
-        Atrévete a descubrir cómo funciona el código, y comprueba por ti misma que la tecnología ¡mola! 
-    </strong></p>
-
-    <p class="text-clain2">
-        <strong>
-            Es hora de volver a cambiar la historia y romper los estereotipos, porque... ¡Todas podemos aprender a programar!</strong></p>
-    
-        <p class="txt-clain3">
-            <strong>
-                
-        
-        </strong></p>
+        <p class="txt-clain1">¡Tú también puedes aprender a programar! ¡Es mucho más fácil y divertido de lo que te imaginas!</p>
+        <p class="text-clain2">¿Quieres descubrir cómo crear tu propia app, juego o página web?</p>
+        <p class="text-clain3">¡Apúntate a nuestros talleres!</p>
     </div>
     
     <div class="img-logo">
