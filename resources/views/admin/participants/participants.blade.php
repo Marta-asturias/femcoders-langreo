@@ -1,4 +1,3 @@
-
 <x-head />
 @include('sweetalert::alert')
 @include('layouts.adminNavigation') 
@@ -18,11 +17,9 @@
     </button>
 
 </div>
-
+<div class="contenedor-P">
     @foreach ($participant as $participants)
-
-    @php ($wtitle = implode(",",array_map(function($value) { return $value['title'];} , $participants->workshops->toArray())));
-
+        @php ($wtitle = implode(" ",array_map(function($value) { return $value['title'];} , $participants->workshops->toArray())))
         <div class="conten-Participants">
             <div class="block-participants">
                 <div class=" participant-person">
@@ -35,14 +32,16 @@
                     <h2 class="txt-Name-participants"><strong>Correo Electronico: </strong>{{ $participants->email}}</h2>
                     <h2 class="txt-Name-participants"><strong>Whatsapp: </strong>{{ $participants->whatsapp}}</h2>
                     <h2 class="txt-Name-participants"><strong>Ciudad: </strong>{{ $participants->city}}</h2>
+                    {{-- <h2 class="txt-Name-admin2"><strong>{{ $participants->date1}}</strong></h2> --}}
                     <h2 class="txt-Name-participants"><strong>Cursos en los que esta apuntado: </strong>{{ $wtitle }}</h2>
                 </div>
                     
-                {{-- <h2 class="txt-Name-admin2"><strong>{{ $participants->$date}}</strong></h2> --}}
+                
                 
             </div>
         </div>
     @endforeach
+</div>
 
 
 
