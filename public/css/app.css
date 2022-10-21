@@ -1658,7 +1658,7 @@ footer .social-networks .networks img {
 .conten-clain .img-logo {
   position: absolute;
   left: 100px;
-  top: 70%;
+  top: 60%;
   width: 30%;
   display: flex;
   justify-content: space-around;
@@ -1678,7 +1678,7 @@ footer .social-networks .networks img {
   font-size: 18px;
   position: absolute;
   left: 15%;
-  top: 85%;
+  top: 75%;
   display: flex;
   align-items: center;
   justify-content: space-around;
