@@ -62,12 +62,10 @@ class ParticipantController
             $participant = $this->repository->getByemail($request);
             if(!empty($participant)){
                 $participant->workshops()->attach($id);
-            }if(!empty($participant)){
-                Mail::to('graxyherrera@gmail.com')->send($mail);
-                return 'Mensaje Enviado';
             }
             else{
                 $this->repository->saveParticipant($request, $id);
+                Mail::to('martagonzalez@gmail.com')->send($mail);
             }
         }
 
