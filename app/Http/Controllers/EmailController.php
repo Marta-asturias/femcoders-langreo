@@ -27,6 +27,7 @@ class EmailController extends Controller
    
        Mail::to($to)->send(new EmailReceived($data));
        return 'gracias por inscribirte';
+       
 }
 }
 

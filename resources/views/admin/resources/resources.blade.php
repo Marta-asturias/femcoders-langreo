@@ -33,7 +33,7 @@
                 </button>
 
                 <button class="btn-Edit">
-                    <a href="{{ route('resource.edit',['id'=>$resources->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i> Modificar</a>
+                    <a href="{{ route('resource.edit',['id'=>$resources->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i> Editar</a>
                 </button>
 
                 <form   action="{{ route('resource.destroy',['id'=>$resources->id]) }}" method="POST">
@@ -45,4 +45,4 @@
         </div>
     @endforeach
 
-    <x-footer/>
+   

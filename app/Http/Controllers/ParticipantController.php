@@ -108,7 +108,7 @@ class ParticipantController
             Mail::to($to)->send(new EmailReceived($data));
         }
        
-        return 'gracias por inscribirte';
+        // return 'gracias por inscribirte';
 
         return redirect(route('getWorkshops'),302);
     }

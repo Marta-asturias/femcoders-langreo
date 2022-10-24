@@ -15,9 +15,7 @@
         <a href="{{ url('/admin/minigames/create') }}" class="btnH2">Agregar Nuevo</a>
     </button>
 
-    <button class="AdminH2">
-        <a href="{{ route('export') }}" class="btnH2" >Exportar Juegos</a>
-    </button>
+
 </div>
 
 @foreach($minigame as $minigames)
@@ -31,7 +29,7 @@
             </button>
 
             <button class="btn-Edit">
-                <a href="{{ route('minigame.edit',['id'=>$minigames->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i>Modificar</a>
+                <a href="{{ route('minigame.edit',['id'=>$minigames->id]) }}" class="btn-Edit"><i class="bi bi-pencil"></i>Editar</a>
             </button>
 
             <form   action="{{ route('minigame.destroy',['id'=>$minigames->id]) }}" method="POST">
@@ -43,4 +41,4 @@
     </div>
 @endforeach
 
-<x-footer/>
+

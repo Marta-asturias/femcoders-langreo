@@ -56,7 +56,7 @@ class WorkshopController
     {
         $workshop = $this->repository->getAll();
         $this->repository->updateWorkshop($request,$id);
-       return view('/workshops')->with('workshop',$workshop);
+       return view('/admin/workshops/workshops')->with('workshop',$workshop);
        
     }
 

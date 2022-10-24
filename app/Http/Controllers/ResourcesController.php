@@ -47,7 +47,7 @@ class ResourcesController extends Controller
     {
         $resource = $this->repository->getAll();
         $this->repository->updateResource($request,$id);
-        return view('/resources')->with('resource',$resource);
+        return view('/admin/resources/resources')->with('resource',$resource);
     }
 
     public function destroy(Request $request)

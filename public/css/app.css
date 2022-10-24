@@ -1664,7 +1664,7 @@ footer .social-networks .networks img {
   padding: 1%;
   position: absolute;
   left: 100px;
-  top: 105%;
+  top: 110%;
   width: 30%;
   display: flex;
   justify-content: space-around;
@@ -1684,7 +1684,7 @@ footer .social-networks .networks img {
   font-size: 18px;
   position: absolute;
   left: 15%;
-  top: 92%;
+  top: 95%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -2335,7 +2335,7 @@ footer .social-networks .networks img {
 }
 .contenD .cardD {
   width: 15%;
-  height: 400px;
+  height: 300px;
   padding: 1%;
   box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.4499999881);
   border-radius: 10px;
@@ -2346,11 +2346,11 @@ footer .social-networks .networks img {
 }
 .contenD .cardD .car-imgD {
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
 .contenD .cardD .car-imgD .card-imgD {
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
 .contenD .cardD .card-bodyD {
   width: 90%;
@@ -2496,6 +2496,10 @@ footer .social-networks .networks img {
 .input-clip {
   width: 45%;
   border: #ff4300 1px solid;
+}
+
+.bi-mouse2-fill {
+  font-size: 12px;
 }
 
 .btn-admin {

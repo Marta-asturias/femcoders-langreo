@@ -40,4 +40,4 @@
     </div>
 @endforeach
 
-<x-footer/>
+

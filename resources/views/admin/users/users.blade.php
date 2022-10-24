@@ -16,9 +16,7 @@
         <a href="{{route('register')}}" class="btnH2">Agregar Nuevo</a>
     </button>
 
-    <button class="AdminH2">
-        <a href="{{ route('export') }}" class="btnH2"> Exportar Talleres</a>
-    </button>
+
 
 </div>
 
@@ -32,11 +30,11 @@
     @foreach ($user as $users)
         <div class="conten-P">
             <div class="linea">
-                {{-- <h2 class="txt-Name-admin0"><strong>{{ $users->id }}</strong></h2> --}}
+              
                 <h2 class="txt-Name-admin1"><strong>{{ $users->name }}</strong></h2>
                 <h2 class="txt-Name-admin2"><strong>{{ $users->email}}</strong></h2>
                 <button class="btn-Edit">
-                    <a class="btn-Edit"href="{{ route('editUser', ['id' => $users->id]) }}"><i class="bi bi-pencil"></i>Edit</a>
+                    <a class="btn-Edit"href="{{ route('editUser', ['id' => $users->id]) }}"><i class="bi bi-pencil"></i>Editar</a>
                 </button>
                 <form   class="AdminB2" action="{{ route('destroyUser',['id'=>$users->id]) }}" method="POST">
                     <button class="btn-Delete-A" type="submit"> <i class="bi bi-trash"></i>Borrar</button>

@@ -71,5 +71,3 @@
 
     </form>
 </div>
-
-<x-footer/>

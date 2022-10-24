@@ -47,7 +47,7 @@ class MiniGamesController extends Controller
     {
         $minigame = $this->repository->getAll();
         $this->repository->updateMiniGame($request,$id);
-        return view('/minigames')->with('minigame',$minigame);
+        return view('/admin/minigames/minigame')->with('minigame',$minigame);
     }
 
     public function destroy(Request $request)
