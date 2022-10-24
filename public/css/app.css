@@ -1626,7 +1626,7 @@ footer .social-networks .networks img {
   margin: 1%;
 }
 .conten-clain .text-clain .txt-clain1 {
-  color: #fdfdfd;
+  color: #4311b9;
   font-size: 30px;
   font-weight: 900;
   text-align: center;
@@ -1636,7 +1636,7 @@ footer .social-networks .networks img {
   font-family: Open Sans;
 }
 .conten-clain .text-clain .text-clain2 {
-  color: #faf7f5;
+  color: #ff4300;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
@@ -1646,7 +1646,7 @@ footer .social-networks .networks img {
   font-family: Open Sans;
 }
 .conten-clain .text-clain .text-clain3 {
-  color: #f8f7f9;
+  color: #4311b9;
   font-size: 40px;
   font-weight: 1000;
   text-align: center;
@@ -1664,7 +1664,7 @@ footer .social-networks .networks img {
   padding: 1%;
   position: absolute;
   left: 100px;
-  top: 90%;
+  top: 105%;
   width: 30%;
   display: flex;
   justify-content: space-around;
@@ -1684,7 +1684,7 @@ footer .social-networks .networks img {
   font-size: 18px;
   position: absolute;
   left: 15%;
-  top: 110%;
+  top: 92%;
   display: flex;
   align-items: center;
   justify-content: space-around;

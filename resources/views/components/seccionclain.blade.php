@@ -2,7 +2,7 @@
 
     <div class="img-principal" >
     {{-- <video src="{{ asset('img/f5.mp4') }}" autoplay="true" muted="false" loop="true"></video> --}}
-    <img class="girl" src="{{ asset('img/1clain.png') }}" alt=""> 
+    <img class="girl" src="{{ asset('img/Presentación Clase de ciencias naturales y química de primaria Educativo Violeta y naranja.jpg') }}" alt=""> 
     </div> 
     
     <div class="text-clain">
